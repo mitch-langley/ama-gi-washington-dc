@@ -3,32 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JOHANNES K. SCHMIDT</title>
+  <title>Selected Writing | Johannes K. Schmidt</title>
+  <meta name="description" content="A decade of essays from Johannes K. Schmidt on liberty, money, and the meaning of history, written through the lens of Western tradition and Hispanic thought." />
+  <link rel="canonical" href="https://www.johanneskschmidt.com/other-writing" />
+  <meta property="og:site_name" content="Johannes K. Schmidt" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.johanneskschmidt.com/other-writing" />
+  <meta property="og:title" content="Selected Writing | Johannes K. Schmidt" />
+  <meta property="og:description" content="A decade of essays from Johannes K. Schmidt on liberty, money, and the meaning of history, written through the lens of Western tradition and Hispanic thought." />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preload" href="assets/fonts/noto-serif-v33-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="assets/jks.css" />
+  <script src="assets/site.js" defer></script>
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <header class="navbar-container">
-  <nav class="navbar">
-    <a href="#" class="logo">Johannes K. Schmidt</a>
-    
+  <nav class="navbar" aria-label="Primary">
+    <a href="index.html" class="logo">Johannes K. Schmidt</a>
+
     <ul class="nav-links">
+      <li><a href="readme.html">Read Me</a></li>
       <li><a href="index.html">Home</a></li>
-      <!-- Dropdown Item -->
       <li class="dropdown">
-        <a href="#" class="dropbtn">Our Hemisphere &#9662;</a>
-        <ul class="dropdown-menu">
+        <button type="button" class="dropbtn" aria-expanded="false" aria-controls="menu-hemisphere">Our Hemisphere <span aria-hidden="true">&#9662;</span></button>
+        <ul class="dropdown-menu" id="menu-hemisphere">
           <li><a href="#">Why the Monroe Doctrine?</a></li>
           <li><a href="#">Hispanic Legacy (Working Paper)</a></li>
           <li><a href="#">Hispanic Legacy (Podcast Episode)</a></li>
-          <li><a href="#">"Civitas Sancti Tui"</a></li>
+          <li><a href="#">&ldquo;Civitas Sancti Tui&rdquo;</a></li>
         </ul>
       </li>
       <li class="dropdown">
-        <a href="#" class="dropbtn">About Me &#9662;</a>
-        <ul class="dropdown-menu">
+        <button type="button" class="dropbtn is-section" aria-expanded="false" aria-controls="menu-about">About Me <span aria-hidden="true">&#9662;</span></button>
+        <ul class="dropdown-menu" id="menu-about">
           <li><a href="bio.html">Bio</a></li>
-          <li><a href="writing.html">Selected Writing</a></li>
+          <li><a href="writing.html" aria-current="page">Selected Writing</a></li>
         </ul>
       </li>
       <li><a href="#">Contact</a></li>
@@ -36,160 +48,107 @@
   </nav>
 </header>
 
-  <!-- Main Content with Alternating Containers -->
-  <main>
+<main id="main" tabindex="-1">
 
-<section class="content-section">
-  <div class="container">
-    <h1>Selected Writing</h1>
-
-    <div id="articles-list" class="article-list"></div>
-  </div>
-
-  <script>
-    fetch('./assets/writing/dictionary.json')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error: ${response.status}`);
-        }
-
-        return response.json();
-      })
-      .then(articles => {
-        const container = document.getElementById('articles-list');
-
-        articles.forEach(article => {
-          const item = document.createElement('article');
-          item.className = 'article-item';
-
-          const keywords = article.keywords
-            .map(keyword => `
-              <span class="keyword">${keyword}</span>
-            `)
-            .join('');
-
-          item.innerHTML = `
-            <div class="article-meta">
-              <span>${article.outlet}</span>
-              <span>${article.date}</span>
-            </div>
-
-            <h3>
-              <a
-                href="${article.link}"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                ${article["article title"]}
-              </a>
-            </h3>
-
-            <div class="keywords">
-              ${keywords}
-            </div>
-          `;
-
-          container.appendChild(item);
-        });
-      })
-      .catch(error => {
-        console.error('Error loading articles:', error);
-
-        document.getElementById('articles-list').innerHTML = `
-          <p>Unable to load articles.</p>
-        `;
-      });
-  </script>
-</section>
-  </main>
-
-  <footer class="footer">
+  <section class="content-section">
     <div class="container">
-      <p style="font-size:var(--t-2xl); color:var(--gold);">𒂼𒄄</p>
-      <p>&copy; 2026 JKS. All rights reserved.</p>
+      <header class="section-head">
+        <h1>Selected Writing</h1>
+      </header>
+
+      <!-- Generated from assets/writing/dictionary.json by tools/build_writing.py. Edit the JSON, then rerun the script. -->
+      <ul class="article-list">
+<!-- writing-list:start -->
+      <li class="article-item">
+        <p class="article-meta"><span>The Hill</span> <time datetime="2025-05-28">May 28, 2025</time></p>
+        <h2><a href="https://thehill.com/opinion/international/5320167-pope-leo-xiv-moral-leadership-venezuela-maduro/">Pope Leo XIV condemned Putin. Will he confront Maduro next?</a></h2>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">Latin America</li><li class="keyword">democracy</li><li class="keyword">authoritarianism</li><li class="keyword">geopolitics</li><li class="keyword">human rights</li></ul>
+      </li>
+      <li class="article-item">
+        <p class="article-meta"><span>Townhall</span> <time datetime="2024-07-08">July 8, 2024</time></p>
+        <h2><a href="https://townhall.com/columnists/johannesschmidt/2024/07/08/lessons-on-tyranny-from-the-spanish-empire-n2641505">Lessons on Tyranny From the Spanish Empire</a></h2>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">history</li><li class="keyword">authoritarianism</li><li class="keyword">liberty</li><li class="keyword">Western civilization</li><li class="keyword">political thought</li></ul>
+      </li>
+      <li class="article-item">
+        <p class="article-meta"><span>Townhall</span> <time datetime="2023-05-05">May 5, 2023</time></p>
+        <h2><a href="https://townhall.com/columnists/johannesschmidt/2023/05/05/cinco-de-mayo-the-day-napoleon-accidentally-liberated-latin-america-n2622884?fbclid=IwAR0WRg--JoVuyG7A0qQQnnLeh90H2FsSv39Coc9RoDbSMtbW71b5K-kud9g">The Day Napoleon Accidentally Liberated Latin America</a></h2>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">history</li><li class="keyword">Latin America</li><li class="keyword">liberty</li><li class="keyword">geopolitics</li></ul>
+      </li>
+      <li class="article-item">
+        <p class="article-meta"><span>Townhall</span> <time datetime="2022-05-01">May 1, 2022</time></p>
+        <h2><a href="https://townhall.com/columnists/johannesschmidt/2022/05/01/zelensky-has-pointed-out-something-the-soviets-recognized-in-1978-the-west-has-lost-its-courage-n2606501#google_vignette">The West Has Lost its Courage</a></h2>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">geopolitics</li><li class="keyword">Western civilization</li><li class="keyword">democracy</li><li class="keyword">authoritarianism</li><li class="keyword">history</li></ul>
+      </li>
+      <li class="article-item">
+        <p class="article-meta"><span>The Washington Examiner</span> <time datetime="2021-11-27">November 27, 2021</time></p>
+        <h2><a href="https://www.washingtonexaminer.com/op-eds/211408/covid-19-and-the-third-hand-dealers-of-truth/">COVID-19 and the ‘Third-Hand Dealers of Truth’</a></h2>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">COVID-19</li><li class="keyword">media</li><li class="keyword">public policy</li><li class="keyword">liberty</li></ul>
+      </li>
+      <li class="article-item">
+        <p class="article-meta"><span>The Washington Examiner</span> <time datetime="2020-07-02">July 2, 2020</time></p>
+        <h2><a href="https://www.washingtonexaminer.com/op-eds/2739762/christopher-columbus-and-the-birth-of-modern-human-rights/">Christopher Columbus and the Birth of Modern Human Rights</a></h2>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">history</li><li class="keyword">human rights</li><li class="keyword">Latin America</li><li class="keyword">Western civilization</li></ul>
+      </li>
+      <li class="article-item">
+        <p class="article-meta"><span>The Washington Examiner</span> <time datetime="2020-02-12">February 12, 2020</time></p>
+        <h2><a href="https://www.washingtonexaminer.com/opinion/op-eds/it-would-be-crazy-for-the-senate-not-to-confirm-judy-shelton">It Would be &#x27;Crazy&#x27; for the Senate not to Confirm Judy Shelton</a></h2>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">monetary policy</li><li class="keyword">Federal Reserve</li><li class="keyword">economics</li><li class="keyword">United States</li><li class="keyword">public policy</li></ul>
+      </li>
+      <li class="article-item">
+        <p class="article-meta"><span>ADN America</span> <time datetime="2020-01-20">January 20, 2020</time></p>
+        <h2><a href="https://adnamerica.com/en/latin-america/latin-american-democracy-danger-after-bidens-first-year">Latin American democracy in danger after Biden&#x27;s first year</a></h2>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">Latin America</li><li class="keyword">democracy</li><li class="keyword">geopolitics</li><li class="keyword">United States</li><li class="keyword">authoritarianism</li></ul>
+      </li>
+      <li class="article-item">
+        <p class="article-meta"><span>The Washington Examiner</span> <time datetime="2019-07-01">July 1, 2019</time></p>
+        <h2><a href="https://www.washingtonexaminer.com/opinion/op-eds/the-hispanic-roots-of-the-american-revolution">The Hispanic Roots of the American Revolution</a></h2>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">history</li><li class="keyword">Latin America</li><li class="keyword">United States</li><li class="keyword">liberty</li><li class="keyword">Hispanic heritage</li></ul>
+      </li>
+      <li class="article-item">
+        <p class="article-meta"><span>The Daily Caller</span> <time datetime="2016-11-03">November 3, 2016</time></p>
+        <h2><a href="https://dailycaller.com/2016/11/03/on-november-8th-im-voting-for-our-next-fed-chair/">On November 8th, I’m Voting for our Next Fed Chair</a></h2>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">monetary policy</li><li class="keyword">Federal Reserve</li><li class="keyword">economics</li><li class="keyword">United States</li></ul>
+      </li>
+      <li class="article-item">
+        <p class="article-meta"><span>Forbes</span> <time datetime="2015-10-13">October 13, 2015</time></p>
+        <h2><a href="https://www.forbes.com/sites/realspin/2015/10/13/voters-should-be-fed-up-that-no-one-is-talking-monetary-policy/?sh=5766171b2404">Voters Should Be Fed Up That No One Is Talking Monetary Policy</a></h2>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">monetary policy</li><li class="keyword">Federal Reserve</li><li class="keyword">economics</li><li class="keyword">public policy</li><li class="keyword">United States</li></ul>
+      </li>
+      <li class="article-item">
+        <p class="article-meta"><span>Forbes</span> <time datetime="2015-09-18">September 18, 2015</time></p>
+        <h2><a href="https://www.forbes.com/sites/jaredmeyer/2015/09/18/somc-reconsider-federal-reserve-dual-mandate-monetary-policy/?sh=fba1bc450329">It’s Time to Reconsider the Fed’s Dual Mandate</a></h2>
+        <p class="article-note">Co-authored with Jared Meyer, Manhattan Institute</p>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">monetary policy</li><li class="keyword">Federal Reserve</li><li class="keyword">economics</li><li class="keyword">public policy</li></ul>
+      </li>
+      <li class="article-item">
+        <p class="article-meta"><span>Fox News</span> <time datetime="2015-05-19">May 19, 2015</time></p>
+        <h2><a href="https://www.foxnews.com/opinion/opinion-hispanic-voters-and-our-forgotten-libertarian-tradition">Hispanic Voters and our Forgotten Libertarian Tradition</a></h2>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">Latin America</li><li class="keyword">United States</li><li class="keyword">liberty</li><li class="keyword">Hispanic heritage</li><li class="keyword">political thought</li></ul>
+      </li>
+      <li class="article-item">
+        <p class="article-meta"><span>American Institute for Economic Research</span> <time datetime="2015-02-05">February 5, 2015</time></p>
+        <h2><a href="https://aier.org/article/greek-crisis-creates-standoff-between-regulators-and-potential-investors/">Greek Crisis Creates Standoff Between Regulators and Investors</a></h2>
+        <p class="article-note">Ft. conversation with Jerry Jordan, former president and CEO at the Cleveland Fed</p>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">monetary policy</li><li class="keyword">economics</li><li class="keyword">Federal Reserve</li><li class="keyword">financial crisis</li><li class="keyword">regulation</li></ul>
+      </li>
+      <li class="article-item">
+        <p class="article-meta"><span>American Institute for Economic Research</span> <time datetime="2014-12-30">December 30, 2014</time></p>
+        <h2><a href="https://aier.org/article/defending-the-dollar-in-ecuador/">Defending the Dollar in Ecuador</a></h2>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">monetary policy</li><li class="keyword">Latin America</li><li class="keyword">economics</li><li class="keyword">currency</li></ul>
+      </li>
+<!-- writing-list:end -->
+      </ul>
     </div>
-  </footer>
+  </section>
 
-<script>
-  const initHeroCarousel = () => {
-  const carousel = document.querySelector('.hero-carousel');
-  if (!carousel) return;
+</main>
 
-  const slides = Array.from(carousel.querySelectorAll('.photo-hero-fluid'));
-  if (slides.length <= 1) return;
-
-  const dots = Array.from(carousel.querySelectorAll('.hero-carousel__dot'));
-
-  let currentIndex = slides.findIndex((s) => s.classList.contains('is-active'));
-  if (currentIndex === -1) {
-    currentIndex = 0;
-    slides[0].classList.add('is-active');
-  }
-
-  const INTERVAL_MS = 30000;
-  let timer = null;
-
-  const showSlide = (nextIndex) => {
-    if (nextIndex === currentIndex) return;
-
-    slides[currentIndex].classList.remove('is-active');
-    slides[currentIndex].setAttribute('aria-hidden', 'true');
-    if (dots[currentIndex]) {
-      dots[currentIndex].classList.remove('is-active');
-      dots[currentIndex].setAttribute('aria-selected', 'false');
-    }
-
-    slides[nextIndex].classList.add('is-active');
-    slides[nextIndex].removeAttribute('aria-hidden');
-    if (dots[nextIndex]) {
-      dots[nextIndex].classList.add('is-active');
-      dots[nextIndex].setAttribute('aria-selected', 'true');
-    }
-
-    currentIndex = nextIndex;
-  };
-
-  const nextSlide = () => {
-    const nextIndex = (currentIndex + 1) % slides.length;
-    showSlide(nextIndex);
-  };
-
-  dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-      showSlide(index);
-      startTimer();
-    });
-  });
-
-  const startTimer = () => {
-    stopTimer();
-    timer = setInterval(nextSlide, INTERVAL_MS);
-  };
-
-  const stopTimer = () => {
-    if (timer) clearInterval(timer);
-  };
-
-  // Pause on hover or keyboard focus
-  carousel.addEventListener('mouseenter', stopTimer);
-  carousel.addEventListener('mouseleave', startTimer);
-  carousel.addEventListener('focusin', stopTimer);
-  carousel.addEventListener('focusout', startTimer);
-
-  // Pause when browser tab is inactive
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-      stopTimer();
-    } else {
-      startTimer();
-    }
-  });
-
-  startTimer();
-};
-
-document.addEventListener('DOMContentLoaded', initHeroCarousel);
-</script>
+<footer class="footer">
+  <div class="container">
+    <p class="footer__mark" role="img" aria-label="Amagi, the Sumerian word for liberty">𒂼𒄄</p>
+    <p>&copy; 2026 JKS. All rights reserved.</p>
+  </div>
+</footer>
 
 </body>
 </html>

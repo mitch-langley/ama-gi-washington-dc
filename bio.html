@@ -3,31 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JOHANNES K. SCHMIDT</title>
+  <title>Bio | Johannes K. Schmidt</title>
+  <meta name="description" content="Washington-based defense professional writing on military innovation, geopolitics, and the Hispanic roots of liberty. Published in Forbes, Fox News, The Hill, and more." />
+  <link rel="canonical" href="https://www.johanneskschmidt.com/bio" />
+  <meta property="og:site_name" content="Johannes K. Schmidt" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.johanneskschmidt.com/bio" />
+  <meta property="og:title" content="Bio | Johannes K. Schmidt" />
+  <meta property="og:description" content="Washington-based defense professional writing on military innovation, geopolitics, and the Hispanic roots of liberty. Published in Forbes, Fox News, The Hill, and more." />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preload" href="assets/fonts/noto-serif-v33-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="assets/jks.css" />
+  <script src="assets/site.js" defer></script>
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <header class="navbar-container">
-  <nav class="navbar">
-    <a href="#" class="logo">Johannes K. Schmidt</a>
-    
+  <nav class="navbar" aria-label="Primary">
+    <a href="index.html" class="logo">Johannes K. Schmidt</a>
+
     <ul class="nav-links">
+      <li><a href="readme.html">Read Me</a></li>
       <li><a href="index.html">Home</a></li>
-      <!-- Dropdown Item -->
       <li class="dropdown">
-        <a href="#" class="dropbtn">Our Hemisphere &#9662;</a>
-        <ul class="dropdown-menu">
+        <button type="button" class="dropbtn" aria-expanded="false" aria-controls="menu-hemisphere">Our Hemisphere <span aria-hidden="true">&#9662;</span></button>
+        <ul class="dropdown-menu" id="menu-hemisphere">
           <li><a href="#">Why the Monroe Doctrine?</a></li>
           <li><a href="#">Hispanic Legacy (Working Paper)</a></li>
           <li><a href="#">Hispanic Legacy (Podcast Episode)</a></li>
-          <li><a href="#">"Civitas Sancti Tui"</a></li>
+          <li><a href="#">&ldquo;Civitas Sancti Tui&rdquo;</a></li>
         </ul>
       </li>
       <li class="dropdown">
-        <a href="#" class="dropbtn">About Me &#9662;</a>
-        <ul class="dropdown-menu">
-          <li><a href="bio.html">Bio</a></li>
+        <button type="button" class="dropbtn is-section" aria-expanded="false" aria-controls="menu-about">About Me <span aria-hidden="true">&#9662;</span></button>
+        <ul class="dropdown-menu" id="menu-about">
+          <li><a href="bio.html" aria-current="page">Bio</a></li>
           <li><a href="writing.html">Selected Writing</a></li>
         </ul>
       </li>
@@ -36,93 +48,78 @@
   </nav>
 </header>
 
-  <!-- Main Content with Alternating Containers -->
-  <main>
+<main id="main" tabindex="-1">
 
-    <section class="bio-hero">
-  <img class="bio-hero__img" src="./assets/bio/dupont.png" alt="" />
-  <blockquote class="bio-hero-quote">
-    <p>“Let us resolve tonight that young Americans will always see those Potomac lights; that they will always find there a city of hope in a country that is free. And let us resolve they will say of our day and our generation that we did keep faith with our God, that we did act worthy of ourselves; that we did protect and pass on lovingly that shining city on a hill.”</p>
-  <cite>Ronald Reagan &middot; "A Vision for America" (1980)</cite>
-</blockquote>
-    </section>
+  <section class="bio-hero">
+    <img class="bio-hero__img" src="assets/web/bio/dupont.webp" width="1787" height="712" alt="A carved figure on the Dupont Circle fountain at dusk, with bare trees and the lit streets of Washington, D.C., behind it" fetchpriority="high" />
+    <blockquote class="bio-hero-quote">
+      <p>&ldquo;Let us resolve tonight that young Americans will always see those Potomac lights; that they will always find there a city of hope in a country that is free. And let us resolve they will say of our day and our generation that we did keep faith with our God, that we did act worthy of ourselves; that we did protect and pass on lovingly that shining city on a hill.&rdquo;</p>
+      <cite>Ronald Reagan &middot; &ldquo;A Vision for America&rdquo; (1980)</cite>
+    </blockquote>
+  </section>
 
-<section class="content-section">
-  <div class="container">
-    <div class="split-panel">
-      <div class="split-panel__grid">
-        <div class="split-panel__text">
-          <p>I'm a defense acquisitions professional living in Washington, D.C., with previous experience working at public relations firms and free-market think-tanks at home and in Latin America.</p>
-          <p>Outside of work, I write about acquisition, military innovation, geopolitics, and the historical roots of liberty in the Americas. My writing has appeared in outlets including <i>Forbes</i>, Fox News, <i>The Hill</i>, <i>Seapower Magazine</i>, and U.S. Naval Institute <i>Proceedings</i>.</p>
-        <p>I have a B.A. in International Affairs from the George Washington University and earned an M.A. in History at Georgetown.</p>
-        <p>I was born in Guayaquil, Ecuador, and have called the D.C. area home since 1993.</p>
-        <p><a href="writing.html">A selected list of my writing, from 2014 until present, is available here.</a></p>
-        </div>
-        <div class="split-panel__media">
-          <img src="/assets/bio/jks_1_var.png"/>
+  <section class="content-section" aria-labelledby="bio-title">
+    <div class="container">
+      <div class="split-panel">
+        <div class="split-panel__grid">
+          <div class="split-panel__text">
+            <h1 id="bio-title">Biography</h1>
+            <p>I&rsquo;m a defense acquisitions professional living in Washington, D.C., with previous experience working at public relations firms and free-market think tanks at home and in Latin America.</p>
+            <p>Outside of work, I write about acquisition, military innovation, geopolitics, and the historical roots of liberty in the Americas. My writing has appeared in outlets including <i>Forbes</i>, Fox News, <i>The Hill</i>, <i>Seapower Magazine</i>, and U.S. Naval Institute <i>Proceedings</i>.</p>
+            <p>I have a B.A. in International Affairs from the George Washington University and earned an M.A. in History at Georgetown.</p>
+            <p>I was born in Guayaquil, Ecuador, and have called the D.C. area home since 1993.</p>
+            <p><a href="writing.html">A selected list of my writing, from 2014 until present, is available here.</a></p>
+          </div>
+          <div class="split-panel__media">
+            <img src="assets/web/bio/jks_1_var.webp" width="1000" height="1000" alt="Johannes standing between two uniformed officers on a harbor road, with a crane barge moored behind them" loading="lazy" />
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-        <section class="content-section">
-  <div class="container">
-    <div class="card-grid-2">
-
-      <!-- Card 1 -->
-      <article class="photo-card">
-        <div class="card-image-wrap">
-          <img src="./assets/bio/jks_2a.png">
-        </div>
-        <div class="card-body">
-          <p class="card-subtitle">Me and a tank on a beach.</p>
-        </div>
-      </article>
-
-      <!-- Card 2 -->
-      <article class="photo-card">
-        <div class="card-image-wrap">
-          <img src="./assets/bio/jks_2b.png" alt="Item 2" />
-        </div>
-        <div class="card-body">
-          <p class="card-subtitle">Attent in an audience.</p>
-        </div>
-      </article>
-
-      <!-- Card 3 -->
-      <article class="photo-card">
-        <div class="card-image-wrap">
-          <img src="./assets/bio/jks_2c.png" alt="Item 3" />
-        </div>
-        <div class="card-body">
-          <p class="card-subtitle">With José Piñera.</p>
-        </div>
-      </article>
-
-      <!-- Card 4 -->
-      <article class="photo-card">
-        <div class="card-image-wrap">
-          <img src="./assets/bio/jks_2d.png" alt="Item 4" />
-        </div>
-        <div class="card-body">
-          <p class="card-subtitle">With Mario Vargas Llosa.</p>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-  </main>
-
-  <footer class="footer">
+  <section class="content-section" aria-label="Photographs">
     <div class="container">
-      <p style="font-size:var(--t-2xl); color:var(--gold);">𒂼𒄄</p>
-      <p>&copy; 2026 JKS. All rights reserved.</p>
+      <div class="card-grid-2">
+        <figure class="photo-card">
+          <div class="card-image-wrap">
+            <img src="assets/web/bio/jks_2a.webp" width="1200" height="800" alt="Johannes standing on a beach in front of an amphibious assault vehicle" loading="lazy" />
+          </div>
+          <figcaption class="card-body card-caption">Me and a tank on a beach.</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+          <div class="card-image-wrap">
+            <img src="assets/web/bio/jks_2b.webp" width="1200" height="578" alt="A conference audience seated at round tables, listening to a speaker at a lectern" loading="lazy" />
+          </div>
+          <figcaption class="card-body card-caption">Attentive in the audience.</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+          <div class="card-image-wrap">
+            <img src="assets/web/bio/jks_2c.webp" width="923" height="616" alt="Johannes with José Piñera and another conference attendee" loading="lazy" />
+          </div>
+          <figcaption class="card-body card-caption">With José Piñera.</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+          <div class="card-image-wrap">
+            <img src="assets/web/bio/jks_2d.webp" width="1200" height="800" alt="Johannes with Mario Vargas Llosa at an evening reception" loading="lazy" />
+          </div>
+          <figcaption class="card-body card-caption">With Mario Vargas Llosa.</figcaption>
+        </figure>
+      </div>
     </div>
-  </footer>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p class="footer__mark" role="img" aria-label="Amagi, the Sumerian word for liberty">𒂼𒄄</p>
+    <p>&copy; 2026 JKS. All rights reserved.</p>
+  </div>
+</footer>
 
 </body>
-
-
 </html>

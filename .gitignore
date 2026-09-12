@@ -1,0 +1,20 @@
+# OS clutter
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editors
+.claude/
+.vscode/
+.idea/
+*.swp
+
+# Python (in case you ever un-ignore tools/)
+__pycache__/
+*.pyc
+
+#Others
+
+reference/
+assets/home/
+assets/bio/
