@@ -43,7 +43,7 @@
           <li><a href="writing.html">Selected Writing</a></li>
         </ul>
       </li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
@@ -51,14 +51,15 @@
 <main id="main" tabindex="-1">
 
   <section class="hero-carousel" aria-roledescription="carousel" aria-label="Quotations">
+    <!--
     <article id="hero-slide-0" class="photo-hero-fluid is-active" role="group" aria-roledescription="slide" aria-label="1 of 2">
       <img src="assets/web/home/angel_quito.webp" width="2000" height="554" alt="The Virgin of El Panecillo, a winged statue with a crown of stars, against a grey sky above Quito" class="photo-fluid-img" fetchpriority="high" />
       <blockquote class="hero-quote">
         <p>&ldquo;The law is our shield; the spoken word, our weapon; and the citizen&rsquo;s patriotic endeavor, our cause.&rdquo;</p>
         <cite>Juan Montalvo &middot; Ecuador (1832&ndash;1889)</cite>
       </blockquote>
-    </article>
-    <article id="hero-slide-1" class="photo-hero-fluid" role="group" aria-roledescription="slide" aria-label="2 of 2" aria-hidden="true" inert>
+    </article> -->
+    <article id="hero-slide-1" class="photo-hero-fluid is-active" role="group" aria-roledescription="slide" aria-label="2 of 2" aria-hidden="true" inert>
       <img src="assets/web/home/lima-coast.webp" width="1600" height="523" alt="Apartment towers above the eroded cliffs of the Costa Verde in Lima" class="photo-fluid-img" loading="lazy" />
       <blockquote class="hero-quote hero-quote--long">
         <p>&ldquo;Liberty, daughter and mother of rationality and the critical spirit, places a heavy burden on the shoulders of the human being: having to decide for oneself what is beneficial and what is harmful, how to face the innumerable challenges of existence, whether society functions as it should or whether it must be transformed.&rdquo;</p>
@@ -97,7 +98,12 @@
         <p>A selection of my published articles on defense, innovation, foreign strategy, and American monetary policy.</p>
       </header>
 
-      <div class="card-grid-5">
+      <div class="card-carousel__nav" hidden>
+        <button type="button" class="card-carousel__btn" data-dir="-1" aria-controls="defense-articles" aria-label="Previous articles"><span aria-hidden="true">&larr;</span></button>
+        <button type="button" class="card-carousel__btn" data-dir="1" aria-controls="defense-articles" aria-label="Next articles"><span aria-hidden="true">&rarr;</span></button>
+      </div>
+
+      <div class="card-grid-4" id="defense-articles" role="region" aria-label="Defense and strategic articles" tabindex="0">
         <article class="photo-card">
           <div class="card-image-wrap">
             <img src="assets/web/home/articles/20260212_smallwarsjournal.webp" width="478" height="638" alt="" loading="lazy" />
@@ -147,10 +153,79 @@
             <h3 class="card-title"><a href="https://www.usni.org/magazines/proceedings/2024/september/agile-acquisition-now-lessons-ukraine">Agile Acquisition Now: Lessons from Ukraine</a></h3>
           </div>
         </article>
+
+        <article class="photo-card">
+          <div class="card-image-wrap">
+            <img src="assets/web/home/articles/20250411_seapower.webp" width="296" height="394" alt="" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <p class="card-source"><span>Sea Power</span> <time datetime="2025-04-11">April 11, 2025</time></p>
+            <h3 class="card-title"><a href="https://seapowermagazine.org/how-marines-are-3d-printing-lethality-behind-enemy-lines/">How Marines are 3D Printing Lethality Behind Enemy Lines</a></h3>
+          </div>
+        </article>
+
+        <article class="photo-card">
+          <div class="card-image-wrap">
+            <img src="assets/web/home/articles/20230727_marines.webp" width="296" height="394" alt="" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <p class="card-source"><span>Marines.mil</span> <time datetime="2023-07-27">July 27, 2023</time></p>
+            <h3 class="card-title"><a href="https://www.marines.mil/News/News-Display/Article/3473524/back-to-the-future-mric-and-the-rebirth-of-the-corps-air-defense-capability/">Back to the Future: MRIC and the Rebirth of the Corps' Air Defense Capability</a></h3>
+          </div>
+        </article>
+        
+        <article class="photo-card">
+          <div class="card-image-wrap">
+            <img src="assets/web/home/articles/20231005_marines.webp" width="296" height="394" alt="" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <p class="card-source"><span>Marines.mil</span> <time datetime="2023-10-05">October 5, 2023</time></p>
+            <h3 class="card-title"><a href="https://www.marines.mil/News/News-Display/Article/3549430/forging-the-future-how-advanced-manufacturing-is-revolutionizing-marine-corps-l/">Forging the Future: How Advanced Manufacturing is Revolutionizing Marine Corps Logistics</a></h3>
+          </div>
+        </article>
+
+        <article class="photo-card">
+          <div class="card-image-wrap">
+            <img src="assets/web/home/articles/20230829_seapower.webp" width="296" height="394" alt="" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <p class="card-source"><span>Sea Power</span> <time datetime="2023-08-29">August 29, 2023</time></p>
+            <h3 class="card-title"><a href="https://seapowermagazine.org/force-design-2030-acquisition-for-the-future-battlefield/">Force Design 2030: Acquisition for the Future Battlefield</a></h3>
+          </div>
+        </article>   
+
+        <article class="photo-card">
+          <div class="card-image-wrap">
+            <img src="assets/web/home/articles/20231228_navy.webp" width="296" height="394" alt="" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <p class="card-source"><span>Navy.mil</span> <time datetime="2023-12-28">December 28, 2023</time></p>
+            <h3 class="card-title"><a href="https://www.navy.mil/Press-Office/News-Stories/Article/3627576/expeditionary-medical-systems-increasing-warfighter-survivability-in-littoral-c/">Expeditionary Medical Systems: Increasing Warfighter Survivability in Littoral Combat</a></h3>
+          </div>
+        </article>
+
       </div>
 
       <p class="section-link"><a href="writing.html">All selected writing</a></p>
     </div>
+  </section>
+
+  <section class="hero-carousel" aria-roledescription="carousel" aria-label="NSS">
+    <!--
+    <article id="hero-slide-0" class="photo-hero-fluid is-active" role="group" aria-roledescription="slide" aria-label="1 of 2">
+      <img src="assets/web/home/angel_quito.webp" width="2000" height="554" alt="The Virgin of El Panecillo, a winged statue with a crown of stars, against a grey sky above Quito" class="photo-fluid-img" fetchpriority="high" />
+      <blockquote class="hero-quote">
+        <p>&ldquo;The law is our shield; the spoken word, our weapon; and the citizen&rsquo;s patriotic endeavor, our cause.&rdquo;</p>
+        <cite>Juan Montalvo &middot; Ecuador (1832&ndash;1889)</cite>
+      </blockquote>
+    </article> -->
+    <article id="hero-slide-1" class="photo-hero-fluid is-active" role="group" aria-roledescription="slide" aria-label="2 of 2" aria-hidden="true" inert>
+      <img src="assets/web/home/nss25.webp" width="1600" height="523" alt="Apartment towers above the eroded cliffs of the Costa Verde in Lima" class="photo-fluid-img" loading="lazy" />
+      <blockquote class="hero-quote hero-quote--long">
+        <p>&ldquo;After years of neglect, the United States will reassert and enforce the Monroe Doctrine to restore American preeminence in the Western Hemisphere, and to protect our homeland and our access to key geographies throughout the region. We will deny non-Hemispheric competitors the ability to position forces or other threatening capabilities, or to own or control strategically vital assets, in our Hemisphere. This “Trump Corollary” to the Monroe Doctrine is a common-sense and potent restoration of American power and priorities, consistent with American security interests.&rdquo;</p>
+        <cite>Pete Hegseth &middot; Secretary of War</cite>
+      </blockquote>
+    </article>
   </section>
 
 </main>
@@ -158,7 +233,7 @@
 <footer class="footer">
   <div class="container">
     <p class="footer__mark" role="img" aria-label="Amagi, the Sumerian word for liberty">𒂼𒄄</p>
-    <p>&copy; 2026 JKS. All rights reserved.</p>
+    <p>&copy; 2026 JKS.</p>
   </div>
 </footer>
 

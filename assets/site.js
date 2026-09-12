@@ -36,6 +36,86 @@
     });
   });
 
+  /* Topic filter: pills show only the articles tagged with that keyword */
+
+  document.querySelectorAll('.topic-filter').forEach((bar) => {
+    const list = document.getElementById(bar.dataset.filterFor);
+    if (!list) return;
+
+    const pills = Array.from(bar.querySelectorAll('.topic-pill'));
+    const status = bar.querySelector('.topic-filter__status');
+    const items = Array.from(list.querySelectorAll(':scope > .article-item'));
+    const topicsOf = new Map(items.map((item) => [
+      item,
+      Array.from(item.querySelectorAll('.keyword')).map((k) => k.textContent.trim().toLowerCase()),
+    ]));
+
+    const apply = (topic) => {
+      let shown = 0;
+      items.forEach((item) => {
+        const match = !topic || topicsOf.get(item).includes(topic);
+        item.hidden = !match;
+        if (match) shown += 1;
+      });
+
+      let label = '';
+      pills.forEach((pill) => {
+        const active = pill.dataset.topic === topic;
+        pill.setAttribute('aria-pressed', String(active));
+        if (active) label = pill.textContent.trim();
+      });
+
+      if (status) {
+        status.textContent = topic
+          ? `Showing ${shown} of ${items.length} articles · ${label}`
+          : `Showing all ${items.length} articles`;
+      }
+    };
+
+    // Clicking the active topic again returns to the full list.
+    pills.forEach((pill) => {
+      pill.addEventListener('click', () => {
+        const isActive = pill.getAttribute('aria-pressed') === 'true';
+        apply(isActive ? '' : pill.dataset.topic);
+      });
+    });
+
+    bar.hidden = false;
+    apply('');
+  });
+
+  /* Publication carousel: arrows page through a scroll-snap track */
+
+  document.querySelectorAll('.card-carousel__nav').forEach((nav) => {
+    const buttons = Array.from(nav.querySelectorAll('.card-carousel__btn'));
+    const track = buttons[0] && document.getElementById(buttons[0].getAttribute('aria-controls'));
+    if (!track) return;
+
+    const smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const update = () => {
+      const max = track.scrollWidth - track.clientWidth;
+      nav.hidden = max <= 1;
+      buttons.forEach((button) => {
+        const dir = Number(button.dataset.dir);
+        button.disabled = dir < 0 ? track.scrollLeft <= 1 : track.scrollLeft >= max - 1;
+      });
+    };
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        track.scrollBy({
+          left: Number(button.dataset.dir) * track.clientWidth,
+          behavior: smooth ? 'smooth' : 'auto',
+        });
+      });
+    });
+
+    track.addEventListener('scroll', update, { passive: true });
+    new ResizeObserver(update).observe(track);
+    update();
+  });
+
   /* Hero carousel */
 
   const carousel = document.querySelector('.hero-carousel');

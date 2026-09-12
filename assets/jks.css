@@ -589,6 +589,163 @@
     pointer-events: auto;
   }
 
+  /* Contact page */
+
+  .contact-layout {
+    inline-size: 100%;
+    max-inline-size: var(--measure, 70ch);
+    margin-inline: auto;
+    text-align: start;
+  }
+
+  .contact-lead {
+    font-size: var(--t-m, 1.125rem);
+    line-height: 1.7;
+    color: var(--paper, #f2efe9);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+    gap: clamp(1rem, 2cqi, 1.5rem);
+    margin-block: var(--space-l, 2.5rem);
+  }
+
+  .contact-card {
+    padding: clamp(1.2rem, 2.5cqi, 1.6rem);
+    border: 1px solid var(--hairline, #29292d);
+    border-radius: var(--radius, 0.1875rem);
+    background: var(--ink-raised, #1c1c21);
+  }
+
+  .contact-card h2 {
+    margin-block-end: var(--space-xs, 0.6rem);
+    font-size: var(--t-m, 1rem);
+    color: var(--gold, #c39b4e);
+    text-align: start;
+  }
+
+  .contact-card p {
+    font-size: var(--t-s, 0.8125rem);
+    line-height: 1.65;
+    color: var(--paper-dim, #bdb8ad);
+  }
+
+  .contact-checklist-panel {
+    margin-block-end: var(--space-l, 2.5rem);
+    padding: clamp(1.2rem, 2.5cqi, 1.8rem);
+    border: 1px solid var(--gold);
+    border-radius: var(--radius, 0.1875rem);
+    background: var(--ink-deep, #08080a);
+  }
+
+  .contact-checklist-panel h3 {
+    margin-block-end: var(--space-s, 1rem);
+    font-size: var(--t-m, 1rem);
+    letter-spacing: var(--tracking-wide, 0.07em);
+    text-transform: uppercase;
+    color: var(--paper, #f2efe9);
+    text-align: start;
+  }
+
+  .contact-checklist {
+    display: grid;
+    gap: var(--space-xs, 0.6rem);
+    padding-inline-start: 1.25rem;
+    font-size: var(--t-s, 0.8125rem);
+    color: var(--paper-dim, #bdb8ad);
+  }
+
+  .contact-checklist li::marker {
+    color: var(--gold, #c39b4e);
+  }
+
+  .contact-form {
+    display: grid;
+    gap: var(--space-m, 1.5rem);
+    margin-block-start: var(--space-l, 2.5rem);
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    gap: var(--space-m, 1.5rem);
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xs, 0.35rem);
+  }
+
+  .form-group label {
+    font-size: var(--t-xs, 0.75rem);
+    font-weight: var(--w-semibold, 600);
+    letter-spacing: var(--tracking-wide, 0.07em);
+    text-transform: uppercase;
+    color: var(--paper-dim, #bdb8ad);
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    inline-size: 100%;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid var(--hairline-strong, #36363a);
+    border-radius: var(--radius, 0.1875rem);
+    background: var(--ink-raised, #1c1c21);
+    color: var(--paper, #f2efe9);
+    font-size: var(--t-s, 0.8125rem);
+    transition:
+      border-color var(--speed, 180ms) var(--ease, ease),
+      background-color var(--speed, 180ms) var(--ease, ease);
+  }
+
+  .form-group input:focus-visible,
+  .form-group textarea:focus-visible,
+  .form-group select:focus-visible {
+    border-color: var(--gold-bright, #e0bf7d);
+    background: var(--ink-deep, #08080a);
+  }
+
+  .form-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-block-size: var(--target-size, 2.75rem);
+    padding: 0.75rem 2rem;
+    border: 1px solid var(--gold, #c39b4e);
+    border-radius: var(--radius, 0.1875rem);
+    background: var(--gold, #c39b4e);
+    color: var(--ink-deep, #08080a);
+    font-size: var(--t-s, 0.8125rem);
+    font-weight: var(--w-semibold, 600);
+    letter-spacing: var(--tracking-wide, 0.07em);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:
+      background-color var(--speed, 180ms) var(--ease, ease),
+      border-color var(--speed, 180ms) var(--ease, ease),
+      color var(--speed, 180ms) var(--ease, ease);
+  }
+
+  .form-button a {
+    color: var(--ink-deep)
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .form-button:hover {
+      border-color: var(--gold-bright, #e0bf7d);
+      background: var(--gold-bright, #e0bf7d);
+    }
+  }
+
+  .form-footer-note {
+    font-size: var(--t-xs, 0.75rem);
+    font-style: italic;
+    color: var(--paper-faint, #97918a);
+  }
+
   @supports (backdrop-filter: blur(1px)) {
     .navbar-container {
       backdrop-filter: blur(10px);
@@ -871,7 +1028,7 @@
 
   .hero-quote--long p {
     max-inline-size: 36ch;
-    font-size: clamp(1.05rem, 0.8rem + 1.1cqi, 1.6rem);
+    font-size: var(--t-m);
     line-height: 1.5;
   }
 
@@ -953,13 +1110,9 @@
 
   /* Biography */
 
-  .split-panel {
-    container: biography / inline-size;
-  }
-
   .split-panel__grid {
     display: grid;
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: center;
     gap: var(--space-l, 2.5rem);
   }
@@ -979,24 +1132,36 @@
     color: var(--paper, #f2efe9);
   }
 
+  .split-panel__text :is(p) {
+    font-size: var(--t-s);
+  }
+
   .split-panel__media img {
+    display: block;          /* Allows margin auto to center the element */
     inline-size: 100%;
     block-size: auto;
-    aspect-ratio: 1;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
     object-position: var(--portrait-position, center);
   }
 
-  @container biography (min-width: 40rem) {
+  @media (max-width: 48rem) {
     .split-panel__grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: clamp(1.5rem, 4cqi, 3rem);
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .split-panel__text {
+      text-align: center;
+    }
+
+    .split-panel__text :is(h1, h2, h3) {
+      text-align: center;
     }
   }
 
   /* Publication cards and biography gallery */
 
-  .card-grid-5,
+  .card-grid-4,
   .card-grid-2 {
     display: grid;
     gap: clamp(1rem, 2.5cqi, 2rem);
@@ -1004,11 +1169,98 @@
     text-align: start;
   }
 
-  .card-grid-5 {
-    grid-template-columns:
-      repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  /*
+    Publication carousel: a horizontal scroll-snap track.
+    Four cards per view on wide containers, three on medium,
+    fewer on phones. Arrow buttons page through it (site.js);
+    touch users can also swipe.
+  */
+
+  .card-grid-4 {
+    --per-view: 1.15;
+    --carousel-gap: clamp(1rem, 2.5cqi, 2rem);
+    display: flex;
+    gap: var(--carousel-gap);
+    margin-block-start: var(--space-s, 1rem);
+    /* Room for card focus outlines inside the scroll area. */
+    padding: 4px;
+    margin-inline: -4px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 4px;
+    scrollbar-width: none;
     --card-image-fit: contain;
     --card-image-ratio: 4 / 3;
+  }
+
+  .card-grid-4::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card-grid-4 > * {
+    flex: 0 0 calc((100% - (var(--per-view) - 1) * var(--carousel-gap)) / var(--per-view));
+    scroll-snap-align: start;
+  }
+
+  @container (min-width: 30rem) {
+    .card-grid-4 { --per-view: 2; }
+  }
+
+  @container (min-width: 44rem) {
+    .card-grid-4 { --per-view: 3; }
+  }
+
+  @container (min-width: 64rem) {
+    .card-grid-4 { --per-view: 4; }
+  }
+
+  .card-carousel__nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+
+  .card-carousel__nav[hidden] {
+    display: none;
+  }
+
+  .card-carousel__btn {
+    display: grid;
+    place-items: center;
+    inline-size: var(--target-size, 2.75rem);
+    block-size: var(--target-size, 2.75rem);
+    padding: 0;
+    border: 1px solid var(--hairline-strong, #36363a);
+    border-radius: 50%;
+    background: transparent;
+    font-size: var(--t-m, 1rem);
+    line-height: 1;
+    color: var(--gold, #c39b4e);
+    cursor: pointer;
+    transition:
+      border-color var(--speed, 180ms) var(--ease, ease),
+      color var(--speed, 180ms) var(--ease, ease);
+  }
+
+  .card-carousel__btn:disabled {
+    color: var(--paper-faint, #97918a);
+    opacity: 0.4;
+    cursor: default;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .card-carousel__btn:not(:disabled):hover {
+      border-color: var(--hairline-gold, #756039);
+      color: var(--gold-bright, #e0bf7d);
+    }
+  }
+
+  @media (forced-colors: active) {
+    .card-carousel__btn {
+      border-color: ButtonText;
+      color: ButtonText;
+    }
   }
 
   .card-grid-2 {
@@ -1152,8 +1404,8 @@
     color: var(--paper-dim, #bdb8ad);
   }
 
-  .section-head + :is(.article-list, .card-grid-5, .card-grid-2),
-  .container > :is(.article-list, .card-grid-5, .card-grid-2):first-child {
+  .section-head + :is(.article-list, .card-grid-4, .card-grid-2),
+  .container > :is(.article-list, .card-grid-4, .card-grid-2):first-child {
     margin-block-start: 0;
   }
 
@@ -1290,6 +1542,78 @@
     color: var(--paper-dim, #bdb8ad);
   }
 
+  /* Topic filter above the publication index */
+
+  .topic-filter {
+    inline-size: 100%;
+    max-inline-size: var(--archive-width, 58rem);
+    margin-inline: auto;
+    margin-block-end: var(--space-m, 1.5rem);
+    text-align: center;
+  }
+
+  .topic-filter ~ .article-list {
+    margin-block-start: 0;
+  }
+
+  .topic-filter__pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .topic-pill {
+    min-block-size: var(--target-size, 2.75rem);
+    padding: 0.4rem 1.1rem;
+    border: 1px solid var(--hairline-strong, #36363a);
+    border-radius: 999px;
+    background: transparent;
+    font-size: var(--t-xs, 0.75rem);
+    font-weight: var(--w-semibold, 600);
+    line-height: 1.4;
+    letter-spacing: var(--tracking-wide, 0.07em);
+    text-transform: uppercase;
+    color: var(--paper-dim, #bdb8ad);
+    cursor: pointer;
+    transition:
+      border-color var(--speed, 180ms) var(--ease, ease),
+      background-color var(--speed, 180ms) var(--ease, ease),
+      color var(--speed, 180ms) var(--ease, ease);
+  }
+
+  .topic-pill[aria-pressed="true"] {
+    border-color: var(--gold, #c39b4e);
+    background: var(--gold, #c39b4e);
+    color: var(--ink-deep, #08080a);
+  }
+
+  .topic-filter__status {
+    margin-block-start: var(--space-s, 1rem);
+    font-size: var(--t-xs, 0.75rem);
+    letter-spacing: var(--tracking-wide, 0.07em);
+    text-transform: uppercase;
+    color: var(--paper-faint, #97918a);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .topic-pill:not([aria-pressed="true"]):hover {
+      border-color: var(--hairline-gold, #756039);
+      color: var(--gold-bright, #e0bf7d);
+    }
+  }
+
+  @media (forced-colors: active) {
+    .topic-pill {
+      border-color: ButtonText;
+    }
+
+    .topic-pill[aria-pressed="true"] {
+      background: Highlight;
+      color: HighlightText;
+    }
+  }
+
   @media (hover: hover) and (pointer: fine) {
     .article-item:hover {
       border-block-end-color: var(--hairline-gold, #756039);
@@ -1318,6 +1642,75 @@
       gap: 0.35rem;
       margin-block-start: 0.8rem;
     }
+  }
+
+  /*
+    Long-form essay content. The essay h1 is deliberately smaller
+    than the h1 used for page/section headers elsewhere on the site.
+  */
+
+  .essay {
+    inline-size: 100%;
+    max-inline-size: var(--measure, 70ch);
+    margin-inline: auto;
+  }
+
+  .essay > .eyebrow {
+    display: block;
+    margin-block-end: var(--space-xs, 0.6rem);
+    text-align: center;
+  }
+
+  .essay > h1 {
+    max-inline-size: 34ch;
+    margin-inline: auto;
+    margin-block-end: var(--space-m, 1.5rem);
+    font-size: var(--t-xl, 1.5rem);
+    text-align: center;
+    color: var(--paper, #f2efe9);
+  }
+
+  .essay > h2 {
+    margin-block: var(--space-l, 2.5rem) var(--space-s, 1rem);
+    font-size: var(--t-l, 1.125rem);
+    color: var(--paper, #f2efe9);
+  }
+
+  .essay > p {
+    font-size: var(--t-m, 1rem);
+    line-height: 1.8;
+    text-align: start;
+    color: var(--paper-dim, #bdb8ad);
+  }
+
+  .essay > p + p {
+    margin-block-start: var(--space-s, 1rem);
+  }
+
+  /* Images sit on their own line, full measure width, whether or not wrapped in a figure. */
+
+  .essay img {
+    inline-size: 100%;
+    block-size: auto;
+    margin-block: var(--space-l, 2.5rem);
+    border-radius: var(--radius, 0.1875rem);
+  }
+
+  .essay figure {
+    margin-block: var(--space-l, 2.5rem);
+  }
+
+  .essay figure img {
+    margin-block: 0;
+  }
+
+  .essay figcaption {
+    margin-block-start: var(--space-xs, 0.6rem);
+    font-size: var(--t-xs, 0.75rem);
+    line-height: 1.6;
+    text-align: center;
+    color: var(--paper-faint, #97918a);
+    padding-bottom:1rem;
   }
 }
 

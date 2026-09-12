@@ -43,7 +43,7 @@
           <li><a href="writing.html" aria-current="page">Selected Writing</a></li>
         </ul>
       </li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
@@ -56,85 +56,98 @@
         <h1>Selected Writing</h1>
       </header>
 
+      <div class="topic-filter" data-filter-for="articles" role="group" aria-label="Filter by topic" hidden>
+        <div class="topic-filter__pills">
+          <button type="button" class="topic-pill" data-topic="" aria-pressed="true">All</button>
+          <button type="button" class="topic-pill" data-topic="governance" aria-pressed="false">Governance</button>
+          <button type="button" class="topic-pill" data-topic="americas" aria-pressed="false">Americas</button>
+          <button type="button" class="topic-pill" data-topic="liberty" aria-pressed="false">Liberty</button>
+          <button type="button" class="topic-pill" data-topic="economics" aria-pressed="false">Economics</button>
+          <button type="button" class="topic-pill" data-topic="geopolitics" aria-pressed="false">Geopolitics</button>
+          <button type="button" class="topic-pill" data-topic="history" aria-pressed="false">History</button>
+        </div>
+        <p class="topic-filter__status" role="status"></p>
+      </div>
+
       <!-- Generated from assets/writing/dictionary.json by tools/build_writing.py. Edit the JSON, then rerun the script. -->
-      <ul class="article-list">
+<ul class="article-list" id="articles">
 <!-- writing-list:start -->
       <li class="article-item">
         <p class="article-meta"><span>The Hill</span> <time datetime="2025-05-28">May 28, 2025</time></p>
         <h2><a href="https://thehill.com/opinion/international/5320167-pope-leo-xiv-moral-leadership-venezuela-maduro/">Pope Leo XIV condemned Putin. Will he confront Maduro next?</a></h2>
-        <ul class="keywords" aria-label="Topics"><li class="keyword">Latin America</li><li class="keyword">democracy</li><li class="keyword">authoritarianism</li><li class="keyword">geopolitics</li><li class="keyword">human rights</li></ul>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">americas</li><li class="keyword">governance</li><li class="keyword">geopolitics</li><li class="keyword">liberty</li></ul>
       </li>
       <li class="article-item">
         <p class="article-meta"><span>Townhall</span> <time datetime="2024-07-08">July 8, 2024</time></p>
         <h2><a href="https://townhall.com/columnists/johannesschmidt/2024/07/08/lessons-on-tyranny-from-the-spanish-empire-n2641505">Lessons on Tyranny From the Spanish Empire</a></h2>
-        <ul class="keywords" aria-label="Topics"><li class="keyword">history</li><li class="keyword">authoritarianism</li><li class="keyword">liberty</li><li class="keyword">Western civilization</li><li class="keyword">political thought</li></ul>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">history</li><li class="keyword">governance</li><li class="keyword">liberty</li></ul>
       </li>
       <li class="article-item">
         <p class="article-meta"><span>Townhall</span> <time datetime="2023-05-05">May 5, 2023</time></p>
         <h2><a href="https://townhall.com/columnists/johannesschmidt/2023/05/05/cinco-de-mayo-the-day-napoleon-accidentally-liberated-latin-america-n2622884?fbclid=IwAR0WRg--JoVuyG7A0qQQnnLeh90H2FsSv39Coc9RoDbSMtbW71b5K-kud9g">The Day Napoleon Accidentally Liberated Latin America</a></h2>
-        <ul class="keywords" aria-label="Topics"><li class="keyword">history</li><li class="keyword">Latin America</li><li class="keyword">liberty</li><li class="keyword">geopolitics</li></ul>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">history</li><li class="keyword">americas</li><li class="keyword">liberty</li><li class="keyword">geopolitics</li></ul>
       </li>
       <li class="article-item">
         <p class="article-meta"><span>Townhall</span> <time datetime="2022-05-01">May 1, 2022</time></p>
         <h2><a href="https://townhall.com/columnists/johannesschmidt/2022/05/01/zelensky-has-pointed-out-something-the-soviets-recognized-in-1978-the-west-has-lost-its-courage-n2606501#google_vignette">The West Has Lost its Courage</a></h2>
-        <ul class="keywords" aria-label="Topics"><li class="keyword">geopolitics</li><li class="keyword">Western civilization</li><li class="keyword">democracy</li><li class="keyword">authoritarianism</li><li class="keyword">history</li></ul>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">geopolitics</li><li class="keyword">governance</li><li class="keyword">history</li><li class="keyword">liberty</li></ul>
       </li>
       <li class="article-item">
         <p class="article-meta"><span>The Washington Examiner</span> <time datetime="2021-11-27">November 27, 2021</time></p>
         <h2><a href="https://www.washingtonexaminer.com/op-eds/211408/covid-19-and-the-third-hand-dealers-of-truth/">COVID-19 and the ‘Third-Hand Dealers of Truth’</a></h2>
-        <ul class="keywords" aria-label="Topics"><li class="keyword">COVID-19</li><li class="keyword">media</li><li class="keyword">public policy</li><li class="keyword">liberty</li></ul>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">governance</li><li class="keyword">liberty</li></ul>
       </li>
       <li class="article-item">
         <p class="article-meta"><span>The Washington Examiner</span> <time datetime="2020-07-02">July 2, 2020</time></p>
         <h2><a href="https://www.washingtonexaminer.com/op-eds/2739762/christopher-columbus-and-the-birth-of-modern-human-rights/">Christopher Columbus and the Birth of Modern Human Rights</a></h2>
-        <ul class="keywords" aria-label="Topics"><li class="keyword">history</li><li class="keyword">human rights</li><li class="keyword">Latin America</li><li class="keyword">Western civilization</li></ul>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">history</li><li class="keyword">liberty</li><li class="keyword">americas</li></ul>
       </li>
       <li class="article-item">
         <p class="article-meta"><span>The Washington Examiner</span> <time datetime="2020-02-12">February 12, 2020</time></p>
         <h2><a href="https://www.washingtonexaminer.com/opinion/op-eds/it-would-be-crazy-for-the-senate-not-to-confirm-judy-shelton">It Would be &#x27;Crazy&#x27; for the Senate not to Confirm Judy Shelton</a></h2>
-        <ul class="keywords" aria-label="Topics"><li class="keyword">monetary policy</li><li class="keyword">Federal Reserve</li><li class="keyword">economics</li><li class="keyword">United States</li><li class="keyword">public policy</li></ul>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">economics</li><li class="keyword">americas</li><li class="keyword">governance</li></ul>
       </li>
       <li class="article-item">
         <p class="article-meta"><span>ADN America</span> <time datetime="2020-01-20">January 20, 2020</time></p>
         <h2><a href="https://adnamerica.com/en/latin-america/latin-american-democracy-danger-after-bidens-first-year">Latin American democracy in danger after Biden&#x27;s first year</a></h2>
-        <ul class="keywords" aria-label="Topics"><li class="keyword">Latin America</li><li class="keyword">democracy</li><li class="keyword">geopolitics</li><li class="keyword">United States</li><li class="keyword">authoritarianism</li></ul>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">americas</li><li class="keyword">governance</li><li class="keyword">geopolitics</li></ul>
       </li>
       <li class="article-item">
         <p class="article-meta"><span>The Washington Examiner</span> <time datetime="2019-07-01">July 1, 2019</time></p>
         <h2><a href="https://www.washingtonexaminer.com/opinion/op-eds/the-hispanic-roots-of-the-american-revolution">The Hispanic Roots of the American Revolution</a></h2>
-        <ul class="keywords" aria-label="Topics"><li class="keyword">history</li><li class="keyword">Latin America</li><li class="keyword">United States</li><li class="keyword">liberty</li><li class="keyword">Hispanic heritage</li></ul>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">history</li><li class="keyword">americas</li><li class="keyword">liberty</li></ul>
       </li>
       <li class="article-item">
         <p class="article-meta"><span>The Daily Caller</span> <time datetime="2016-11-03">November 3, 2016</time></p>
         <h2><a href="https://dailycaller.com/2016/11/03/on-november-8th-im-voting-for-our-next-fed-chair/">On November 8th, I’m Voting for our Next Fed Chair</a></h2>
-        <ul class="keywords" aria-label="Topics"><li class="keyword">monetary policy</li><li class="keyword">Federal Reserve</li><li class="keyword">economics</li><li class="keyword">United States</li></ul>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">economics</li><li class="keyword">americas</li><li class="keyword">governance</li></ul>
       </li>
       <li class="article-item">
         <p class="article-meta"><span>Forbes</span> <time datetime="2015-10-13">October 13, 2015</time></p>
         <h2><a href="https://www.forbes.com/sites/realspin/2015/10/13/voters-should-be-fed-up-that-no-one-is-talking-monetary-policy/?sh=5766171b2404">Voters Should Be Fed Up That No One Is Talking Monetary Policy</a></h2>
-        <ul class="keywords" aria-label="Topics"><li class="keyword">monetary policy</li><li class="keyword">Federal Reserve</li><li class="keyword">economics</li><li class="keyword">public policy</li><li class="keyword">United States</li></ul>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">economics</li><li class="keyword">governance</li><li class="keyword">americas</li></ul>
       </li>
       <li class="article-item">
         <p class="article-meta"><span>Forbes</span> <time datetime="2015-09-18">September 18, 2015</time></p>
         <h2><a href="https://www.forbes.com/sites/jaredmeyer/2015/09/18/somc-reconsider-federal-reserve-dual-mandate-monetary-policy/?sh=fba1bc450329">It’s Time to Reconsider the Fed’s Dual Mandate</a></h2>
         <p class="article-note">Co-authored with Jared Meyer, Manhattan Institute</p>
-        <ul class="keywords" aria-label="Topics"><li class="keyword">monetary policy</li><li class="keyword">Federal Reserve</li><li class="keyword">economics</li><li class="keyword">public policy</li></ul>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">economics</li><li class="keyword">governance</li></ul>
       </li>
       <li class="article-item">
         <p class="article-meta"><span>Fox News</span> <time datetime="2015-05-19">May 19, 2015</time></p>
         <h2><a href="https://www.foxnews.com/opinion/opinion-hispanic-voters-and-our-forgotten-libertarian-tradition">Hispanic Voters and our Forgotten Libertarian Tradition</a></h2>
-        <ul class="keywords" aria-label="Topics"><li class="keyword">Latin America</li><li class="keyword">United States</li><li class="keyword">liberty</li><li class="keyword">Hispanic heritage</li><li class="keyword">political thought</li></ul>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">americas</li><li class="keyword">liberty</li><li class="keyword">governance</li></ul>
       </li>
       <li class="article-item">
         <p class="article-meta"><span>American Institute for Economic Research</span> <time datetime="2015-02-05">February 5, 2015</time></p>
         <h2><a href="https://aier.org/article/greek-crisis-creates-standoff-between-regulators-and-potential-investors/">Greek Crisis Creates Standoff Between Regulators and Investors</a></h2>
         <p class="article-note">Ft. conversation with Jerry Jordan, former president and CEO at the Cleveland Fed</p>
-        <ul class="keywords" aria-label="Topics"><li class="keyword">monetary policy</li><li class="keyword">economics</li><li class="keyword">Federal Reserve</li><li class="keyword">financial crisis</li><li class="keyword">regulation</li></ul>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">economics</li><li class="keyword">governance</li><li class="keyword">geopolitics</li></ul>
       </li>
       <li class="article-item">
         <p class="article-meta"><span>American Institute for Economic Research</span> <time datetime="2014-12-30">December 30, 2014</time></p>
         <h2><a href="https://aier.org/article/defending-the-dollar-in-ecuador/">Defending the Dollar in Ecuador</a></h2>
-        <ul class="keywords" aria-label="Topics"><li class="keyword">monetary policy</li><li class="keyword">Latin America</li><li class="keyword">economics</li><li class="keyword">currency</li></ul>
+        <ul class="keywords" aria-label="Topics"><li class="keyword">economics</li><li class="keyword">americas</li><li class="keyword">governance</li></ul>
       </li>
 <!-- writing-list:end -->
       </ul>
@@ -146,7 +159,7 @@
 <footer class="footer">
   <div class="container">
     <p class="footer__mark" role="img" aria-label="Amagi, the Sumerian word for liberty">𒂼𒄄</p>
-    <p>&copy; 2026 JKS. All rights reserved.</p>
+    <p>&copy; 2026 JKS.</p>
   </div>
 </footer>
 
