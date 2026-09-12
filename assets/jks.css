@@ -589,6 +589,21 @@
     pointer-events: auto;
   }
 
+  .video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.video-container video {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  display: block;
+}
   /* Contact page */
 
   .contact-layout {
@@ -1134,6 +1149,24 @@
 
   .split-panel__text :is(p) {
     font-size: var(--t-s);
+  }
+
+  .split-panel__text h2.lyric {
+    font-style:italic;
+    font-weight: 100;
+    font-size: var(--t-l);
+    text-align:center;
+    line-height:2;
+  }
+
+  .split-panel__grid--lyrics {
+    max-inline-size: 54rem;
+    margin-inline: auto;
+    gap: var(--space-m, 1.5rem);
+  }
+
+  .split-panel__grid--lyrics .split-panel__text {
+    text-align: center;
   }
 
   .split-panel__media img {
