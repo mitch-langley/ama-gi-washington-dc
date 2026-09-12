@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JOHANNES K. SCHMIDT</title>
+  <link rel="stylesheet" href="assets/jks.css" />
+</head>
+<body>
+
+<header class="navbar-container">
+  <nav class="navbar">
+    <a href="#" class="logo">Johannes K. Schmidt</a>
+    
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <!-- Dropdown Item -->
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Our Hemisphere &#9662;</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Why the Monroe Doctrine?</a></li>
+          <li><a href="#">Hispanic Legacy (Working Paper)</a></li>
+          <li><a href="#">Hispanic Legacy (Podcast Episode)</a></li>
+          <li><a href="#">"Civitas Sancti Tui"</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">About Me &#9662;</a>
+        <ul class="dropdown-menu">
+          <li><a href="bio.html">Bio</a></li>
+          <li><a href="writing.html">Selected Writing</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- Main Content with Alternating Containers -->
+  <main>
+
+<section class="content-section">
+  <div class="container">
+    <h1>Selected Writing</h1>
+
+    <div id="articles-list" class="article-list"></div>
+  </div>
+
+  <script>
+    fetch('./assets/writing/dictionary.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error: ${response.status}`);
+        }
+
+        return response.json();
+      })
+      .then(articles => {
+        const container = document.getElementById('articles-list');
+
+        articles.forEach(article => {
+          const item = document.createElement('article');
+          item.className = 'article-item';
+
+          const keywords = article.keywords
+            .map(keyword => `
+              <span class="keyword">${keyword}</span>
+            `)
+            .join('');
+
+          item.innerHTML = `
+            <div class="article-meta">
+              <span>${article.outlet}</span>
+              <span>${article.date}</span>
+            </div>
+
+            <h3>
+              <a
+                href="${article.link}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                ${article["article title"]}
+              </a>
+            </h3>
+
+            <div class="keywords">
+              ${keywords}
+            </div>
+          `;
+
+          container.appendChild(item);
+        });
+      })
+      .catch(error => {
+        console.error('Error loading articles:', error);
+
+        document.getElementById('articles-list').innerHTML = `
+          <p>Unable to load articles.</p>
+        `;
+      });
+  </script>
+</section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p style="font-size:var(--t-2xl); color:var(--gold);">𒂼𒄄</p>
+      <p>&copy; 2026 JKS. All rights reserved.</p>
+    </div>
+  </footer>
+
+<script>
+  const initHeroCarousel = () => {
+  const carousel = document.querySelector('.hero-carousel');
+  if (!carousel) return;
+
+  const slides = Array.from(carousel.querySelectorAll('.photo-hero-fluid'));
+  if (slides.length <= 1) return;
+
+  const dots = Array.from(carousel.querySelectorAll('.hero-carousel__dot'));
+
+  let currentIndex = slides.findIndex((s) => s.classList.contains('is-active'));
+  if (currentIndex === -1) {
+    currentIndex = 0;
+    slides[0].classList.add('is-active');
+  }
+
+  const INTERVAL_MS = 30000;
+  let timer = null;
+
+  const showSlide = (nextIndex) => {
+    if (nextIndex === currentIndex) return;
+
+    slides[currentIndex].classList.remove('is-active');
+    slides[currentIndex].setAttribute('aria-hidden', 'true');
+    if (dots[currentIndex]) {
+      dots[currentIndex].classList.remove('is-active');
+      dots[currentIndex].setAttribute('aria-selected', 'false');
+    }
+
+    slides[nextIndex].classList.add('is-active');
+    slides[nextIndex].removeAttribute('aria-hidden');
+    if (dots[nextIndex]) {
+      dots[nextIndex].classList.add('is-active');
+      dots[nextIndex].setAttribute('aria-selected', 'true');
+    }
+
+    currentIndex = nextIndex;
+  };
+
+  const nextSlide = () => {
+    const nextIndex = (currentIndex + 1) % slides.length;
+    showSlide(nextIndex);
+  };
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      showSlide(index);
+      startTimer();
+    });
+  });
+
+  const startTimer = () => {
+    stopTimer();
+    timer = setInterval(nextSlide, INTERVAL_MS);
+  };
+
+  const stopTimer = () => {
+    if (timer) clearInterval(timer);
+  };
+
+  // Pause on hover or keyboard focus
+  carousel.addEventListener('mouseenter', stopTimer);
+  carousel.addEventListener('mouseleave', startTimer);
+  carousel.addEventListener('focusin', stopTimer);
+  carousel.addEventListener('focusout', startTimer);
+
+  // Pause when browser tab is inactive
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      stopTimer();
+    } else {
+      startTimer();
+    }
+  });
+
+  startTimer();
+};
+
+document.addEventListener('DOMContentLoaded', initHeroCarousel);
+</script>
+
+</body>
+</html>
