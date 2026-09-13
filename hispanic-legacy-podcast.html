@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hispanic Legacy Podcast | Johannes K. Schmidt</title>
+  <meta name="description" content="A conversation on the School of Salamanca, the Spanish Atlantic world, and the intellectual roots of Latin American revolutionary projects." />
+  <link rel="canonical" href="https://www.johanneskschmidt.com/hisplegacy-podcast.html" />
+  <meta property="og:site_name" content="Johannes K. Schmidt" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.johanneskschmidt.com/hisplegacy-podcast.html" />
+  <meta property="og:title" content="Hispanic Legacy Podcast | Johannes K. Schmidt" />
+  <meta property="og:description" content="A conversation on the School of Salamanca, the Spanish Atlantic world, and the intellectual roots of Latin American revolutionary projects." />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preload" href="assets/fonts/noto-serif-v33-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="assets/jks.css" />
+  <script src="assets/site.js" defer></script>
+
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="navbar-container">
+    <nav class="navbar" aria-label="Primary">
+      <a href="index.html" class="logo">Johannes K. Schmidt</a>
+
+      <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <button type="button" class="dropbtn" aria-expanded="false" aria-controls="menu-hemisphere">Our Hemisphere <span aria-hidden="true">&#9662;</span></button>
+        <ul class="dropdown-menu" id="menu-hemisphere">
+          <li><a href="monroe-why.html">Why the Monroe Doctrine?</a></li>
+          <li><a href="monroe-reimagined.html">Reimagining the Monroe Doctrine</a></li>
+          <li><a href="hispanic-legacy-paper.html">Hispanic Legacy (Working Paper)</a></li>
+          <li><a href="hispanic-legacy-podcast.html" aria-current="page">Hispanic Legacy (Podcast Episode)</a></li>
+          <li><a href="civitas-sancti-tui.html">&ldquo;Civitas Sancti Tui&rdquo;</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <button type="button" class="dropbtn is-section" aria-expanded="false" aria-controls="menu-about">About Me <span aria-hidden="true">&#9662;</span></button>
+        <ul class="dropdown-menu" id="menu-about">
+          <li><a href="bio.html">Bio</a></li>
+          <li><a href="writing.html">Selected Writing</a></li>
+        </ul>
+      </li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <section class="page-hero">
+      <img class="page-hero__img" src="assets/web/hemisphere/legacy/iglesia_var.webp" width="1020" height="432" alt="The carved and gilded nave and altarpiece of a Baroque Jesuit church" fetchpriority="high" />
+      <header class="page-hero-quote">
+        <h1 id="podcast-title">The School of Salamanca and the Intellectual Roots of Latin American Revolution</h1>
+        <cite>Johannes Schmidt &middot; Podcast</cite>
+      </header>
+    </section>
+
+    <section class="content-section" aria-labelledby="podcast-title">
+      <div class="container">
+        <div class="podcast-shell">
+
+          <header class="podcast-intro">
+            <p>I joined Tiana Mobley on "Untold Histories of the Atlantic World" to discuss the School of Salamanca, the Spanish Atlantic world, and the Hispanic intellectual traditions that helped shape early Latin American revolutionary projects.</p>
+          </header>
+
+          <section class="podcast-quotes" aria-label="Key quotes from Johannes Schmidt">
+            <blockquote class="podcast-quote">
+              <p>&ldquo;These thinkers (...) were saying, natives have rights, they have rights to property, they have a right to choose their own religion.&rdquo;</p>
+            </blockquote>
+            <blockquote class="podcast-quote">
+              <p>&ldquo;Latin America attempted to preserve the old freedoms that were gained from those ancient Hispanic formulations of power and authority.&rdquo;</p>
+            </blockquote>
+            <blockquote class="podcast-quote">
+              <p>&ldquo;Our deeply Hispanic ties to the crown were broken, and we have a legal structure in place that means that we are allowed to be free now.&rdquo;</p>
+            </blockquote>
+          </section>
+
+          <div class="podcast-layout">
+            <div class="podcast-player-column">
+              <div class="podcast-player" aria-label="Podcast audio player">
+                <audio id="podcast-audio" controls preload="metadata">
+                  <source src="assets/web/hemisphere/legacy/hisplegacy_podcast_64k.mp3" type="audio/mpeg" />
+                  Your browser does not support HTML audio.
+                </audio>
+                <div class="podcast-player__meta" aria-hidden="true">
+                  <span id="current-speaker">Ready to play</span>
+                  <span id="current-time">0:00</span>
+                </div>
+              </div>
+            </div>
+
+            <section class="transcript-panel" aria-labelledby="transcript-title">
+              <div class="transcript-heading">
+                <h2 id="transcript-title">Transcript</h2>
+                <p>Click any passage to jump to that point in the episode.</p>
+              </div>
+
+              <div id="transcript" class="transcript" aria-live="off">
+                <p class="transcript-status">Loading transcript&hellip;</p>
+              </div>
+
+              <noscript>
+                <p class="transcript-status">JavaScript is required to load and synchronize the transcript.</p>
+              </noscript>
+            </section>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+<footer class="footer">
+  <div class="container">
+    <p class="footer__mark" role="img" aria-label="Amagi, the Sumerian word for liberty">𒂼𒄄</p>
+    <p class="footer__caption">4,400 years ago, the Sumerian ruler Enetenma of Lagash wrote "amagi" in cuneiform, marking the first time that liberty was given a dedicated word.</p>
+    <p class="footer__end">&copy; 2026 JKS. E-mail me at <a href="mailto:schmidtj16@gmail.com">schmidtj16@gmail.com</a>.</p>
+  </div>
+</footer>
+
+  <script>
+    (() => {
+      const TRANSCRIPT_URL = "assets/web/hemisphere/legacy/podcast_web.json";
+
+      const audio = document.getElementById("podcast-audio");
+      const transcriptElement = document.getElementById("transcript");
+      const currentSpeakerElement = document.getElementById("current-speaker");
+      const currentTimeElement = document.getElementById("current-time");
+
+      let segments = [];
+      let blockElements = [];
+      let activeIndex = -1;
+      let userScrolledAt = 0;
+      let programmaticScroll = false;
+      let pendingSeek = null;
+
+      const formatTime = (seconds) => {
+        if (!Number.isFinite(seconds) || seconds < 0) return "0:00";
+
+        const total = Math.floor(seconds);
+        const hours = Math.floor(total / 3600);
+        const minutes = Math.floor((total % 3600) / 60);
+        const secs = total % 60;
+
+        if (hours > 0) {
+          return `${hours}:${String(minutes).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+        }
+
+        return `${minutes}:${String(secs).padStart(2, "0")}`;
+      };
+
+      const isCue = (text) => /^\[[^\]]+\]$/.test(text.trim());
+
+      const findSegmentIndex = (time) => {
+        let low = 0;
+        let high = segments.length - 1;
+
+        while (low <= high) {
+          const mid = Math.floor((low + high) / 2);
+          const segment = segments[mid];
+
+          if (time < segment.start) {
+            high = mid - 1;
+          } else if (time >= segment.end) {
+            low = mid + 1;
+          } else {
+            return mid;
+          }
+        }
+
+        return -1;
+      };
+
+      const activeBlockIsVisible = (element) => {
+        const rect = element.getBoundingClientRect();
+        const topSafe = Math.min(window.innerHeight * 0.28, 240);
+        const bottomSafe = window.innerHeight * 0.82;
+        return rect.top >= topSafe && rect.bottom <= bottomSafe;
+      };
+
+      const maybeFollowTranscript = (element) => {
+        if (!element || programmaticScroll) return;
+
+        // Do not fight the reader if they have manually scrolled recently.
+        if (Date.now() - userScrolledAt < 5000) return;
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+        const transcriptIsScrollable = transcriptElement.scrollHeight > transcriptElement.clientHeight + 4;
+
+        if (transcriptIsScrollable) {
+          const containerRect = transcriptElement.getBoundingClientRect();
+          const elementRect = element.getBoundingClientRect();
+          const visible = elementRect.top >= containerRect.top && elementRect.bottom <= containerRect.bottom;
+          if (visible) return;
+
+          programmaticScroll = true;
+          const targetTop = element.offsetTop - (transcriptElement.clientHeight / 2) + (element.offsetHeight / 2);
+          transcriptElement.scrollTo({ behavior: "smooth", top: Math.max(0, targetTop) });
+          window.setTimeout(() => {
+            programmaticScroll = false;
+          }, 700);
+          return;
+        }
+
+        if (activeBlockIsVisible(element)) return;
+        programmaticScroll = true;
+        element.scrollIntoView({ behavior: "smooth", block: "center" });
+        window.setTimeout(() => {
+          programmaticScroll = false;
+        }, 700);
+      };
+
+      const setActiveSegment = (index, shouldFollow = true) => {
+        if (index === activeIndex) return;
+
+        if (activeIndex >= 0 && blockElements[activeIndex]) {
+          blockElements[activeIndex].classList.remove("is-active");
+          blockElements[activeIndex].removeAttribute("aria-current");
+        }
+
+        activeIndex = index;
+
+        if (index < 0 || !segments[index] || !blockElements[index]) {
+          currentSpeakerElement.textContent = audio.paused ? "Ready to play" : "Playing";
+          return;
+        }
+
+        const segment = segments[index];
+        const element = blockElements[index];
+
+        element.classList.add("is-active");
+        element.setAttribute("aria-current", "true");
+        currentSpeakerElement.textContent = isCue(segment.text) ? segment.text : segment.speaker;
+
+        if (shouldFollow) maybeFollowTranscript(element);
+      };
+
+      const syncTranscript = (shouldFollow = true) => {
+        currentTimeElement.textContent = formatTime(audio.currentTime);
+        setActiveSegment(findSegmentIndex(audio.currentTime), shouldFollow);
+      };
+
+      const seekAudio = (target, index) => {
+        const requestedTime = Number(target);
+        if (!Number.isFinite(requestedTime) || requestedTime < 0) return;
+
+        const applySeek = () => {
+          let seekTime = requestedTime;
+          if (Number.isFinite(audio.duration) && audio.duration > 0) {
+            seekTime = Math.min(requestedTime, Math.max(0, audio.duration - 0.01));
+          }
+
+          try {
+            // Assigning currentTime only after metadata is available avoids the
+            // 0:00 reset seen in some browsers when the MP3 has not initialized.
+            audio.currentTime = seekTime;
+            setActiveSegment(index, false);
+            currentTimeElement.textContent = formatTime(seekTime);
+            audio.play().catch(() => {});
+          } catch (error) {
+            console.error("Unable to seek audio:", error);
+          }
+        };
+
+        if (audio.readyState < HTMLMediaElement.HAVE_METADATA || !Number.isFinite(audio.duration)) {
+          pendingSeek = { target: requestedTime, index };
+          audio.load();
+          return;
+        }
+
+        applySeek();
+      };
+
+      const renderTranscript = () => {
+        const fragment = document.createDocumentFragment();
+        blockElements = [];
+
+        segments.forEach((segment, index) => {
+          const block = document.createElement("div");
+          block.className = "transcript-block";
+          block.tabIndex = 0;
+          block.dataset.index = String(index);
+          block.dataset.start = String(segment.start);
+          block.dataset.end = String(segment.end);
+          block.dataset.cue = String(isCue(segment.text));
+          block.setAttribute("role", "button");
+          block.setAttribute("aria-label", `Jump to ${formatTime(segment.start)}: ${segment.text}`);
+
+          const meta = document.createElement("div");
+          meta.className = "transcript-meta";
+
+          const time = document.createElement("span");
+          time.className = "transcript-time";
+          time.textContent = formatTime(segment.start);
+
+          const speaker = document.createElement("span");
+          speaker.className = "transcript-speaker";
+          speaker.textContent = isCue(segment.text) ? "Audio cue" : segment.speaker;
+
+          const text = document.createElement("div");
+          text.className = "transcript-text";
+          text.textContent = segment.text;
+
+          meta.append(time, speaker);
+          block.append(meta, text);
+
+          const seek = () => {
+            seekAudio(segment.start, index);
+          };
+
+          block.addEventListener("click", seek);
+          block.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              seek();
+            }
+          });
+
+          blockElements.push(block);
+          fragment.appendChild(block);
+        });
+
+        transcriptElement.replaceChildren(fragment);
+      };
+
+      const markUserScroll = () => {
+        if (!programmaticScroll) userScrolledAt = Date.now();
+      };
+
+      transcriptElement.addEventListener("scroll", markUserScroll, { passive: true });
+      window.addEventListener("scroll", markUserScroll, { passive: true });
+
+      audio.addEventListener("timeupdate", () => syncTranscript(true));
+      audio.addEventListener("seeked", () => syncTranscript(false));
+      audio.addEventListener("loadedmetadata", () => {
+        if (pendingSeek) {
+          const { target, index } = pendingSeek;
+          pendingSeek = null;
+          seekAudio(target, index);
+          return;
+        }
+        syncTranscript(false);
+      });
+      audio.addEventListener("pause", () => {
+        if (activeIndex < 0) currentSpeakerElement.textContent = "Paused";
+      });
+
+      fetch(TRANSCRIPT_URL)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`Transcript request failed with HTTP ${response.status}`);
+          }
+          return response.json();
+        })
+        .then((data) => {
+          if (!data || !Array.isArray(data.segments)) {
+            throw new Error("Transcript JSON does not contain a segments array.");
+          }
+
+          segments = data.segments
+            .filter((segment) =>
+              segment &&
+              typeof segment.text === "string" &&
+              Number.isFinite(Number(segment.start)) &&
+              Number.isFinite(Number(segment.end))
+            )
+            .map((segment) => ({
+              ...segment,
+              start: Number(segment.start),
+              end: Number(segment.end),
+              speaker: segment.speaker || "Speaker"
+            }))
+            .sort((a, b) => a.start - b.start);
+
+          renderTranscript();
+          syncTranscript(false);
+        })
+        .catch((error) => {
+          console.error(error);
+          transcriptElement.innerHTML = '<p class="transcript-status">The transcript could not be loaded. Confirm that <code>assets/web/hemisphere/legacy/podcast_web.json</code> is available from this page.</p>';
+        });
+    })();
+  </script>
+
+</body>
+</html>

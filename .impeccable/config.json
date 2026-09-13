@@ -10,7 +10,16 @@
           "hisplegacy-paper.html"
         ],
         "createdAt": "2026-09-13T00:33:45.348Z",
-        "reason": "false positive: verbatim academic prose from user's own essay describing a historical scholar's contribution, not marketing copy"
+        "reason": "pre-existing academic essay prose describing a historical scholar's contribution, not marketing copy; unrelated to this session's CSS-only edit"
+      },
+      {
+        "rule": "marketing-buzzword",
+        "value": "*",
+        "files": [
+          "hisplegacy-paper.html"
+        ],
+        "createdAt": "2026-09-13T17:59:39.355Z",
+        "reason": "Claude triage: flagged phrase is 'He revolutionizes the concept' in the author's own academic prose, not marketing copy"
       }
     ]
   }

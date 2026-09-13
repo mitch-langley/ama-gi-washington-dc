@@ -25,70 +25,61 @@
     <a href="index.html" class="logo">Johannes K. Schmidt</a>
 
     <ul class="nav-links">
-      <li><a href="readme.html">Read Me</a></li>
       <li><a href="index.html" aria-current="page">Home</a></li>
       <li class="dropdown">
         <button type="button" class="dropbtn" aria-expanded="false" aria-controls="menu-hemisphere">Our Hemisphere <span aria-hidden="true">&#9662;</span></button>
         <ul class="dropdown-menu" id="menu-hemisphere">
-          <li><a href="whymonroe.html">Why the Monroe Doctrine?</a></li>
-          <li><a href="monroe-doctrine.html">Reimagining the Monroe Doctrine</a></li>
-          <li><a href="hisplegacy-paper.html">Hispanic Legacy (Working Paper)</a></li>
-          <li><a href="hisplegacy-podcast.html">Hispanic Legacy (Podcast Episode)</a></li>
-          <li><a href="byrdsong.html">&ldquo;Civitas Sancti Tui&rdquo;</a></li>
+          <li><a href="monroe-why.html">Why the Monroe Doctrine?</a></li>
+          <li><a href="monroe-reimagined.html">Reimagining the Monroe Doctrine</a></li>
+          <li><a href="hispanic-legacy-paper.html">Hispanic Legacy (Working Paper)</a></li>
+          <li><a href="hispanic-legacy-podcast.html">Hispanic Legacy (Podcast Episode)</a></li>
+          <li><a href="civitas-sancti-tui.html">&ldquo;Civitas Sancti Tui&rdquo;</a></li>
         </ul>
       </li>
       <li class="dropdown">
-        <button type="button" class="dropbtn" aria-expanded="false" aria-controls="menu-about">About Me <span aria-hidden="true">&#9662;</span></button>
+        <button type="button" class="dropbtn is-section" aria-expanded="false" aria-controls="menu-about">About Me <span aria-hidden="true">&#9662;</span></button>
         <ul class="dropdown-menu" id="menu-about">
           <li><a href="bio.html">Bio</a></li>
           <li><a href="writing.html">Selected Writing</a></li>
         </ul>
       </li>
-      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
 
 <main id="main" tabindex="-1">
 
-  <section class="hero-carousel" aria-roledescription="carousel" aria-label="Quotations">
-    <!--
-    <article id="hero-slide-0" class="photo-hero-fluid is-active" role="group" aria-roledescription="slide" aria-label="1 of 2">
-      <img src="assets/web/home/angel_quito.webp" width="2000" height="554" alt="The Virgin of El Panecillo, a winged statue with a crown of stars, against a grey sky above Quito" class="photo-fluid-img" fetchpriority="high" />
-      <blockquote class="hero-quote">
-        <p>&ldquo;The law is our shield; the spoken word, our weapon; and the citizen&rsquo;s patriotic endeavor, our cause.&rdquo;</p>
-        <cite>Juan Montalvo &middot; Ecuador (1832&ndash;1889)</cite>
-      </blockquote>
-    </article> -->
-    <article id="hero-slide-1" class="photo-hero-fluid is-active" role="group" aria-roledescription="slide" aria-label="2 of 2" aria-hidden="true" inert>
-      <img src="assets/web/home/lima-coast.webp" width="1600" height="523" alt="Apartment towers above the eroded cliffs of the Costa Verde in Lima" class="photo-fluid-img" loading="lazy" />
+  <section class="hero-carousel">
+    <div class="photo-hero-fluid is-active">
+      <img src="assets/web/home/quito.webp" width="2640" height="930" alt="The Virgin of Panecillo overlooking the Cotopaxi volcano near Quito, Ecuador." class="photo-fluid-img" fetchpriority="high" />
       <blockquote class="hero-quote hero-quote--long">
         <p>&ldquo;Liberty, daughter and mother of rationality and the critical spirit, places a heavy burden on the shoulders of the human being: having to decide for oneself what is beneficial and what is harmful, how to face the innumerable challenges of existence, whether society functions as it should or whether it must be transformed.&rdquo;</p>
         <cite>Mario Vargas Llosa &middot; <i>La llamada de la tribu</i></cite>
       </blockquote>
-    </article>
-    <div class="hero-carousel__dots" role="group" aria-label="Slideshow controls">
-      <button type="button" class="hero-carousel__dot is-active" aria-controls="hero-slide-0" aria-current="true" aria-label="Show quotation 1"></button>
-      <button type="button" class="hero-carousel__dot" aria-controls="hero-slide-1" aria-label="Show quotation 2"></button>
-      <button type="button" class="hero-carousel__toggle" aria-pressed="false" aria-label="Pause slideshow"></button>
     </div>
   </section>
 
   <section class="content-section" aria-labelledby="working-paper-title">
     <div class="container">
-      <header class="section-head">
-        <p class="eyebrow">Working Paper</p>
-        <h1 id="working-paper-title">Production as Deterrence: The Western Hemisphere&rsquo;s Role in a Future Pacific Fight</h1>
-      </header>
-      <div class="photo-row">
-        <div class="photo-item">
-          <img src="assets/web/home/working_bird.webp" width="428" height="333" alt="A seagull perched on a wall in front of COSCO Shipping cranes at the Port of Chancay, Peru" loading="lazy" />
-        </div>
-        <div class="photo-item">
-          <img src="assets/web/home/jks_peru.webp" width="429" height="329" alt="Johannes in a small boat off Chancay, with the port&rsquo;s cranes behind him" loading="lazy" />
+      <div class="split-panel">
+        <div class="split-panel__grid">
+          <div class="photo-column">
+            <div class="photo-item">
+              <img src="assets/web/home/jks_peru.webp" width="339" height="260" alt="..." loading="lazy" />
+            </div>
+            <div class="photo-item">
+              <img src="assets/web/home/working_bird.webp" width="339" height="260" alt="..." loading="lazy" />
+            </div>
+          </div>
+          <div class="split-panel__text">
+            <p class="eyebrow">Working Paper</p>
+            <h1 id="working-paper-title">Production as Deterrence: The Western Hemisphere&rsquo;s Role in a Future Pacific Fight</h1>
+            <p>Recently, I visited the COSCO-operated megaport at Chancay, Peru, to examine how China&rsquo;s expanding port infrastructure intersects with a deeper American vulnerability: the absence of a secure industrial rear for a future Pacific conflict.</p>
+            <p>This working paper argues that the Joint Force will not overcome contested logistics and the tyranny of distance in PACOM without integrating trusted Latin American and Caribbean partners into a hemispheric defense-production network.</p>
+            <p>Consistent with the 2025 National Security Strategy, the 2026 National Defense Strategy, and emerging joint concepts, it proposes a program of hemispheric industrial reconstruction combining DFC financing, expanded use of DPA Title III authorities, private capital, procurement reform, and sustained demand generated through deeper military cooperation and the development of shared capability requirements.</p>
+          </div>
         </div>
       </div>
-      <p>Recently, I visited the COSCO-operated megaport at Chancay, Peru, to examine how China&rsquo;s expanding port infrastructure intersects with a deeper American vulnerability: the absence of a secure industrial rear for a future Pacific conflict. This working paper argues that the Joint Force will not overcome contested logistics and the tyranny of distance in PACOM without integrating trusted Latin American and Caribbean partners into a hemispheric defense-production network. Consistent with the 2025 National Security Strategy, the 2026 National Defense Strategy, and emerging joint concepts, it proposes a program of hemispheric industrial reconstruction combining DFC financing, expanded use of DPA Title III authorities, private capital, procurement reform, and sustained demand generated through deeper military cooperation and the development of shared capability requirements.</p>
     </div>
   </section>
 
@@ -96,7 +87,7 @@
     <div class="container">
       <header class="section-head">
         <h2 id="defense-writing-title">Defense &amp; Strategic Writing</h2>
-        <p>A selection of my published articles on defense, innovation, foreign strategy, and American monetary policy.</p>
+        <p>A selection of my published articles on defense, innovation, geopolitics, and American monetary policy.</p>
       </header>
 
       <div class="card-carousel__nav" hidden>
@@ -214,30 +205,35 @@
   <section class="content-section" aria-labelledby="nss-title">
     <div class="container">
       <header class="section-head">
-        <h2 id="nss-title">The Monroe Doctrine, Restated</h2>
-        <p>The <a href="https://www.whitehouse.gov/wp-content/uploads/2025/12/2025-National-Security-Strategy.pdf">2025 National Security Strategy</a> revives the Monroe Doctrine as the organizing logic for American primacy in the Western Hemisphere. My writing supporting the Doctrine below..</p>
+        <h2 id="nss-title">The Monroe Doctrine, Reimagined</h2>
+        <p class="eyebrow">Sea Power Magazine &middot; Feb/Mar 2025 &middot; Featured Article</p>
       </header>
-      <p class="section-link"><a href="monroe-doctrine.html">Reimagining the Monroe Doctrine</a></p>
-      <p class="section-link"><a href="whymonroe.html">Why the Monroe Doctrine?</a></p>
+
+      <div class="img-scroller-frame">
+        <div class="card-carousel__nav card-carousel__nav--overlay" hidden>
+          <button type="button" class="card-carousel__btn" data-dir="-1" aria-controls="seapower-scroller" aria-label="Previous page"><span aria-hidden="true">&larr;</span></button>
+          <button type="button" class="card-carousel__btn" data-dir="1" aria-controls="seapower-scroller" aria-label="Next page"><span aria-hidden="true">&rarr;</span></button>
+        </div>
+
+        <div class="img-scroller" id="seapower-scroller" role="region" aria-label="Pages from Sea Power magazine, February/March 2025" tabindex="0">
+          <img src="assets/web/seapower/seapower1.webp" width="640" height="837" alt="Cover of the February/March 2025 issue of Sea Power magazine, asking &ldquo;Is a New Monroe Doctrine Needed?&rdquo;" loading="lazy" />
+          <img src="assets/web/seapower/seapower2.webp" width="637" height="827" alt="Sea Power feature page: &ldquo;Reimagining the Monroe Doctrine Amid Great Power Competition,&rdquo; by Johannes Schmidt" loading="lazy" />
+          <img src="assets/web/seapower/seapower3.webp" width="642" height="830" alt="Sea Power article page on Russian and Chinese influence-building in Latin America" loading="lazy" />
+          <img src="assets/web/seapower/seapower4.webp" width="637" height="831" alt="Sea Power article page on Iranian proxy networks and the case for a 21st-century Monroe Doctrine" loading="lazy" />
+          <img src="assets/web/seapower/seapower5.webp" width="642" height="830" alt="Sea Power article page closing with recommendations for hemispheric military modernization" loading="lazy" />
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="hero-carousel" aria-roledescription="carousel" aria-label="NSS">
-    <!--
-    <article id="hero-slide-0" class="photo-hero-fluid is-active" role="group" aria-roledescription="slide" aria-label="1 of 2">
-      <img src="assets/web/home/angel_quito.webp" width="2000" height="554" alt="The Virgin of El Panecillo, a winged statue with a crown of stars, against a grey sky above Quito" class="photo-fluid-img" fetchpriority="high" />
-      <blockquote class="hero-quote">
-        <p>&ldquo;The law is our shield; the spoken word, our weapon; and the citizen&rsquo;s patriotic endeavor, our cause.&rdquo;</p>
-        <cite>Juan Montalvo &middot; Ecuador (1832&ndash;1889)</cite>
-      </blockquote>
-    </article> -->
-    <article id="hero-slide-1" class="photo-hero-fluid photo-hero-fluid--fade-top is-active" role="group" aria-roledescription="slide" aria-label="2 of 2" aria-hidden="true" inert>
-      <img src="assets/web/home/nss25.webp" width="1600" height="523" alt="Apartment towers above the eroded cliffs of the Costa Verde in Lima" class="photo-fluid-img" loading="lazy" />
+  <section class="hero-carousel">
+    <div class="photo-hero-fluid photo-hero-fluid--fade-top is-active">
+      <img src="assets/web/home/nss25.webp" width="1200" height="515" alt="The cover of the November 2025 National Security Strategy of the United States of America" class="photo-fluid-img" loading="lazy" />
       <blockquote class="hero-quote hero-quote--longer">
         <p>&ldquo;After years of neglect, the United States will reassert and enforce the Monroe Doctrine to restore American preeminence in the Western Hemisphere, and to protect our homeland and our access to key geographies throughout the region. We will deny non-Hemispheric competitors the ability to position forces or other threatening capabilities, or to own or control strategically vital assets, in our Hemisphere. This “Trump Corollary” to the Monroe Doctrine is a common-sense and potent restoration of American power and priorities, consistent with American security interests.&rdquo;</p>
-        <cite>Pete Hegseth &middot; Secretary of War</cite>
+        <cite>U.S. National Security Strategy</cite>
       </blockquote>
-    </article>
+    </div>
   </section>
 
 </main>
@@ -245,7 +241,8 @@
 <footer class="footer">
   <div class="container">
     <p class="footer__mark" role="img" aria-label="Amagi, the Sumerian word for liberty">𒂼𒄄</p>
-    <p>&copy; 2026 JKS.</p>
+    <p class="footer__caption">4,400 years ago, the Sumerian ruler Enetenma of Lagash wrote "amagi" in cuneiform, marking the first time that liberty was given a dedicated word.</p>
+    <p class="footer__end">&copy; 2026 JKS. E-mail me at <a href="mailto:schmidtj16@gmail.com">schmidtj16@gmail.com</a>.</p>
   </div>
 </footer>
 
