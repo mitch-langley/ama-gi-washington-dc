@@ -415,6 +415,24 @@
     color: var(--gold, #c39b4e);
   }
 
+  .eyebrow a {
+    font-size: var(--t-xs, 0.75rem);
+    font-weight: var(--w-semibold, 600);
+    letter-spacing: var(--tracking-caps, 0.12em);
+    text-transform: uppercase;
+    color: var(--gold, #c39b4e);
+    margin-top:1rem;
+  }
+
+a.eyebrow::after {
+    content: "\2192";
+    transition: transform var(--speed, 180ms) var(--ease, ease);
+  }
+
+a.eyebrow:hover::after {
+      transform: translateX(0.2rem);
+    }
+
   .measure {
     max-inline-size: var(--measure, 70ch);
     margin-inline: auto;
@@ -639,11 +657,14 @@
 
   .lyrics {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
-    gap: var(--space-m, 1.5rem) var(--space-xl, 4rem);
-    max-inline-size: 54rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 32rem), 1fr));
+    /* Reduced the column gap from 4rem to 1.5rem (or 2rem) */
+    gap: var(--space-m, 1.5rem) var(--space-s, 1.5rem);
+    max-inline-size: 70rem;
     margin-block-start: var(--space-l, 2.5rem);
     margin-inline: auto;
+    justify-items: center;
+    text-align: center;
     font-size: var(--t-l, 1.125rem);
     font-style: italic;
     line-height: 1.75;
@@ -832,9 +853,10 @@
       ),
       linear-gradient(
         to bottom,
-        rgba(8, 8, 10, 0.85),
-        rgba(8, 8, 10, 0.4) 35%,
-        transparent 65%
+        var(--ink, oklch(15% 0.006 265)),
+        oklch(15% 0.006 265 / 0.9) 12%,
+        oklch(15% 0.006 265 / 0.5) 40%,
+        transparent 72%
       ),
       linear-gradient(
         to right,
@@ -1341,6 +1363,10 @@
     block-size: 100%;
     object-fit: var(--card-image-fit, cover);
     object-position: var(--card-image-position, center);
+  }
+
+  .photo-card--contain {
+    --card-image-fit: contain;
   }
 
   .card-body {
@@ -2016,6 +2042,13 @@
     font-size: var(--t-s, 0.875rem);
     line-height: 1.75;
     color: var(--paper-dim, #bdb8ad);
+  }
+
+  .podcast-intro img {
+    max-inline-size: 50%;
+    margin-inline: auto;
+    border-radius: 6px;
+    padding-bottom: 2rem;
   }
 
   .podcast-quotes {

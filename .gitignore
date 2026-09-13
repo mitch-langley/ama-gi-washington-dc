@@ -25,3 +25,8 @@ assets/bio/
 # Uncompressed audio formats
 *.wav
 *.flac
+
+# PNG and JPG
+*.png
+*.jpg
+*.jpeg
