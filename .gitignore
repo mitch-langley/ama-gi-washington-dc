@@ -1,22 +1,27 @@
-# OS clutterassets
+# OS clutter
 Thumbs.db
 desktop.ini
 .DS_Store
+*.~tmp
+*.tmp
+*.bak
 
-# Editors
+# Editors & tooling
 .claude/
 .vscode/
 .idea/
 *.swp
+.impeccable/
 
-# Python (in case you ever un-ignore tools/)
+# Python
 __pycache__/
 *.pyc
 
-#Others
-
+# Local references & source asset folders
 reference/
 assets/home/
 assets/bio/
-assets/web/hemisphere/legacy/hisplegacy_podcast.mp3
-assets/web/hemisphere/legacy/iglesia_var.png
+
+# Uncompressed audio formats
+*.wav
+*.flac
