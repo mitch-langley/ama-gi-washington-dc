@@ -192,10 +192,13 @@
       btn.setAttribute("aria-pressed", btn.dataset.group === group ? "true" : "false");
     });
     document.querySelectorAll(".sal-map__marker-set").forEach(marker => {
-      marker.hidden = group !== "all" && marker.dataset.group !== group;
+      const shouldHide = group !== "all" && marker.dataset.group !== group;
+      marker.toggleAttribute("hidden", shouldHide);
+      marker.setAttribute("aria-hidden", shouldHide ? "true" : "false");
     });
     document.querySelectorAll("#sal-map-city-index li").forEach(item => {
-      item.hidden = group !== "all" && item.dataset.group !== group;
+      const shouldHide = group !== "all" && item.dataset.group !== group;
+      item.toggleAttribute("hidden", shouldHide);
     });
     const count = cities.filter(c => group === "all" || groupFor(c.classification_category) === group).length;
     status.textContent = `${count} ${count === 1 ? "city" : "cities"} shown`;
