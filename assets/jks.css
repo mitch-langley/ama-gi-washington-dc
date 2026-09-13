@@ -1773,6 +1773,115 @@
     color: var(--paper-faint, #97918a);
     padding-bottom:1rem;
   }
+
+  /* Subheadings within long essays (appendices, source groupings) */
+
+  .essay > h3 {
+    margin-block: var(--space-l, 2.5rem) var(--space-xs, 0.6rem);
+    font-size: var(--t-l, 1.125rem);
+    color: var(--paper, #f2efe9);
+  }
+
+  .essay > h4 {
+    margin-block: var(--space-m, 1.5rem) var(--space-2xs, 0.35rem);
+    font-size: var(--t-s, 0.8125rem);
+    font-weight: var(--w-semibold, 600);
+    letter-spacing: var(--tracking-wide, 0.07em);
+    text-transform: uppercase;
+    color: var(--paper-dim, #bdb8ad);
+  }
+
+  .essay > .catalog-meta {
+    margin-block-end: var(--space-xs, 0.6rem);
+    font-size: var(--t-xs, 0.75rem);
+    font-style: italic;
+    color: var(--paper-faint, #97918a);
+  }
+
+  /* Extended source quotations */
+
+  .essay > blockquote {
+    max-inline-size: 64ch;
+    margin-inline: auto;
+    margin-block: var(--space-m, 1.5rem);
+    padding-inline-start: var(--space-m, 1.5rem);
+    border-inline-start: 2px solid var(--hairline-gold, #756039);
+    font-size: var(--t-s, 0.8125rem);
+    line-height: 1.75;
+    color: var(--paper-dim, #bdb8ad);
+  }
+
+  .essay > blockquote > p + p {
+    margin-block-start: var(--space-s, 1rem);
+  }
+
+  .essay > blockquote cite {
+    display: block;
+    margin-block-start: var(--space-xs, 0.6rem);
+    font-size: var(--t-xs, 0.75rem);
+    letter-spacing: var(--tracking-wide, 0.07em);
+    text-transform: uppercase;
+    color: var(--paper-faint, #97918a);
+  }
+
+  /* Numbered and catalog lists (appendices) */
+
+  .essay > ol,
+  .essay > ul {
+    margin-block: var(--space-s, 1rem);
+    padding-inline-start: 1.4em;
+    font-size: var(--t-m, 1rem);
+    line-height: 1.8;
+    color: var(--paper-dim, #bdb8ad);
+  }
+
+  .essay li + li {
+    margin-block-start: var(--space-xs, 0.6rem);
+  }
+
+  .essay li::marker {
+    color: var(--gold, #c39b4e);
+  }
+
+  /* Inline footnote citation markers */
+
+  .essay sup.fnref {
+    font-size: 0.7em;
+    line-height: 0;
+  }
+
+  .essay sup.fnref a {
+    padding-inline: 0.1em;
+    text-decoration: none;
+    color: var(--gold, #c39b4e);
+  }
+
+  .essay sup.fnref a:hover,
+  .essay sup.fnref a:focus-visible {
+    text-decoration: underline;
+    color: var(--gold-bright, #e0bf7d);
+  }
+
+  /* Footnotes / endnotes list */
+
+  .essay > .footnotes-list {
+    margin-block-start: var(--space-s, 1rem);
+    padding-inline-start: 1.4em;
+    padding-block-start: var(--space-m, 1.5rem);
+    border-block-start: 1px solid var(--hairline, #29292d);
+    font-size: var(--t-xs, 0.75rem);
+    line-height: 1.7;
+    color: var(--paper-faint, #97918a);
+  }
+
+  .essay > .footnotes-list li:target {
+    color: var(--paper, #f2efe9);
+  }
+
+  .essay .footnote-back {
+    margin-inline-start: 0.35em;
+    text-decoration: none;
+  }
 }
 
 /* Responsive and accessibility adjustments */

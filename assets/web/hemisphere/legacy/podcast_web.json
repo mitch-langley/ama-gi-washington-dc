@@ -1,0 +1,761 @@
+{
+  "language_code": "eng",
+  "segments": [
+    {
+      "id": 1,
+      "text": "Welcome to \"Untold Histories of the Atlantic World.\" I am your host, Tiana Mobley.",
+      "start": 0.34,
+      "end": 5.92,
+      "speaker": "Tiana Mobley"
+    },
+    {
+      "id": 2,
+      "text": "[music]",
+      "start": 5.92,
+      "end": 26.96,
+      "speaker": "Tiana Mobley"
+    },
+    {
+      "id": 3,
+      "text": "In today's episode, I will be discussing the influence of the School of Salamanca in early Latin American revolutionary projects in the context of the Spanish Atlantic world.",
+      "start": 27.0,
+      "end": 36.86,
+      "speaker": "Tiana Mobley"
+    },
+    {
+      "id": 4,
+      "text": "Joining me is Johannes Schmidt. Allow me to introduce you to Johannes.",
+      "start": 37.5,
+      "end": 41.44,
+      "speaker": "Tiana Mobley"
+    },
+    {
+      "id": 5,
+      "text": "He is a public relations professional based in Washington, DC. Johannes studied international relations at George Washington University and is graduating from Georgetown University next month.",
+      "start": 42.54,
+      "end": 53.6,
+      "speaker": "Tiana Mobley"
+    },
+    {
+      "id": 6,
+      "text": "His research focuses on intellectual history in the Atlantic world, and his writings have been featured in publications including Forbes, Fox News, the Chicago Tribune, the Baltimore Sun, and the Washington Examiner, among others.",
+      "start": 54.16,
+      "end": 67.38,
+      "speaker": "Tiana Mobley"
+    },
+    {
+      "id": 7,
+      "text": "And without further ado, welcome to \"Untold Histories of the Atlantic World,\" Johannes.",
+      "start": 68.2,
+      "end": 72.86,
+      "speaker": "Tiana Mobley"
+    },
+    {
+      "id": 8,
+      "text": "Hey, thank you so much for having me, Tiana. I'm excited to be here with you.",
+      "start": 73.62,
+      "end": 76.14,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 9,
+      "text": "Thank you so much for joining me. So, Johannes, would you mind beginning by sharing a little bit about your research on the School of Salamanca and how it relates to Latin American revolutionary projects?",
+      "start": 76.76,
+      "end": 88.0,
+      "speaker": "Tiana Mobley"
+    },
+    {
+      "id": 10,
+      "text": "Sure thing. So, basically, I've had a problem with the idea of looking at Latin American revolutions and Latin American independence movements for several reasons.",
+      "start": 88.7,
+      "end": 99.66,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 11,
+      "text": "First and foremost, I was born in Ecuador, and so as a South American, it was always weird to discover that in the American historiographies or British historiographies, oftentimes the Spanish Empire is painted in a negative light.",
+      "start": 99.88,
+      "end": 112.18,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 12,
+      "text": "Basically, all we focus on is the treatment of the Native Americans. We focus on the plunder, the disease spread,",
+      "start": 112.96,
+      "end": 118.76,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 13,
+      "text": "but all the positive sides are often ignored. And what's not ignored is it's basically we hear that these are all just imitations of the American Revolution or the French Revolution.",
+      "start": 120.22,
+      "end": 129.44,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 14,
+      "text": "Generally speaking, when we think about the Western epicenters of thought, inevitably we think of ancient Greek philosophers, the prolific jurists of the Roman Empire.",
+      "start": 130.1,
+      "end": 139.74,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 15,
+      "text": "And really, you can't think of medieval Western Christendom without thinking of the University of Paris or Oxford, and the Renaissance is almost exclusively an Italian affair in the historiography.",
+      "start": 140.44,
+      "end": 150.4,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 16,
+      "text": "You can't really imagine the Reformation without invoking the German Sprachraum or the Industrial Revolution without thinking of the English or Scottish Enlightenments.",
+      "start": 151.04,
+      "end": 158.54,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 17,
+      "text": "However, when you think of the West, we often fail to recognize the philosophic and theological contributions of Spain, and most certainly of Hispanic America, even though their contributions to Western liberal thought have been monumental.",
+      "start": 159.56,
+      "end": 170.06,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 18,
+      "text": "There is one difference, though. One Hispanic historian, his name is Roberto Fernandez Retamar, he reminds us that, and this is a quote now, \"Assassinations and acts of destruction were not lacking in the conquest carried out by other Western powers.",
+      "start": 171.0,
+      "end": 183.08,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 19,
+      "text": "What they did lack were scrupulous men who defended the rights of the Indians and debates about the legitimacy of conquest.\" With this historian's words in mind, we can start to understand the historical importance of the Hispanic thinkers on both sides of the Hispanic or Spanish Atlantic.",
+      "start": 183.44,
+      "end": 197.5,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 20,
+      "text": "And these people, these Spanish jurists, priests, monks, they fervently defended the rights of natives while also challenging both the crown and the Pope's right to conquer foreign lands as the European imperialist age was being born.",
+      "start": 198.4,
+      "end": 209.78,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 21,
+      "text": "And so, Tiana, we'll turn to 1492, Spain's Annus Mirabilis, basically the magnificent year when Granada was conquered, the Jews were expelled from the Catholic kingdoms, the Castilian Grammatica was first published, and perhaps most notably, the Indies or the New World, terms that we really don't say anymore, but that's the historiography,",
+      "start": 210.88,
+      "end": 228.74,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 22,
+      "text": "[chuckles]",
+      "start": 228.78,
+      "end": 229.84,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 23,
+      "text": "were discovered. These events threw questions of nation, humanity, race, sovereignty to the forefront of the times, and often new principles and attitudes were embraced which denied centuries of previous political thought.",
+      "start": 229.86,
+      "end": 240.28,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 24,
+      "text": "And so as the Spanish began their conquest of the New World, another group of Spanish men were in the process of conquering the lecture halls of great Spanish and later American universities.",
+      "start": 241.04,
+      "end": 248.94,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 25,
+      "text": "In Latin America, we're talking about Santo Domingo, Lima, Mexico City, all these universities basically created to mirror the University of Salamanca, Spain's oldest and most prestigious university, where all these great Spanish thinkers started their career based on basically the teachings of Francisco Suarez, and then along with the conquerors or the conquistadors, went over to the New World and",
+      "start": 249.64,
+      "end": 273.64,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 26,
+      "text": "started the same writings based out of new universities. So basically, they took a deeply Hispanic intellectual project and made it uniquely American.",
+      "start": 273.94,
+      "end": 282.1,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 27,
+      "text": "And based on their writings and the debates that they were having, that is where we start seeing the influence of Spanish intellectual history in the New World.",
+      "start": 282.54,
+      "end": 290.9,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 28,
+      "text": "Because even after these different priests and jurists started saying, \"Well, the Pope really doesn't have a right to conquer lands in the name of the church, neither does a king or an emperor,\" basically, these people started having the first international human rights debates in history.",
+      "start": 291.24,
+      "end": 305.66,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 29,
+      "text": "And those debates we can see carried on from the earliest days of the conquest. Even in the early 15th century, you see one Spanish Dominican monk, he goes as far as saying that the people that he traveled with are in a state of mortal sin because of the way they were treating the natives. And that made it",
+      "start": 305.86,
+      "end": 321.42,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 30,
+      "text": "back to the courts of Iberia, but also universities, and that sparked these debates that lasted all the way through 20th century Mexico.",
+      "start": 322.48,
+      "end": 329.76,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 31,
+      "text": "And we still see remnants of these ideas in the Mexican Revolution that's still being used today.",
+      "start": 329.9,
+      "end": 334.34,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 32,
+      "text": "Very fascinating. Thank you so much, Johannes, for providing that initial context for this discussion. So one of the questions I wanted to ask you was, what types of sources do you usually use in order to research this topic?",
+      "start": 335.92,
+      "end": 348.16,
+      "speaker": "Tiana Mobley"
+    },
+    {
+      "id": 33,
+      "text": "Sure. So, I think one of the biggest advantages that one has when researching colonial Latin America is how accessible the archives are.",
+      "start": 349.48,
+      "end": 358.28,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 34,
+      "text": "Not only are a lot of the archives digitized, and I'm talking the archives when you look at the colonial archives in- Lima, or even in Seville, where they have the archives of the Indies, a lot of these documents have been digitized, so it's easy to access some.",
+      "start": 359.28,
+      "end": 372.644,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 35,
+      "text": "And even if you take a quick trip to Lima, I know the archives there, I've had a chance to explore a little bit, and they're accessible, they're well-organized. So primarily, I think there's a lot of material available in the archives.",
+      "start": 373.344,
+      "end": 384.764,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 36,
+      "text": "Luckily, too, there's a wide range of secondary literature available coming out of different areas. For some reason, the Germans really are fascinated by colonial Latin America.",
+      "start": 385.464,
+      "end": 395.564,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 37,
+      "text": "Obviously the Spanish are. The Americans and the Brits are too, although their views are a little bit different than mine for the most part. And then most importantly, too, I think there's a revival in secondary sources coming out of Latin America.",
+      "start": 396.324,
+      "end": 408.164,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 38,
+      "text": "I know at one university in Guatemala, Francisco Marroquín, there's even a project that focuses strictly on preserving the thought of the School of Salamanca, and that's a pretty powerful university in the region right now.",
+      "start": 408.904,
+      "end": 420.224,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 39,
+      "text": "So yeah, there's a ton of available materials ranging from secondary sources to very easily accessible primary sources in the archives.",
+      "start": 420.744,
+      "end": 428.604,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 40,
+      "text": "Have you been able to visit any of these archives, and if not, do you hope to in the future? Like, is this research a project that you would hope to continue?",
+      "start": 429.883,
+      "end": 437.124,
+      "speaker": "Tiana Mobley"
+    },
+    {
+      "id": 41,
+      "text": "I was able to visit the archives in Lima briefly during COVID, but I haven't been able to make it over to Seville, which is where I really want to go.",
+      "start": 438.264,
+      "end": 446.384,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 42,
+      "text": "Yeah, I definitely hope to do that even after graduation. It's definitely something that interests me way beyond turning in a paper or anything like that.",
+      "start": 446.744,
+      "end": 453.504,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 43,
+      "text": "So another question is, what does historical research mean to you? So, like, how do you see your research as having broader implications or mattering beyond the traditional academy?",
+      "start": 454.204,
+      "end": 464.944,
+      "speaker": "Tiana Mobley"
+    },
+    {
+      "id": 44,
+      "text": "Sure. So for me, this is almost a matter of national pride, but it's also very much a matter of getting the facts straight. And at the end of the day, history can be somewhat political, and we see that with the Black Legend, the Spanish Black Legend, where basically the English or the British Empire, the French Empire, they're playing PR games and making it look like Spain is doing things that their own empires aren't doing.",
+      "start": 466.244,
+      "end": 488.144,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 45,
+      "text": "But at the end of the day, Latin America, we didn't experience chattel slavery like the American South did. Had various courts that really attended to native rights, whereas they obviously didn't have that in the United States.",
+      "start": 488.384,
+      "end": 499.724,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 46,
+      "text": "And if they did, it's overshadowed by things like the Trail of Tears. But in Latin America, we had a system that wasn't perfect by any means.",
+      "start": 499.744,
+      "end": 507.944,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 47,
+      "text": "There were still atrocities. But I think it's important to bring to light the fact that the Spanish Empire did have a decent human rights streak on paper.",
+      "start": 507.984,
+      "end": 516.164,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 48,
+      "text": "Obviously, you've studied this as well. You know that there were terrible things that happened, but on paper, there were people on the ground really trying to make things better for Blacks, for non-white European colonists.",
+      "start": 516.804,
+      "end": 527.744,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 49,
+      "text": "And so to explore the historiography through this context kind of gives agency back to those thinkers, the people that were saying natives have rights, they have rights to property, they have a right to choose their own religion.",
+      "start": 528.364,
+      "end": 539.184,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 50,
+      "text": "And so for me, this is combating that negative PR that came from those colonial games and kind of putting the light back on Spain and trying to remember what we can learn from it.",
+      "start": 540.064,
+      "end": 548.584,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 51,
+      "text": "Because a lot of the revolutionary projects were based on human rights and markets, and",
+      "start": 549.184,
+      "end": 554.904,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 52,
+      "text": "they were pretty liberal for a long time, and that's worth preserving. Even after Spain went into its absolutist age or even after the liberal reforms in Spain tried to take away a lot of rights from Latin American governments on the ground, Latin America attempted to preserve the old freedoms that were gained from those ancient Hispanic formulations of power and authority.",
+      "start": 556.044,
+      "end": 576.664,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 53,
+      "text": "So yeah, for me, this is deeply a matter of revisiting history and kind of telling a story that's been ignored for a long time within certain historiographies.",
+      "start": 577.284,
+      "end": 584.524,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 54,
+      "text": "That's great, and it's pretty evident how passionate you are about this topic. Would you mind telling us a little bit more about the School of Salamanca for listeners who may not be as familiar?",
+      "start": 585.784,
+      "end": 595.824,
+      "speaker": "Tiana Mobley"
+    },
+    {
+      "id": 55,
+      "text": "Sure thing. I'll start with a quote from a good friend of mine. I actually met him in a little coffee shop, but he's a medievalist, and he was a professor for a long time at Rutgers and then a librarian at Penn.",
+      "start": 596.544,
+      "end": 606.464,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 56,
+      "text": "But his name is Tom Izbicki, and he's retired now, but he still writes quite a lot. And one of the ways that he described the School of Salamanca, basically an intellectual movement or a certain group of theologians in 16th and 17th century Spain and Portugal, is a group of priests, jurists that in a broad sense developed international law or jus gentium, and were also willing to depart from the teachings of Aristotle and were some of the earliest theorists of",
+      "start": 606.704,
+      "end": 630.724,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 57,
+      "text": "monetary economics. Essentially followed the trajectory of Francisco Suarez, a Dominican priest who talked about international human rights, who talked about monetary policy, all within a Christian framework pointing back to Aristotle and Aquinas.",
+      "start": 630.784,
+      "end": 646.284,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 58,
+      "text": "The School of Salamanca deeply is a scholastic affair. It's people that follow Aristotelian ways of teaching and studying and discovering the world.",
+      "start": 647.264,
+      "end": 656.424,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 59,
+      "text": "And so basically, it's the school based out of Spain that reexamines European thought through a lens of Aristotle and Aquinas, and often comes up with radically different conclusions than the former.",
+      "start": 656.864,
+      "end": 668.284,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 60,
+      "text": "That's so interesting. I've never really learned about the School of Salamanca at all. Anytime I've heard those great thinkers mentioned, it's never been in the context of Spain at all, like Spain's intellectual history.",
+      "start": 669.644,
+      "end": 681.424,
+      "speaker": "Tiana Mobley"
+    },
+    {
+      "id": 61,
+      "text": "As this podcast is called \"Untold Histories of the Atlantic World,\" in what way is this history about the School of Salamanca and its connections to Latin American revolutionary projects an example of an overlooked or untold history?",
+      "start": 682.924,
+      "end": 698.224,
+      "speaker": "Tiana Mobley"
+    },
+    {
+      "id": 62,
+      "text": "Sure. So I guess we'll go back to how we started, and that's the idea of what the West is, what the contributions intellectually came out of Western Europe.",
+      "start": 699.004,
+      "end": 707.904,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 63,
+      "text": "But also, I guess the question has to be, whose ideas were behind the revolutions that started in Latin America in the early 19th century?",
+      "start": 708.704,
+      "end": 717.004,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 64,
+      "text": "And most people are going to tell you the driving minds behind the independence movements were Montesquieu or Rousseau. But no, I don't think that's necessarily the case.",
+      "start": 717.484,
+      "end": 726.904,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 65,
+      "text": "I think in a lot of historiographies, people talk about, yeah, sure- French and English Enlightenment thought, even American Enlightenment thought, really did influence these movements.",
+      "start": 727.304,
+      "end": 736.888,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 66,
+      "text": "The people were reading Locke. People were definitely reading Rousseau and his \"Social Contract.\" But at the end of the day, from the earliest time they would enter not only university, but even schools or were getting tutors, these people were reading deeply Hispanic minds. They were reading Mariana, they were reading",
+      "start": 736.948,
+      "end": 754.768,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 67,
+      "text": "Suarez, they were reading Saravia de la Calle. They were reading Spaniards, and also Latin Americans at that point, because soon after universities opened, the ideas that were developed in Spain in the 16th century were then basically molded to fit the Latin American reality.",
+      "start": 755.948,
+      "end": 772.988,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 68,
+      "text": "And later, we can even go into some of those thinkers. They deeply influenced even the Mexican project and the writing of the Mexican Constitution. We even find citations of one particular Mexican scholastic in the earliest revolutionary texts.",
+      "start": 773.828,
+      "end": 787.128,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 69,
+      "text": "But yeah, at the end of the day, it is my argument that the driving force behind the early liberal movements in Hispanic America were fundamentally Hispanic in nature, and not only the product of British or French Enlightenment thought.",
+      "start": 787.408,
+      "end": 798.228,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 70,
+      "text": "And this is due to the fact that revolutionary ideas promulgated by the Hispanic schoolmen were being taught throughout the Indies since the first university opened in Lima in the first half of the 16th century and onto the eve of revolution.",
+      "start": 798.788,
+      "end": 808.928,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 71,
+      "text": "Whether one thinks on 11th century charters in Spain, which were written before Magna Carta, like the Charter of Leon. It was written actually about 100 years before Magna Carta, and it did pretty much the same thing.",
+      "start": 809.628,
+      "end": 820.248,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 72,
+      "text": "Or if you think about the scholastic writings on the limits of monarchical power for taxation or currency manipulation, well-versed jurists and run-of-the-mill citizens in the Indies would have been well-versed in the Hispanic ideas that could fuel revolution.",
+      "start": 821.028,
+      "end": 832.588,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 73,
+      "text": "And there are three reasons that I really believe that these revolutionary projects were fundamentally Hispanic. First and foremost, it's the way that we look at the social contract.",
+      "start": 833.228,
+      "end": 842.908,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 74,
+      "text": "In Latin America, we don't look at the relationship between citizens and monarch or leader the same way that",
+      "start": 843.328,
+      "end": 849.028,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 75,
+      "text": "Rousseau would. For us, it's necessarily a theocratic exercise. There's still this idea that God grants the king his right.",
+      "start": 850.108,
+      "end": 860.188,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 76,
+      "text": "So therefore, there's no need for this social contract to exist on the ground where people... In the social contract that Rousseau would think about, people basically come together and decide that we're going to hand power to government.",
+      "start": 860.847,
+      "end": 871.868,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 77,
+      "text": "In Latin America, that already exists. Suarez basically says God created the king, the monarch, the prince, and that contract exists. It's a direct contract between",
+      "start": 872.368,
+      "end": 882.128,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 78,
+      "text": "man and the monarch, and so basically directly with God. It's a God-given thing. And so it's within that context, within how deeply",
+      "start": 883.428,
+      "end": 891.808,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 79,
+      "text": "Christian, deeply Catholic, and deeply rooted in Hispanic principles Latin America was, it's hard to imagine a secular project being born using Rousseau.",
+      "start": 893.008,
+      "end": 902.188,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 80,
+      "text": "It wasn't the case. It wasn't what was being read. It wasn't what was being said at the time. And the evidence doesn't point there in the revolutions, or in the early revolutionary texts like the Venezuelan Declaration of Independence in 1811, or even the latest Mexican Constitution, which still talks about Suarez's idea of a contract between man and the prince.",
+      "start": 902.248,
+      "end": 923.508,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 81,
+      "text": "Another reason that I'm convinced that this was a deeply Hispanic affair was the timeline. The French and American revolutions happened, and even the Haitian Revolution happened, and nothing happened in Latin America.",
+      "start": 924.648,
+      "end": 935.848,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 82,
+      "text": "There were some small uprisings, but nothing really happened until Bayonne in 1811 when Napoleon basically forced the Spanish monarch and his son to abdicate.",
+      "start": 935.908,
+      "end": 944.768,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 83,
+      "text": "Right after that is when you start seeing all of the American revolutions start. And why is that? Because the contract between king and the people was broken.",
+      "start": 945.328,
+      "end": 953.408,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 84,
+      "text": "So, there was a legitimate legal claim that could be made that the contract or the relationship between Spain and Latin America was broken by Napoleon.",
+      "start": 953.488,
+      "end": 961.448,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 85,
+      "text": "That's pointing at a theory called the pactum translationis, which is one of Suarez's ideas that basically says the contract exists between the individual and the king, but that contract is broken if the king loses his throne or if he becomes a tyrant.",
+      "start": 962.528,
+      "end": 978.248,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 86,
+      "text": "And yeah, so that's why you don't see anything happen in Latin America until after Napoleon basically dethrones the king.",
+      "start": 979.368,
+      "end": 986.728,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 87,
+      "text": "And the last, I think, reason that I'm so convinced of",
+      "start": 987.647,
+      "end": 991.028,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 88,
+      "text": "these ideas is that when you look at early revolutionary documents, from the earliest days of the revolution all the way up to the latest Mexican Constitution, you see remnants of this pactum translationis.",
+      "start": 992.087,
+      "end": 1003.468,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 89,
+      "text": "You see almost verbatim people saying, \"Well, Napoleon broke the contract. There is no tie between Latin America and Spain, and therefore we are free.\"",
+      "start": 1003.528,
+      "end": 1013.448,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 90,
+      "text": "It's almost verbatim. And I'll show you real quick where that exists in the Venezuela case. Yeah, in the Venezuelan Declaration of Independence in April 1810,",
+      "start": 1013.748,
+      "end": 1024.468,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 91,
+      "text": "what was written was basically, \"The representatives of the United Provinces of Venezuela, in view of full and absolute possession of our rights that we have recovered just and legitimately since April 19th, 1810, in consequence of the occurrence of the Bayonne, the occupation of the Spanish throne by conquest, and the secession of a new dynastic instituted without our consent, our desirous before using the rights of which have been forcibly deprived for more than three centuries, but which are now restored to us",
+      "start": 1025.508,
+      "end": 1049.568,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 92,
+      "text": "by the political order of human events to make known to the world that the reasons arising from these events that authorize the free use which we are about to make for our sovereignty.\"",
+      "start": 1049.608,
+      "end": 1057.168,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 93,
+      "text": "So as early as 1810, you see that people are saying, \"The reason that we're breaking away is not because the American Revolution inspired us, or not because Rousseau's social contract just made something click in our heads.\"",
+      "start": 1057.948,
+      "end": 1070.388,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 94,
+      "text": "No, they said, \"Our deeply Hispanic ties to the crown were broken, and we have a legal structure in place that means that we are allowed to be free now.\"",
+      "start": 1070.428,
+      "end": 1079.228,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 95,
+      "text": "And so that's where you see the revolution start taking place. Down the line, you see a lot of these different examples of this written in two different texts.",
+      "start": 1079.748,
+      "end": 1087.408,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 96,
+      "text": "But I think what's most interesting is that as far back as the Mexican Constitution that I keep referencing, which was drafted and adopted in 1917-",
+      "start": 1087.628,
+      "end": 1097.568,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 97,
+      "text": "You see another reference to the Pactum Transactionis. For example, Article 39 reads, and I'm translating here, so excuse me, but, \"The national sovereignty resides essentially and originally in the people.",
+      "start": 1098.692,
+      "end": 1109.452,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 98,
+      "text": "All public power comes from the people and is instituted for their benefit. The people have inalienable right to alter or modify their form of government.\"",
+      "start": 1109.952,
+      "end": 1120.592,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 99,
+      "text": "So once again, it's this contract that we look at constantly. And although that's not the verbatim pactum that we looked at through history, it still comes pretty close, and it still has those ties back to early Latin American and deeply Hispanic thought that comes out of the School of Salamanca.",
+      "start": 1121.192,
+      "end": 1137.552,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 100,
+      "text": "And so for those three reasons, I think there's at least some reason to question the narrative and also start looking deeper into what is Hispanic and what is Western, and kind of start digging deeper into Latin America's intellectual past.",
+      "start": 1138.092,
+      "end": 1152.872,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 101,
+      "text": "Thank you so much for that, Johannes. The point that you're making about the lack of emphasis on Spanish contributions to the ideology circulating around the early modern Atlantic, I think really resonated with me because I would agree that even as Eurocentric as the Atlantic world tends to be, the emphasis tends to be also on the",
+      "start": 1154.672,
+      "end": 1179.332,
+      "speaker": "Tiana Mobley"
+    },
+    {
+      "id": 102,
+      "text": "British Empire, and then maybe after that, the French Empire. So, especially when it comes to intellectual history. I'm certainly no specialist on revolutionary history, but you've definitely inspired me to dive deeper into intellectual history.",
+      "start": 1179.392,
+      "end": 1193.332,
+      "speaker": "Tiana Mobley"
+    },
+    {
+      "id": 103,
+      "text": "Just throughout this entire conversation, I feel like I've learned so much. So thank you so much for that.",
+      "start": 1194.072,
+      "end": 1198.932,
+      "speaker": "Tiana Mobley"
+    },
+    {
+      "id": 104,
+      "text": "To my listeners, if you are interested in finding out more about the history of the School of Salamanca and early Latin American revolutionary projects, please visit my website for a list of recommended sources.",
+      "start": 1199.952,
+      "end": 1211.692,
+      "speaker": "Tiana Mobley"
+    },
+    {
+      "id": 105,
+      "text": "To learn more about my wonderful guest, Johannes, links to his published articles can be found on my website as well. Thank you so much, Johannes, for joining me today.",
+      "start": 1212.232,
+      "end": 1221.452,
+      "speaker": "Tiana Mobley"
+    },
+    {
+      "id": 106,
+      "text": "Thank you so much, Tianna, for having me. It was a pleasure talking to you, and I look forward to seeing you next week.",
+      "start": 1222.312,
+      "end": 1226.172,
+      "speaker": "Johannes Schmidt"
+    },
+    {
+      "id": 107,
+      "text": "Tune in next time for more untold histories of the Atlantic world.",
+      "start": 1226.852,
+      "end": 1231.132,
+      "speaker": "Tiana Mobley"
+    },
+    {
+      "id": 108,
+      "text": "[music]",
+      "start": 1231.192,
+      "end": 1252.792,
+      "speaker": "Tiana Mobley"
+    }
+  ]
+}

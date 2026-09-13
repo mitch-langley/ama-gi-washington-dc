@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "marketing-buzzword",
+        "value": "revolutionizes",
+        "files": [
+          "hisplegacy-paper.html"
+        ],
+        "createdAt": "2026-09-13T00:33:45.348Z",
+        "reason": "false positive: verbatim academic prose from user's own essay describing a historical scholar's contribution, not marketing copy"
+      }
+    ]
+  }
+}
