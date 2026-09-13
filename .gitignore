@@ -1,4 +1,4 @@
-# OS clutter
+# OS clutterassets
 Thumbs.db
 desktop.ini
 .DS_Store
@@ -18,3 +18,5 @@ __pycache__/
 reference/
 assets/home/
 assets/bio/
+assets/web/hemisphere/legacy/hisplegacy_podcast.mp3
+assets/web/hemisphere/legacy/iglesia_var.png
