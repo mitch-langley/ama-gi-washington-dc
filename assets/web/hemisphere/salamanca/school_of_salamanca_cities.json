@@ -1,0 +1,367 @@
+{
+  "metadata": {
+    "title": "Cities Associated with the School of Salamanca and Its Scholars",
+    "coordinate_system": "WGS84",
+    "coordinate_convention": {
+      "x": "longitude",
+      "y": "latitude"
+    },
+    "coordinate_note": "Coordinates are approximate city-center coordinates, intended for mapping rather than cadastral use.",
+    "classification_note": "Categories distinguish direct institutional centers, major extensions, debate/political sites, biographical links, precursor contexts, and later reception of Salamanca/Vitorian/Suarezian scholasticism."
+  },
+  "cities": [
+    {
+      "region": "Iberia",
+      "country": "Spain",
+      "x": -5.66354,
+      "y": 40.9701,
+      "former_name": null,
+      "current_name": "Salamanca",
+      "classification_category": "Core institutional center",
+      "short_description": "Primary institutional nucleus of the School of Salamanca, centered on the University of Salamanca and the Dominican convent of San Esteban.",
+      "associated_scholars_etc": [
+        "Francisco de Vitoria",
+        "Domingo de Soto",
+        "Melchor Cano",
+        "Martín de Azpilcueta",
+        "Domingo Báñez",
+        "Fray Luis de León",
+        "Francisco Suárez",
+        "University of Salamanca",
+        "Convent of San Esteban"
+      ],
+      "id": "salamanca"
+    },
+    {
+      "region": "Iberia",
+      "country": "Spain",
+      "x": -3.36354,
+      "y": 40.48198,
+      "former_name": null,
+      "current_name": "Alcalá de Henares",
+      "classification_category": "Major Iberian extension",
+      "short_description": "Important neighboring university center linked to several major Salamancan scholars and to the wider Iberian late-scholastic network.",
+      "associated_scholars_etc": [
+        "Domingo de Soto",
+        "Martín de Azpilcueta",
+        "Luis de Molina",
+        "University of Alcalá"
+      ],
+      "id": "alcala-de-henares"
+    },
+    {
+      "region": "Iberia",
+      "country": "Spain",
+      "x": -4.72856,
+      "y": 41.65225,
+      "former_name": null,
+      "current_name": "Valladolid",
+      "classification_category": "Major debate and political center",
+      "short_description": "Site of the 1550–1551 Valladolid debate over conquest, Indigenous rights, and legitimate dominion, closely tied to questions developed by the School of Salamanca.",
+      "associated_scholars_etc": [
+        "Domingo de Soto",
+        "Bartolomé de las Casas",
+        "Juan Ginés de Sepúlveda",
+        "Valladolid debate (1550–1551)"
+      ],
+      "id": "valladolid"
+    },
+    {
+      "region": "Iberia",
+      "country": "Portugal",
+      "x": -8.4292,
+      "y": 40.2033,
+      "former_name": null,
+      "current_name": "Coimbra",
+      "classification_category": "Major Iberian extension",
+      "short_description": "One of the strongest Portuguese continuations of the Salamanca tradition, especially in canon law, moral theology, and second scholasticism.",
+      "associated_scholars_etc": [
+        "Martín de Azpilcueta",
+        "Luis de Molina",
+        "Francisco Suárez",
+        "University of Coimbra"
+      ],
+      "id": "coimbra"
+    },
+    {
+      "region": "Iberia",
+      "country": "Portugal",
+      "x": -7.9077,
+      "y": 38.5714,
+      "former_name": null,
+      "current_name": "Évora",
+      "classification_category": "Strong secondary center",
+      "short_description": "Portuguese university center important to the later scholastic tradition; Molina taught theology here and Suárez received his doctorate here.",
+      "associated_scholars_etc": [
+        "Luis de Molina",
+        "Francisco Suárez",
+        "University of Évora"
+      ],
+      "id": "evora"
+    },
+    {
+      "region": "Iberia",
+      "country": "Spain",
+      "x": -5.9845,
+      "y": 37.3891,
+      "former_name": null,
+      "current_name": "Seville",
+      "classification_category": "Strong secondary center",
+      "short_description": "Atlantic commercial center where Salamancan moral theology was applied to trade, prices, money, contracts, and the ethics of imperial commerce.",
+      "associated_scholars_etc": [
+        "Tomás de Mercado",
+        "Bartolomé de las Casas",
+        "Dominican intellectual networks",
+        "Atlantic commercial economy"
+      ],
+      "id": "seville"
+    },
+    {
+      "region": "Iberia",
+      "country": "Spain",
+      "x": -4.1184,
+      "y": 40.9429,
+      "former_name": null,
+      "current_name": "Segovia",
+      "classification_category": "Strong secondary center",
+      "short_description": "Linked biographically and academically to Domingo de Soto and to the early teaching career of Francisco Suárez.",
+      "associated_scholars_etc": [
+        "Domingo de Soto",
+        "Francisco Suárez",
+        "Dominican and Jesuit teaching networks"
+      ],
+      "id": "segovia"
+    },
+    {
+      "region": "Iberia",
+      "country": "Spain",
+      "x": -4.6818,
+      "y": 40.6566,
+      "former_name": null,
+      "current_name": "Ávila",
+      "classification_category": "Biographical and teaching association",
+      "short_description": "Secondary academic site associated especially with Francisco Suárez during the early stages of his teaching career.",
+      "associated_scholars_etc": [
+        "Francisco Suárez",
+        "Jesuit scholastic teaching"
+      ],
+      "id": "avila"
+    },
+    {
+      "region": "Iberia",
+      "country": "Spain",
+      "x": -2.1374,
+      "y": 40.0704,
+      "former_name": null,
+      "current_name": "Cuenca",
+      "classification_category": "Biographical association",
+      "short_description": "Included principally for its biographical connection to Luis de Molina rather than as an institutional center of the School.",
+      "associated_scholars_etc": [
+        "Luis de Molina"
+      ],
+      "id": "cuenca"
+    },
+    {
+      "region": "Iberia",
+      "country": "Spain",
+      "x": -3.7038,
+      "y": 40.4168,
+      "former_name": null,
+      "current_name": "Madrid",
+      "classification_category": "Peripheral political and reception center",
+      "short_description": "A peripheral rather than formative center, relevant through the royal court and the later circulation, consultation, publication, and reception of late-scholastic political and legal thought.",
+      "associated_scholars_etc": [
+        "Spanish royal court",
+        "Late-scholastic jurists and theologians",
+        "Royal consultation and censorship networks"
+      ],
+      "id": "madrid"
+    },
+    {
+      "region": "Americas",
+      "country": "Mexico",
+      "x": -99.1332,
+      "y": 19.4326,
+      "former_name": "México-Tenochtitlan",
+      "current_name": "Mexico City",
+      "classification_category": "Major American center",
+      "short_description": "Probably the strongest American institutional center connected directly to Salamancan-trained scholars and the application of their ideas to New World legal, economic, and theological questions.",
+      "associated_scholars_etc": [
+        "Alonso de la Veracruz",
+        "Tomás de Mercado",
+        "Royal and Pontifical University of Mexico",
+        "Dominican and Augustinian scholastic networks"
+      ],
+      "id": "mexico-city"
+    },
+    {
+      "region": "Americas",
+      "country": "Mexico",
+      "x": -101.34457,
+      "y": 19.55111,
+      "former_name": null,
+      "current_name": "Tiripetío",
+      "classification_category": "Direct American transplant",
+      "short_description": "Early Augustinian center of higher studies where Alonso de la Veracruz taught philosophy and theology, making it one of the clearest direct transplants of Salamanca-trained scholasticism to the Americas.",
+      "associated_scholars_etc": [
+        "Alonso de la Veracruz",
+        "Augustinian house of studies at Tiripetío",
+        "Michoacán missionary-scholar network"
+      ],
+      "id": "tiripetio"
+    },
+    {
+      "region": "Americas",
+      "country": "Mexico",
+      "x": -101.60995,
+      "y": 19.5132,
+      "former_name": null,
+      "current_name": "Pátzcuaro",
+      "classification_category": "Strong American secondary center",
+      "short_description": "Part of the Michoacán intellectual and missionary environment in which Salamanca-derived arguments about Indigenous communities, property, governance, and evangelization were put into practice.",
+      "associated_scholars_etc": [
+        "Alonso de la Veracruz",
+        "Vasco de Quiroga",
+        "Colegio de San Nicolás",
+        "Michoacán missionary and educational networks"
+      ],
+      "id": "patzcuaro"
+    },
+    {
+      "region": "Americas",
+      "country": "Peru",
+      "x": -77.0428,
+      "y": -12.0464,
+      "former_name": "Ciudad de los Reyes",
+      "current_name": "Lima",
+      "classification_category": "Major American center",
+      "short_description": "Major South American center of scholastic theology, canon law, natural law, and debates over colonial rule through San Marcos and the city's religious colleges.",
+      "associated_scholars_etc": [
+        "José de Acosta",
+        "University of San Marcos",
+        "Dominican and Jesuit scholastic networks",
+        "Peruvian colonial jurists and theologians"
+      ],
+      "id": "lima"
+    },
+    {
+      "region": "Americas",
+      "country": "Dominican Republic",
+      "x": -69.9312,
+      "y": 18.4861,
+      "former_name": null,
+      "current_name": "Santo Domingo",
+      "classification_category": "American precursor and formative context",
+      "short_description": "A crucial precursor to Salamanca's American debates: Dominican denunciations of abuses against Indigenous peoples here helped frame questions later systematized by Vitoria and his successors.",
+      "associated_scholars_etc": [
+        "Antonio de Montesinos",
+        "Pedro de Córdoba",
+        "Bartolomé de las Casas",
+        "Dominican community of Hispaniola",
+        "1511 Montesinos sermon"
+      ],
+      "id": "santo-domingo"
+    },
+    {
+      "region": "Americas",
+      "country": "Mexico",
+      "x": -92.6367,
+      "y": 16.7376,
+      "former_name": "Ciudad Real de Chiapa",
+      "current_name": "San Cristóbal de las Casas",
+      "classification_category": "Strong American secondary center",
+      "short_description": "Episcopal seat of Bartolomé de las Casas and an important setting for practical disputes over Indigenous freedom, forced labor, evangelization, and legitimate colonial authority.",
+      "associated_scholars_etc": [
+        "Bartolomé de las Casas",
+        "Diocese of Chiapa",
+        "Dominican reform network"
+      ],
+      "id": "san-cristobal-de-las-casas"
+    },
+    {
+      "region": "Americas",
+      "country": "Ecuador",
+      "x": -78.4678,
+      "y": -0.1807,
+      "former_name": "San Francisco de Quito",
+      "current_name": "Quito",
+      "classification_category": "Later American scholastic reception",
+      "short_description": "Important colonial university and Jesuit center where Vitorian and especially Suárezian scholastic traditions were transmitted and adapted in the northern Andes.",
+      "associated_scholars_etc": [
+        "University of San Gregorio Magno",
+        "Jesuit scholasticism",
+        "Francisco Suárez (textual and doctrinal reception)",
+        "Vitorian natural-law tradition"
+      ],
+      "id": "quito"
+    },
+    {
+      "region": "Americas",
+      "country": "Bolivia",
+      "x": -65.2619,
+      "y": -19.0196,
+      "former_name": "La Plata de la Nueva Toledo / La Plata / Chuquisaca",
+      "current_name": "Sucre",
+      "classification_category": "Later American legal-scholastic center",
+      "short_description": "Major legal, ecclesiastical, and university center of the Audiencia of Charcas where late-scholastic natural-law and political thought became part of colonial learned culture.",
+      "associated_scholars_etc": [
+        "University of San Francisco Xavier of Chuquisaca",
+        "Royal Audiencia of Charcas",
+        "Scholastic legal and theological tradition",
+        "Vitorian and Suárezian textual reception"
+      ],
+      "id": "sucre"
+    },
+    {
+      "region": "Americas",
+      "country": "Colombia",
+      "x": -74.0721,
+      "y": 4.711,
+      "former_name": "Santa Fe / Santa Fe de Bogotá",
+      "current_name": "Bogotá",
+      "classification_category": "Later American scholastic reception",
+      "short_description": "Colonial academic center in New Granada where Vitorian, Thomist, and Suárezian natural-law traditions circulated through universities and religious colleges.",
+      "associated_scholars_etc": [
+        "Colegio Mayor de Nuestra Señora del Rosario",
+        "Pontifical Javeriana University",
+        "Dominican and Jesuit scholastic networks",
+        "Vitorian and Suárezian legal thought"
+      ],
+      "id": "bogota"
+    },
+    {
+      "region": "Americas",
+      "country": "Guatemala",
+      "x": -90.734,
+      "y": 14.5586,
+      "former_name": "Santiago de los Caballeros de Guatemala",
+      "current_name": "Antigua Guatemala",
+      "classification_category": "American secondary reception and reform context",
+      "short_description": "Colonial capital connected to Dominican reform activity, debates over Indigenous peoples, and the later university transmission of Iberian scholastic thought in Central America.",
+      "associated_scholars_etc": [
+        "Bartolomé de las Casas",
+        "Dominican reform network",
+        "University of San Carlos of Guatemala",
+        "Vitorian and late-scholastic reception"
+      ],
+      "id": "antigua-guatemala"
+    },
+    {
+      "region": "Americas",
+      "country": "Argentina",
+      "x": -64.1888,
+      "y": -31.4201,
+      "former_name": "Córdoba de la Nueva Andalucía",
+      "current_name": "Córdoba",
+      "classification_category": "Later Jesuit and Suárezian reception",
+      "short_description": "Important later colonial university center where Jesuit education transmitted Suárezian and broader second-scholastic philosophy, theology, and political thought in the Río de la Plata region.",
+      "associated_scholars_etc": [
+        "University of Córdoba",
+        "Jesuit scholasticism",
+        "Francisco Suárez (textual and doctrinal reception)",
+        "Second scholastic tradition"
+      ],
+      "id": "cordoba"
+    }
+  ]
+}
