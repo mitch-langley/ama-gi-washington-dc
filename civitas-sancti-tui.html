@@ -26,18 +26,53 @@
 
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
+
       <li class="dropdown">
         <button type="button" class="dropbtn is-section" aria-expanded="false" aria-controls="menu-hemisphere">Our Hemisphere <span aria-hidden="true">&#9662;</span></button>
+
         <ul class="dropdown-menu" id="menu-hemisphere">
-          <li><a href="monroe-why.html">Why the Monroe Doctrine?</a></li>
-          <li><a href="monroe-reimagined.html">Reimagining the Monroe Doctrine</a></li>
-          <li><a href="hispanic-legacy-paper.html">Hispanic Legacy (Working Paper)</a></li>
-          <li><a href="hispanic-legacy-podcast.html">Hispanic Legacy (Podcast Episode)</a></li>
+          <li class="submenu">
+            <button
+              type="button"
+              class="submenu-btn"
+              aria-expanded="false"
+              aria-controls="submenu-monroe"
+            >
+              Monroe Doctrine
+              <span class="submenu-arrow" aria-hidden="true">›</span>
+            </button>
+
+            <ul class="submenu-menu" id="submenu-monroe">
+              <li><a href="monroe-why.html">Why the Monroe Doctrine?</a></li>
+              <li><a href="monroe-reimagined.html">Reimagining the Monroe Doctrine</a></li>
+            </ul>
+          </li>
+
+          <li class="submenu">
+            <button
+              type="button"
+              class="submenu-btn"
+              aria-expanded="false"
+              aria-controls="submenu-salamanca"
+            >
+              School of Salamanca
+              <span class="submenu-arrow" aria-hidden="true">›</span>
+            </button>
+
+            <ul class="submenu-menu" id="submenu-salamanca">
+              <li><a href="hispanic-legacy-paper.html">Working Paper</a></li>
+              <li><a href="hispanic-legacy-podcast.html">Podcast Interview</a></li>
+              <li><a href="hispanic-legacy-map.html">Interactive Map</a></li>
+            </ul>
+          </li>
+
           <li><a href="civitas-sancti-tui.html" aria-current="page">&ldquo;Civitas Sancti Tui&rdquo;</a></li>
         </ul>
       </li>
+
       <li class="dropdown">
         <button type="button" class="dropbtn" aria-expanded="false" aria-controls="menu-about">About Me <span aria-hidden="true">&#9662;</span></button>
+
         <ul class="dropdown-menu" id="menu-about">
           <li><a href="bio.html">Bio</a></li>
           <li><a href="writing.html">Selected Writing</a></li>

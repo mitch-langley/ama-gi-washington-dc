@@ -633,6 +633,105 @@ a.eyebrow:hover::after {
     pointer-events: auto;
   }
 
+/* ==========================================================================
+   Nested dropdowns / submenus
+   ========================================================================== */
+
+.dropdown-menu .submenu {
+  position: relative;
+}
+
+/* Nested-menu button should visually behave like a normal dropdown link */
+.dropdown-menu .submenu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  inline-size: 100%;
+  min-block-size: var(--target-size, 2.75rem);
+
+  padding: 0.65rem 1.1rem;
+
+  border: 0;
+  background: none;
+
+  font: inherit;
+  font-size: var(--t-s, 0.8125rem);
+  font-weight: var(--w-medium, 500);
+  line-height: 1.45;
+  letter-spacing: 0.02em;
+
+  text-align: start;
+  text-transform: none;
+
+  color: var(--paper-dim, #bdb8ad);
+
+  cursor: pointer;
+}
+
+.dropdown-menu .submenu-btn:hover,
+.dropdown-menu .submenu-btn:focus-visible,
+.dropdown-menu .submenu-btn[aria-expanded="true"] {
+  color: var(--gold-bright, #e0bf7d);
+  background: var(--hover-wash);
+}
+
+.dropdown-menu .submenu-btn:focus-visible {
+  outline-offset: -3px;
+}
+
+
+/* Arrow */
+
+.submenu-arrow {
+  flex: 0 0 auto;
+
+  font-size: 1.15em;
+  line-height: 1;
+
+  transition: transform var(--speed, 180ms) var(--ease, ease);
+}
+
+.submenu-btn[aria-expanded="true"] .submenu-arrow {
+  transform: rotate(90deg);
+}
+
+
+/* Nested menu */
+
+.submenu-menu {
+  display: none;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.submenu-btn[aria-expanded="true"] + .submenu-menu {
+  display: block;
+}
+
+
+/* Indent second-level links */
+
+.submenu-menu a {
+  padding-inline-start: 2rem;
+  font-size: 0.95em;
+  color: var(--paper-dim, #bdb8ad);
+}
+
+.submenu-menu a::before {
+  content: "—";
+  margin-inline-end: 0.55rem;
+  color: var(--gold, #c39b4e);
+  opacity: 0.65;
+}
+
+.submenu-menu a:hover,
+.submenu-menu a:focus-visible {
+  color: var(--gold-bright, #e0bf7d);
+  background: var(--hover-wash);
+}
+
   /* Embedded video */
 
   .embed {

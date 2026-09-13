@@ -36,6 +36,27 @@
     });
   });
 
+  document.querySelectorAll(".submenu-btn").forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.stopPropagation();
+
+    const isOpen = button.getAttribute("aria-expanded") === "true";
+
+    /* Close sibling submenus */
+    const parentMenu = button.closest(".dropdown-menu");
+
+    parentMenu
+      .querySelectorAll(".submenu-btn[aria-expanded='true']")
+      .forEach((otherButton) => {
+        if (otherButton !== button) {
+          otherButton.setAttribute("aria-expanded", "false");
+        }
+      });
+
+    button.setAttribute("aria-expanded", String(!isOpen));
+  });
+});
+
   /* Topic filter: pills show only the articles tagged with that keyword */
 
   document.querySelectorAll('.topic-filter').forEach((bar) => {
