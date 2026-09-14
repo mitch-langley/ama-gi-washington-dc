@@ -84,13 +84,19 @@
           <p>Explore cities in Iberia and the Americas associated with the School of Salamanca, its scholars, its immediate American interlocutors, and the later transmission of Vitorian and Suárezian thought.</p>
         </header>
 
-        <p class="sal-map-instructions">Hover, focus, or tap a city marker for details. Use the filters to isolate different kinds of association.</p>
+        <p class="sal-map-instructions">Hover, focus, or tap a city marker for details. Click a marker to keep its information open. Use the filters to isolate different kinds of association.</p>
 
-        <div class="topic-filter salamanca-map__filters" aria-label="Filter cities by association">
+        <div class="topic-filter salamanca-map__filters" role="group" aria-label="Map legend and city filters by association">
           <div class="topic-filter__pills" id="sal-map-filter-pills"></div>
           <p class="topic-filter__status" id="sal-map-filter-status" aria-live="polite"></p>
         </div>
 
+        <div class="sal-map-view-switch" id="sal-map-view-switch" role="group" aria-label="Map view" hidden>
+          <button type="button" data-view="atlantic" aria-pressed="true" aria-controls="salamanca-map-svg">Atlantic</button>
+          <button type="button" data-view="iberia" aria-pressed="false" aria-controls="salamanca-map-svg">Iberia</button>
+        </div>
+
+        <div class="sal-map-explorer">
         <div class="sal-map-shell">
           <svg id="salamanca-map-svg" class="sal-map" viewBox="0 0 1200 900" role="img" aria-labelledby="sal-map-title sal-map-desc">
             <title id="sal-map-title">Cities associated with the School of Salamanca</title>
@@ -172,34 +178,39 @@
 <path class="sal-map__country" d="M1082.1,154.7 L1082.7,160.8 L1086.1,171.4 L1088.8,173.5 L1086.9,177.4 L1073.8,179.1 L1069.3,182.8 L1063.5,183.6 L1063.1,191.0 L1051.4,195.0 L1047.6,200.0 L1039.4,202.7 L1029.4,204.2 L1013.3,211.6 L1013.3,223.4 L1011.8,223.4 L1012.1,228.8 L1005.9,229.1 L1002.6,231.4 L998.1,231.4 L994.5,230.1 L986.1,231.2 L982.8,239.0 L979.7,239.7 L975.0,252.3 L961.1,263.1 L957.8,276.9 L953.7,281.4 L952.5,285.0 L930.0,285.8 L929.8,285.8 L930.3,281.1 L934.1,278.4 L937.4,273.2 L936.7,269.8 L940.2,262.8 L945.7,256.4 L949.1,254.8 L951.8,249.0 L952.0,243.6 L955.6,237.5 L962.3,233.8 L968.6,223.6 L968.8,223.5 L973.8,219.6 L983.1,218.5 L991.0,211.7 L996.0,209.0 L1004.4,200.7 L1001.9,188.2 L1005.7,179.6 L1007.0,174.4 L1013.4,167.6 L1023.5,163.0 L1030.9,158.9 L1037.6,148.5 L1040.7,142.4 L1048.1,142.4 L1054.1,146.7 L1063.6,146.0 L1074.0,148.2 L1078.3,148.3 L1082.1,154.7 Z" aria-label="Morocco" />
 <path class="sal-map__country" d="M1199.5,250.6 L1199.1,246.3 L1193.2,239.1 L1197.2,234.9 L1196.3,228.6 L1197.6,223.1 L1196.8,218.6 L1198.6,210.4 L1198.1,205.8 L1194.8,196.9 L1199.7,194.6 L1200.0,193.1 L1200.0,251.4 L1199.5,250.6 Z M1199.5,186.2 L1200.0,186.0 L1200.0,188.2 L1199.5,186.2 Z" aria-label="Libya" />
 <path class="sal-map__country" d="M488.9,391.1 L491.0,391.4 L490.6,398.9 L482.3,400.0 L480.5,399.1 L483.4,396.4 L483.2,392.4 L488.9,391.1 Z" aria-label="Trinidad and Tobago" /></g>
+            <g class="sal-map__locator" aria-hidden="true">
+              <rect id="sal-map-inset-locator" x="995" y="65" width="95" height="80" />
+              <path id="sal-map-inset-connector" d="M995,105 L820,175" />
+            </g>
+            <text class="sal-map__region-label" x="740" y="410" text-anchor="middle" aria-hidden="true">Atlantic Ocean</text>
             <g id="sal-map-city-layer"></g>
 
             <g class="sal-map__inset" aria-label="Enlarged map of Iberia">
+              <rect class="sal-map__inset-header" x="470" y="10" width="350" height="35" />
               <rect class="sal-map__inset-bg" x="470" y="45" width="350" height="260" rx="3" />
               <g aria-hidden="true"><path class="sal-map__country" d="M801.5,60.1 L786.8,47.5 L789.2,45.0 L820.0,45.0 L820.0,64.2 L801.5,60.1 Z" aria-label="France" />
 <path class="sal-map__country" d="M812.3,298.0 L820.0,296.9 L820.0,305.0 L798.4,305.0 L812.3,298.0 Z" aria-label="Algeria" />
 <path class="sal-map__country" d="M537.3,89.4 L552.4,84.6 L561.6,100.5 L583.4,100.5 L589.7,96.4 L611.2,97.5 L621.5,113.8 L604.4,122.6 L604.0,148.0 L598.0,152.8 L596.5,168.1 L580.6,170.8 L595.3,190.3 L585.2,211.6 L597.9,221.3 L592.8,230.1 L579.2,242.3 L582.2,253.1 L567.4,261.5 L548.0,256.9 L529.0,260.5 L534.6,235.1 L531.2,215.1 L514.7,212.1 L505.9,199.8 L508.8,178.5 L523.5,166.7 L526.1,153.6 L533.8,134.0 L533.0,120.3 L525.6,108.6 L524.0,97.6 L537.3,89.4 Z" aria-label="Portugal" />
 <path class="sal-map__country" d="M579.2,242.3 L592.8,230.1 L597.9,221.3 L585.2,211.6 L595.3,190.3 L580.6,170.8 L596.5,168.1 L598.0,152.8 L604.0,148.0 L604.4,122.6 L621.5,113.8 L611.2,97.5 L589.7,96.4 L583.4,100.5 L561.6,100.5 L552.4,84.6 L537.3,89.4 L524.0,97.6 L525.8,74.5 L510.8,60.4 L545.0,45.0 L674.5,45.0 L696.7,48.1 L727.2,46.4 L786.8,47.5 L801.5,60.1 L820.0,64.2 L820.0,238.1 L803.8,241.9 L777.8,266.8 L731.0,267.3 L695.9,266.7 L672.8,278.2 L658.7,290.5 L640.7,287.8 L627.1,276.8 L616.6,258.1 L582.2,253.1 L579.2,242.3 Z" aria-label="Spain" />
 <path class="sal-map__country" d="M638.4,296.6 L665.5,296.7 L678.8,305.0 L633.5,305.0 L638.4,296.6 Z" aria-label="Morocco" /></g>
-              <text class="sal-map__inset-label" x="488" y="73">IBERIA · ENLARGED</text>
+              <rect class="sal-map__inset-frame" x="470" y="45" width="350" height="260" rx="3" aria-hidden="true" />
+              <text class="sal-map__inset-label" x="488" y="33">IBERIA · ENLARGED</text>
               <g id="sal-map-inset-city-layer"></g>
             </g>
           </svg>
 
-          <aside id="sal-map-tooltip" class="sal-map__tooltip" role="tooltip" hidden></aside>
           <noscript><p class="sal-map-note">This interactive map requires JavaScript. The city index below remains available only when scripting is enabled.</p></noscript>
         </div>
-
-        <div class="sal-map-legend" aria-label="Map marker legend">
-          <span class="sal-map-legend__item"><span class="sal-map-legend__dot sal-map-legend__dot--core"></span>Core center</span>
-          <span class="sal-map-legend__item"><span class="sal-map-legend__dot"></span>Major extension</span>
-          <span class="sal-map-legend__item"><span class="sal-map-legend__dot sal-map-legend__dot--secondary"></span>Secondary center</span>
-          <span class="sal-map-legend__item"><span class="sal-map-legend__dot sal-map-legend__dot--biographical"></span>Biographical / peripheral</span>
-          <span class="sal-map-legend__item"><span class="sal-map-legend__dot sal-map-legend__dot--precursor"></span>American precursor</span>
-          <span class="sal-map-legend__item"><span class="sal-map-legend__dot sal-map-legend__dot--reception"></span>Later reception</span>
+        <aside id="sal-map-tooltip" class="sal-map__tooltip" data-empty="true" aria-labelledby="sal-map-detail-title">
+          <div id="sal-map-detail-content" class="sal-map__tooltip-body" aria-live="polite" aria-atomic="true">
+            <p class="sal-map__tooltip-kicker">City information</p>
+            <h2 id="sal-map-detail-title">Explore a city</h2>
+            <p class="sal-map__tooltip-description">Hover over or focus on a marker to explore its history and associations. Click a city to keep its details here.</p>
+          </div>
+        </aside>
         </div>
 
-        <p class="sal-map-note">Coordinates are approximate city centers. The classification distinguishes direct institutional centers, scholar associations, formative American contexts, and later reception. Base geography derived from Natural Earth 1:110m data.</p>
+        <p class="sal-map-note">Gold-tinted countries contain cities matching the selected filter. Coordinates are approximate city centers. The classification distinguishes direct institutional centers, scholar associations, formative American contexts, and later reception. Base geography derived from Natural Earth 1:110m data.</p>
 
         <section class="salamanca-city-index-wrap" aria-labelledby="city-index-heading">
           <h2 id="city-index-heading">City Index</h2>

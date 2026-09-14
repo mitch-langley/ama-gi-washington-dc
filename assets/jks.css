@@ -401,6 +401,7 @@
     font-size: var(--t-xs, 0.75rem);
     text-align: center;
     color: var(--paper-faint, #97918a);
+    padding-top:1rem;
   }
 }
 

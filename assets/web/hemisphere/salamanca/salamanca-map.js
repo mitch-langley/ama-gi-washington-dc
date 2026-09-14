@@ -5,6 +5,19 @@
   const MAIN = { minLon: -110, maxLon: 10, minLat: -40, maxLat: 50, x: 0, y: 0, width: 1200, height: 900 };
   const INSET = { minLon: -10.5, maxLon: -1.0, minLat: 35.5, maxLat: 43.5, x: 470, y: 45, width: 350, height: 260 };
   const NS = "http://www.w3.org/2000/svg";
+  const labelPositions = {
+    inset: {
+      salamanca: { dx: -16, dy: -22, anchor: "end", mobile: true },
+      valladolid: { dx: 14, dy: -22, anchor: "start" },
+      coimbra: { dx: -55, dy: 34, anchor: "start" },
+      "alcala-de-henares": { dx: 65, dy: 48, anchor: "end" }
+    },
+    main: {
+      "mexico-city": { dx: 34, dy: -6, anchor: "start", mobile: true },
+      tiripetio: { dx: 18, dy: -24, anchor: "start" },
+      lima: { dx: -18, dy: 6, anchor: "end", mobile: true }
+    }
+  };
 
   const groupMeta = {
     all: { label: "All" },
@@ -42,19 +55,123 @@
   const mainLayer = document.querySelector("#sal-map-city-layer");
   const insetLayer = document.querySelector("#sal-map-inset-city-layer");
   const tooltip = document.querySelector("#sal-map-tooltip");
-  const tooltipClose = tooltip.querySelector(".sal-map__tooltip-close");
+  const detailContent = document.querySelector("#sal-map-detail-content");
+  const emptyDetails = detailContent.innerHTML;
+  const compactLayout = window.matchMedia("(max-width: 64rem)");
   const shell = document.querySelector(".sal-map-shell");
   const filters = document.querySelector("#sal-map-filter-pills");
   const status = document.querySelector("#sal-map-filter-status");
   const index = document.querySelector("#sal-map-city-index");
+  const viewSwitch = document.querySelector("#sal-map-view-switch");
+  const mapDescription = document.querySelector("#sal-map-desc");
+  const desktopDescription = mapDescription.textContent;
+  const countryShapes = [...svg.querySelectorAll(".sal-map__country")];
+  const countryNames = { "Dominican Rep.": "Dominican Republic" };
 
   let cities = [];
   let pinnedCityId = null;
   let activeGroup = "all";
+  let mobileView = "atlantic";
+
+  function currentView() {
+    return compactLayout.matches ? mobileView : "desktop";
+  }
+
+  function updateMapVisibility() {
+    const view = currentView();
+    document.querySelectorAll(".sal-map__marker-set").forEach(marker => {
+      const wrongGroup = activeGroup !== "all" && marker.dataset.group !== activeGroup;
+      const wrongView = view === "iberia"
+        ? marker.parentElement !== insetLayer
+        : view === "atlantic" && marker.parentElement === insetLayer;
+      const shouldHide = wrongGroup || wrongView;
+      marker.toggleAttribute("hidden", shouldHide);
+      marker.setAttribute("aria-hidden", String(shouldHide));
+      marker.setAttribute("tabindex", shouldHide ? "-1" : "0");
+    });
+    const filteredCities = cities.filter(city => activeGroup === "all" || groupFor(city.classification_category) === activeGroup);
+    const countries = new Set(filteredCities.map(city => city.country));
+    countryShapes.forEach(shape => {
+      const name = shape.getAttribute("aria-label");
+      shape.classList.toggle("has-cities", countries.has(countryNames[name] || name));
+    });
+    const count = filteredCities.filter(city => view !== "iberia" || city.region === "Iberia").length;
+    status.textContent = view === "iberia"
+      ? `${count} ${count === 1 ? "city" : "cities"} in Iberia · ${filteredCities.length} in the city index`
+      : `${count} ${count === 1 ? "city" : "cities"} shown`;
+  }
+
+  function syncMapView() {
+    const view = currentView();
+    shell.dataset.view = view;
+    svg.setAttribute("viewBox", view === "iberia"
+      ? `${INSET.x} ${INSET.y - 35} ${INSET.width} ${INSET.height + 35}`
+      : `${MAIN.x} ${MAIN.y} ${MAIN.width} ${MAIN.height}`);
+    mapDescription.textContent = view === "desktop" ? desktopDescription
+      : view === "iberia" ? "Enlarged interactive map of cities in Iberia. Switch to Atlantic for the transatlantic overview."
+      : "Interactive Atlantic map showing cities in Iberia and the Americas. Switch to Iberia for an enlarged view.";
+    viewSwitch.querySelectorAll("button").forEach(button => {
+      button.setAttribute("aria-pressed", String(button.dataset.view === mobileView));
+    });
+    updateMapVisibility();
+  }
+
+  function selectMapView(view) {
+    if (mobileView !== view) unpinCity();
+    mobileView = view;
+    syncMapView();
+  }
 
   function markerRadius(group, inset = false) {
     const base = { core: 7, major: 6, secondary: 5.5, biographical: 4.5, precursor: 5.5, reception: 5 }[group] || 5;
     return inset ? base + 1 : base;
+  }
+
+  function positionInsetLocator() {
+    const topLeft = project(INSET.minLon, INSET.maxLat, MAIN);
+    const bottomRight = project(INSET.maxLon, INSET.minLat, MAIN);
+    const locator = document.querySelector("#sal-map-inset-locator");
+    locator.setAttribute("x", topLeft.x);
+    locator.setAttribute("y", topLeft.y);
+    locator.setAttribute("width", bottomRight.x - topLeft.x);
+    locator.setAttribute("height", bottomRight.y - topLeft.y);
+    document.querySelector("#sal-map-inset-connector").setAttribute("d",
+      `M${topLeft.x},${(topLeft.y + bottomRight.y) / 2} L${INSET.x + INSET.width},${INSET.y + INSET.height / 2}`);
+  }
+
+  function createCityLabel(city, p, cfg, isInset, set) {
+    const permanent = labelPositions[isInset ? "inset" : "main"][city.id];
+    const alignLeft = p.x > cfg.x + cfg.width / 2;
+    const placement = permanent || {
+      dx: alignLeft ? -16 : 16,
+      dy: -17,
+      anchor: alignLeft ? "end" : "start"
+    };
+    set.dataset.labelPermanent = String(Boolean(permanent));
+    set.dataset.labelMobile = String(Boolean(permanent?.mobile));
+
+    const labels = document.createElementNS(NS, "g");
+    labels.setAttribute("class", "sal-map__city-label-set");
+    labels.setAttribute("aria-hidden", "true");
+    if (permanent && Math.hypot(placement.dx, placement.dy) > 25) {
+      const leader = document.createElementNS(NS, "path");
+      const length = Math.hypot(placement.dx, placement.dy);
+      const clearance = markerRadius(groupFor(city.classification_category), isInset) + 5;
+      const startX = p.x + placement.dx / length * clearance;
+      const startY = p.y + placement.dy / length * clearance;
+      const endX = p.x + placement.dx + (placement.anchor === "end" ? 4 : -4);
+      leader.setAttribute("class", "sal-map__label-leader");
+      leader.setAttribute("d", `M${startX},${startY} L${endX},${p.y + placement.dy - 5}`);
+      labels.appendChild(leader);
+    }
+    const label = document.createElementNS(NS, "text");
+    label.setAttribute("class", "sal-map__city-label");
+    label.setAttribute("x", p.x + placement.dx);
+    label.setAttribute("y", p.y + placement.dy);
+    label.setAttribute("text-anchor", placement.anchor);
+    label.textContent = city.current_name;
+    labels.appendChild(label);
+    set.appendChild(labels);
   }
 
   function createMarker(city, cfg, layer, isInset = false) {
@@ -67,6 +184,8 @@
     set.dataset.region = city.region;
     set.setAttribute("tabindex", "0");
     set.setAttribute("role", "button");
+    set.setAttribute("aria-controls", "sal-map-tooltip");
+    set.setAttribute("aria-pressed", "false");
     set.setAttribute("aria-label", `${city.current_name}, ${city.country}. ${city.classification_category}`);
 
     const hit = document.createElementNS(NS, "circle");
@@ -81,7 +200,19 @@
     dot.setAttribute("cy", p.y);
     dot.setAttribute("r", markerRadius(group, isInset));
 
+    if (city.id === "salamanca") {
+      [4, 8].forEach((offset, i) => {
+        const ring = document.createElementNS(NS, "circle");
+        ring.setAttribute("class", `sal-map__core-ring${i ? " sal-map__core-ring--outer" : ""}`);
+        ring.setAttribute("cx", p.x);
+        ring.setAttribute("cy", p.y);
+        ring.setAttribute("r", markerRadius(group, isInset) + offset);
+        ring.setAttribute("aria-hidden", "true");
+        set.appendChild(ring);
+      });
+    }
     set.append(hit, dot);
+    createCityLabel(city, p, cfg, isInset, set);
     set.addEventListener("mouseenter", () => showCity(city, set, false));
     set.addEventListener("mouseleave", () => { if (!pinnedCityId) hideTooltip(); });
     set.addEventListener("focus", () => showCity(city, set, false));
@@ -99,61 +230,43 @@
     layer.appendChild(set);
   }
 
-  function tooltipHtml(city) {
+  function tooltipHtml(city, pinned) {
     const former = city.former_name
       ? `<p class="sal-map__former-name">Historically: ${esc(city.former_name)}</p>`
       : "";
     return `
       <button class="sal-map__tooltip-close" type="button" aria-label="Close city information">×</button>
       <p class="sal-map__tooltip-kicker">${esc(city.region)} · ${esc(city.classification_category)}</p>
-      <h2>${esc(city.current_name)}</h2>
+      <h2 id="sal-map-detail-title">${esc(city.current_name)}</h2>
       ${former}
       <p class="sal-map__tooltip-description">${esc(city.short_description)}</p>
-      <p class="sal-map__tooltip-associations"><strong>Associated:</strong> ${city.associated_scholars_etc.map(esc).join(" · ")}</p>`;
+      <p class="sal-map__tooltip-associations"><strong>Associated:</strong> ${city.associated_scholars_etc.map(esc).join(" · ")}</p>
+      <p class="sal-map__tooltip-state">${pinned ? "Pinned. Select another city to switch, or close to clear." : "Click a city marker to keep its details open."}</p>`;
   }
 
   function setActiveMarkers(cityId) {
     document.querySelectorAll(".sal-map__marker-set").forEach(el => {
       el.classList.toggle("is-active", el.dataset.cityId === cityId);
+      el.setAttribute("aria-pressed", String(el.dataset.cityId === pinnedCityId));
     });
   }
 
   function showCity(city, marker, pinned) {
-    if (pinnedCityId && !pinned && pinnedCityId !== city.id) return;
-    tooltip.innerHTML = tooltipHtml(city);
-    tooltip.hidden = false;
+    if (pinnedCityId && !pinned) return;
+    if (tooltip.dataset.cityId === city.id && tooltip.dataset.pinned === String(pinned)) return;
+    detailContent.innerHTML = tooltipHtml(city, pinned);
+    tooltip.dataset.empty = "false";
+    tooltip.dataset.cityId = city.id;
     tooltip.dataset.pinned = pinned ? "true" : "false";
+    detailContent.scrollTop = 0;
+    tooltip.scrollTop = 0;
     setActiveMarkers(city.id);
-    positionTooltip(marker);
     tooltip.querySelector(".sal-map__tooltip-close").addEventListener("click", unpinCity, { once: true });
   }
 
-  function positionTooltip(marker) {
-    if (window.matchMedia("(max-width: 44rem)").matches) {
-      tooltip.style.left = "";
-      tooltip.style.top = "";
-      return;
-    }
-    const shellRect = shell.getBoundingClientRect();
-    const markerRect = marker.getBoundingClientRect();
-    let left = markerRect.left - shellRect.left + markerRect.width / 2;
-    let top = markerRect.top - shellRect.top + markerRect.height / 2;
-    const half = Math.min(184, (shellRect.width - 32) / 2);
-    left = Math.max(half + 16, Math.min(shellRect.width - half - 16, left));
-    if (top < 235) {
-      tooltip.style.transform = "translate(-50%, 1.25rem)";
-    } else {
-      tooltip.style.transform = "translate(-50%, calc(-100% - .85rem))";
-    }
-    tooltip.style.left = `${left}px`;
-    tooltip.style.top = `${top}px`;
-  }
-
   function hideTooltip() {
-    if (pinnedCityId) return;
-    tooltip.hidden = true;
-    tooltip.removeAttribute("data-pinned");
-    setActiveMarkers("");
+    if (pinnedCityId || !compactLayout.matches) return;
+    unpinCity();
   }
 
   function pinCity(city, marker) {
@@ -167,8 +280,12 @@
 
   function unpinCity() {
     pinnedCityId = null;
-    tooltip.hidden = true;
+    tooltip.dataset.empty = "true";
+    delete tooltip.dataset.cityId;
     tooltip.removeAttribute("data-pinned");
+    detailContent.innerHTML = emptyDetails;
+    detailContent.scrollTop = 0;
+    tooltip.scrollTop = 0;
     setActiveMarkers("");
   }
 
@@ -179,7 +296,28 @@
       button.className = "topic-pill";
       button.dataset.group = key;
       button.setAttribute("aria-pressed", key === "all" ? "true" : "false");
-      button.textContent = meta.label;
+      if (key !== "all") {
+        const symbol = document.createElementNS(NS, "svg");
+        symbol.setAttribute("class", "sal-map-filter-symbol");
+        symbol.setAttribute("viewBox", "-17 -17 34 34");
+        symbol.setAttribute("aria-hidden", "true");
+        symbol.setAttribute("focusable", "false");
+        symbol.dataset.group = key;
+        if (key === "core") {
+          [4, 8].forEach((offset, i) => {
+            const ring = document.createElementNS(NS, "circle");
+            ring.setAttribute("class", `sal-map__core-ring${i ? " sal-map__core-ring--outer" : ""}`);
+            ring.setAttribute("r", markerRadius(key) + offset);
+            symbol.appendChild(ring);
+          });
+        }
+        const dot = document.createElementNS(NS, "circle");
+        dot.setAttribute("class", "sal-map__marker");
+        dot.setAttribute("r", markerRadius(key));
+        symbol.appendChild(dot);
+        button.appendChild(symbol);
+      }
+      button.appendChild(document.createTextNode(meta.label));
       button.addEventListener("click", () => applyFilter(key));
       filters.appendChild(button);
     });
@@ -191,17 +329,11 @@
     document.querySelectorAll("#sal-map-filter-pills .topic-pill").forEach(btn => {
       btn.setAttribute("aria-pressed", btn.dataset.group === group ? "true" : "false");
     });
-    document.querySelectorAll(".sal-map__marker-set").forEach(marker => {
-      const shouldHide = group !== "all" && marker.dataset.group !== group;
-      marker.toggleAttribute("hidden", shouldHide);
-      marker.setAttribute("aria-hidden", shouldHide ? "true" : "false");
-    });
     document.querySelectorAll("#sal-map-city-index li").forEach(item => {
       const shouldHide = group !== "all" && item.dataset.group !== group;
       item.toggleAttribute("hidden", shouldHide);
     });
-    const count = cities.filter(c => group === "all" || groupFor(c.classification_category) === group).length;
-    status.textContent = `${count} ${count === 1 ? "city" : "cities"} shown`;
+    updateMapVisibility();
   }
 
   function buildIndex() {
@@ -213,7 +345,9 @@
       button.type = "button";
       button.innerHTML = `<strong>${esc(city.current_name)}</strong><span>${esc(city.region)} · ${esc(city.classification_category)}</span>`;
       button.addEventListener("click", () => {
-        const marker = document.querySelector(`.sal-map__marker-set[data-city-id="${CSS.escape(city.id)}"]`);
+        if (compactLayout.matches) selectMapView(city.region === "Iberia" ? "iberia" : "atlantic");
+        const layer = city.region === "Iberia" ? insetLayer : mainLayer;
+        const marker = layer.querySelector(`.sal-map__marker-set[data-city-id="${CSS.escape(city.id)}"]`);
         if (!marker) return;
         marker.focus({ preventScroll: true });
         pinCity(city, marker);
@@ -225,6 +359,7 @@
   }
 
   async function init() {
+    positionInsetLocator();
     try {
       const response = await fetch(DATA_URL, { cache: "no-store" });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -237,6 +372,8 @@
       buildFilters();
       buildIndex();
       applyFilter("all");
+      syncMapView();
+      viewSwitch.hidden = false;
     } catch (error) {
       console.error("Unable to load Salamanca map data:", error);
       status.textContent = "Map data could not be loaded.";
@@ -250,10 +387,17 @@
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") unpinCity();
   });
-  window.addEventListener("resize", () => {
-    if (!pinnedCityId || tooltip.hidden) return;
-    const marker = document.querySelector(`.sal-map__marker-set[data-city-id="${CSS.escape(pinnedCityId)}"].is-active`);
-    if (marker) positionTooltip(marker);
+  viewSwitch.querySelectorAll("button").forEach(button => {
+    button.addEventListener("click", () => selectMapView(button.dataset.view));
+  });
+  compactLayout.addEventListener("change", () => {
+    if (compactLayout.matches && pinnedCityId) {
+      const city = cities.find(item => item.id === pinnedCityId);
+      mobileView = city?.region === "Iberia" ? "iberia" : "atlantic";
+    } else if (compactLayout.matches) {
+      unpinCity();
+    }
+    if (cities.length) syncMapView();
   });
 
   init();

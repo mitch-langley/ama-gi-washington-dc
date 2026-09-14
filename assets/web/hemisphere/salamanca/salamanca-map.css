@@ -25,7 +25,71 @@
     margin-block-end: var(--space-m, 1.5rem);
   }
 
+  .salamanca-map__filters .topic-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .4rem;
+  }
+
+  .salamanca-map__filters .topic-pill[aria-pressed="true"] {
+    background: var(--gold-wash, rgba(195,155,78,.08));
+    color: var(--gold-bright, #e0bf7d);
+    border-color: var(--gold, #c39b4e);
+    box-shadow: inset 0 0 0 1px var(--hairline-gold, #756039);
+  }
+
+  .sal-map-filter-symbol {
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
+    flex: 0 0 1.5rem;
+    pointer-events: none;
+  }
+
+  .sal-map-view-switch {
+    display: none;
+    justify-content: center;
+    gap: .35rem;
+    margin-block-end: 1rem;
+  }
+
+  .sal-map-view-switch[hidden] { display: none; }
+
+  .sal-map-view-switch button {
+    min-block-size: var(--target-size, 2.75rem);
+    min-inline-size: 7rem;
+    padding: .55rem 1.25rem;
+    border: 1px solid var(--hairline-strong, #36363a);
+    border-radius: var(--radius, .1875rem);
+    background: var(--ink-raised, #1c1c21);
+    color: var(--paper-dim, #bdb8ad);
+    font: inherit;
+    font-size: var(--t-s, .8125rem);
+    cursor: pointer;
+  }
+
+  .sal-map-view-switch button[aria-pressed="true"] {
+    background: var(--gold-wash, rgba(195,155,78,.08));
+    border-color: var(--gold, #c39b4e);
+    color: var(--gold-bright, #e0bf7d);
+  }
+
+  .sal-map-view-switch button:focus-visible {
+    outline: 2px solid var(--paper, #f2efe9);
+    outline-offset: 3px;
+  }
+
+  .sal-map-explorer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 20rem;
+    gap: 1rem;
+    align-items: stretch;
+    max-inline-size: var(--max-width, 73.75rem);
+    margin-inline: auto;
+  }
+
   .sal-map-shell {
+    min-inline-size: 0;
     position: relative;
     inline-size: 100%;
     max-inline-size: var(--max-width, 73.75rem);
@@ -47,6 +111,7 @@
   }
 
   .sal-map {
+    display: block;
     position: relative;
     z-index: 0;
     inline-size: 100%;
@@ -60,16 +125,23 @@
   }
 
   .sal-map__graticule line {
-    stroke: var(--hairline, rgba(255,255,255,.10));
-    stroke-width: 1;
+    stroke: oklch(100% 0 0 / 0.045);
+    stroke-width: .65;
     vector-effect: non-scaling-stroke;
   }
 
   .sal-map__country {
-    fill: var(--ink-raised, #1c1c21);
-    stroke: var(--hairline-strong, rgba(255,255,255,.18));
-    stroke-width: 1;
+    fill: oklch(27% 0.012 80);
+    stroke: oklch(78% 0.015 85 / 0.16);
+    stroke-width: .65;
     vector-effect: non-scaling-stroke;
+  }
+
+  .sal-map__country.has-cities {
+    fill: oklch(33% 0.045 82);
+    stroke: var(--gold, #c39b4e);
+    stroke-opacity: .7;
+    stroke-width: 1;
   }
 
   .sal-map__inset-bg {
@@ -77,6 +149,37 @@
     stroke: var(--hairline-gold, #756039);
     stroke-width: 1.2;
     vector-effect: non-scaling-stroke;
+  }
+
+  .sal-map__inset-header {
+    fill: color-mix(in oklch, var(--ink-deep) 90%, var(--gold) 10%);
+    stroke: var(--hairline-gold, #756039);
+    stroke-width: .8;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .sal-map__inset-frame {
+    fill: none;
+    stroke: var(--hairline-gold, #756039);
+    stroke-width: .8;
+    vector-effect: non-scaling-stroke;
+    pointer-events: none;
+  }
+
+  .sal-map__locator {
+    fill: none;
+    stroke: var(--gold, #c39b4e);
+    stroke-opacity: .45;
+    pointer-events: none;
+  }
+
+  .sal-map__locator :is(rect, path) {
+    stroke-width: .8;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .sal-map__locator path {
+    stroke-dasharray: 4 5;
   }
 
   .sal-map__inset-label,
@@ -92,7 +195,59 @@
 
   .sal-map__region-label {
     font-size: 20px;
-    opacity: .55;
+    font-weight: 400;
+    letter-spacing: .28em;
+    opacity: .4;
+  }
+
+  .sal-map__city-label-set {
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .sal-map__marker-set[data-label-permanent="true"] .sal-map__city-label-set,
+  .sal-map__marker-set.is-active .sal-map__city-label-set,
+  .sal-map__marker-set:hover .sal-map__city-label-set,
+  .sal-map__marker-set:focus .sal-map__city-label-set {
+    visibility: visible;
+  }
+
+  .sal-map__city-label {
+    font-family: var(--serif, Georgia, serif);
+    font-size: 16px;
+    font-weight: 500;
+    fill: var(--paper-dim, #bdb8ad);
+    stroke: var(--ink-deep, #08080a);
+    stroke-width: 3.5;
+    stroke-linejoin: round;
+    paint-order: stroke fill;
+  }
+
+  .sal-map__marker-set[data-group="core"] .sal-map__city-label {
+    font-size: 18px;
+    font-weight: 700;
+    fill: var(--gold-bright, #e0bf7d);
+  }
+
+  .sal-map__label-leader {
+    fill: none;
+    stroke: var(--paper-faint, #97918a);
+    stroke-opacity: .6;
+    stroke-width: .65;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .sal-map__core-ring {
+    fill: none;
+    stroke: var(--gold-bright, #e0bf7d);
+    stroke-width: .85;
+    vector-effect: non-scaling-stroke;
+    pointer-events: none;
+  }
+
+  .sal-map__core-ring--outer {
+    stroke-opacity: .4;
+    stroke-width: .65;
   }
 
   .sal-map__marker-hit {
@@ -110,30 +265,30 @@
     transition: r var(--speed, 180ms) var(--ease, ease), fill var(--speed, 180ms) var(--ease, ease), opacity var(--speed, 180ms) var(--ease, ease);
   }
 
-  .sal-map__marker-set[data-group="core"] .sal-map__marker {
+  :is(.sal-map__marker-set, .sal-map-filter-symbol)[data-group="core"] .sal-map__marker {
     fill: var(--gold-bright, #e0bf7d);
   }
 
-  .sal-map__marker-set[data-group="major"] .sal-map__marker {
+  :is(.sal-map__marker-set, .sal-map-filter-symbol)[data-group="major"] .sal-map__marker {
     fill: var(--gold, #c39b4e);
   }
 
-  .sal-map__marker-set[data-group="secondary"] .sal-map__marker {
+  :is(.sal-map__marker-set, .sal-map-filter-symbol)[data-group="secondary"] .sal-map__marker {
     fill: var(--gold-deep, #6f5a20);
     stroke: var(--gold-bright, #e0bf7d);
   }
 
-  .sal-map__marker-set[data-group="biographical"] .sal-map__marker {
+  :is(.sal-map__marker-set, .sal-map-filter-symbol)[data-group="biographical"] .sal-map__marker {
     fill: var(--paper-faint, #97918a);
   }
 
-  .sal-map__marker-set[data-group="precursor"] .sal-map__marker,
-  .sal-map__marker-set[data-group="reception"] .sal-map__marker {
+  :is(.sal-map__marker-set, .sal-map-filter-symbol)[data-group="precursor"] .sal-map__marker,
+  :is(.sal-map__marker-set, .sal-map-filter-symbol)[data-group="reception"] .sal-map__marker {
     fill: var(--ink-deep, #08080a);
     stroke: var(--gold, #c39b4e);
   }
 
-  .sal-map__marker-set[data-group="reception"] .sal-map__marker {
+  :is(.sal-map__marker-set, .sal-map-filter-symbol)[data-group="reception"] .sal-map__marker {
     stroke: var(--paper-dim, #bdb8ad);
   }
 
@@ -156,36 +311,43 @@
   }
 
   .sal-map__tooltip {
-    position: absolute;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+    position: relative;
     z-index: 20;
-    inline-size: min(23rem, calc(100% - 2rem));
-    padding: 1rem 1.05rem 1.1rem;
+    min-inline-size: 0;
+    min-block-size: 0;
     border: 1px solid var(--hairline-gold, #756039);
     border-radius: var(--radius, 0.1875rem);
     background: var(--ink-veil, rgba(13,13,16,.94));
-    box-shadow: 0 1rem 2.5rem -0.75rem rgba(0,0,0,.75);
-    pointer-events: none;
-    transform: translate(-50%, calc(-100% - .85rem));
+    text-align: start;
+  }
+
+  .sal-map__tooltip-body {
+    position: absolute;
+    inset: 0;
+    padding: 1.25rem;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+  }
+
+  .sal-map__tooltip[data-empty="true"] {
+    border-color: var(--hairline-strong, #36363a);
   }
 
   .sal-map__tooltip[data-pinned="true"] {
-    pointer-events: auto;
+    border-color: var(--gold, #c39b4e);
   }
 
-  .sal-map__tooltip::after {
-    content: "";
-    position: absolute;
-    inset-block-start: 100%;
-    inset-inline-start: 50%;
-    inline-size: .75rem;
-    block-size: .75rem;
-    border-inline-end: 1px solid var(--hairline-gold, #756039);
-    border-block-end: 1px solid var(--hairline-gold, #756039);
-    background: var(--ink-veil, rgba(13,13,16,.94));
-    transform: translate(-50%, -.38rem) rotate(45deg);
+  .sal-map__tooltip-state {
+    margin-block: 1rem 0;
+    font-size: var(--t-xs, .75rem);
+    line-height: 1.55;
+    color: var(--gold, #c39b4e);
   }
 
   .sal-map__tooltip-kicker {
+    padding-inline-end: 1.75rem;
     margin-block-end: .25rem;
     font-size: var(--t-2xs, .6875rem);
     font-weight: var(--w-semibold, 600);
@@ -231,7 +393,8 @@
     position: absolute;
     inset-block-start: .55rem;
     inset-inline-end: .55rem;
-    display: none;
+    display: grid;
+    place-items: center;
     inline-size: 2rem;
     block-size: 2rem;
     border: 0;
@@ -239,43 +402,6 @@
     color: var(--paper-dim, #bdb8ad);
     cursor: pointer;
   }
-
-  .sal-map__tooltip[data-pinned="true"] .sal-map__tooltip-close {
-    display: grid;
-    place-items: center;
-  }
-
-  .sal-map-legend {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: .55rem 1rem;
-    max-inline-size: var(--max-width, 73.75rem);
-    margin: var(--space-m, 1.5rem) auto 0;
-    font-size: var(--t-xs, .75rem);
-    color: var(--paper-faint, #97918a);
-  }
-
-  .sal-map-legend__item {
-    display: inline-flex;
-    align-items: center;
-    gap: .4rem;
-  }
-
-  .sal-map-legend__dot {
-    inline-size: .65rem;
-    block-size: .65rem;
-    border: 2px solid var(--ink-deep, #08080a);
-    border-radius: 50%;
-    background: var(--gold, #c39b4e);
-    box-shadow: 0 0 0 1px var(--hairline-strong, #36363a);
-  }
-
-  .sal-map-legend__dot--core { background: var(--gold-bright); }
-  .sal-map-legend__dot--secondary { background: var(--gold-deep); border-color: var(--gold-bright); }
-  .sal-map-legend__dot--biographical { background: var(--paper-faint); }
-  .sal-map-legend__dot--precursor { background: var(--ink-deep); border-color: var(--gold); }
-  .sal-map-legend__dot--reception { background: var(--ink-deep); border-color: var(--paper-dim); }
 
   .sal-map-note {
     max-inline-size: var(--measure, 70ch);
@@ -302,13 +428,19 @@
   .salamanca-city-index {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+    grid-auto-rows: 1fr;
     gap: .5rem;
     padding: 0;
     list-style: none;
   }
 
   .salamanca-city-index button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     inline-size: 100%;
+    block-size: 100%;
     min-block-size: var(--target-size, 2.75rem);
     padding: .65rem .75rem;
     border: 1px solid var(--hairline, #29292d);
@@ -342,22 +474,48 @@
     }
   }
 
+  @media (max-width: 64rem) {
+    .sal-map-view-switch { display: flex; }
+    .sal-map-shell[data-view="atlantic"] .sal-map__inset,
+    .sal-map-shell[data-view="atlantic"] #sal-map-inset-connector {
+      display: none;
+    }
+    .sal-map-shell[data-view="iberia"] .sal-map > :not(.sal-map__inset):not(title):not(desc) {
+      display: none;
+    }
+    .sal-map-shell[data-view="iberia"] .sal-map {
+      aspect-ratio: 350 / 295;
+    }
+    .sal-map-shell[data-view="iberia"] .sal-map__city-label { font-size: 16px; }
+    .sal-map-shell[data-view="iberia"] .sal-map__marker-set[data-group="core"] .sal-map__city-label { font-size: 18px; }
+    .sal-map-shell[data-view="iberia"] .sal-map__marker-hit { r: 22; }
+    .sal-map-explorer { display: block; }
+    .sal-map__tooltip {
+      position: fixed;
+      inset-inline: 1rem;
+      inset-block-end: 1rem;
+      max-block-size: min(70vh, 32rem);
+      max-block-size: min(70dvh, 32rem);
+      overflow-y: auto;
+      box-shadow: 0 1rem 2.5rem -0.75rem rgba(0,0,0,.75);
+    }
+    .sal-map__tooltip[data-empty="true"] { display: none; }
+    .sal-map__tooltip-body {
+      position: relative;
+      overflow: visible;
+    }
+  }
+
   @media (max-width: 44rem) {
     .sal-map-shell { overflow: visible; }
     .sal-map-shell::before { display: none; }
     .sal-map { aspect-ratio: 4 / 3; }
     .sal-map__region-label { display: none; }
-    .sal-map__tooltip {
-      position: fixed;
-      inset-inline: 1rem;
-      inset-block-end: 1rem;
-      inline-size: auto;
-      max-block-size: min(70vh, 32rem);
-      overflow-y: auto;
-      transform: none;
+    .sal-map-shell:not([data-view="iberia"]) .sal-map__marker-set[data-label-permanent="true"]:not([data-label-mobile="true"]):not(.is-active):not(:hover):not(:focus) .sal-map__city-label-set {
+      visibility: hidden;
     }
-    .sal-map__tooltip::after { display: none; }
-    .sal-map__tooltip-close { display: grid; place-items: center; }
+    .sal-map__city-label { font-size: 22px; }
+    .sal-map__marker-set[data-group="core"] .sal-map__city-label { font-size: 24px; }
   }
 
   @media (prefers-reduced-motion: reduce) {
