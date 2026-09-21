@@ -1271,6 +1271,10 @@ a.eyebrow:hover::after {
     .split-panel__text :is(h1, h2, h3) {
       text-align: center;
     }
+
+    [aria-labelledby="working-paper-title"] .split-panel__text p {
+      text-align: center;
+    }
   }
 
   /* Publication cards and biography gallery */
