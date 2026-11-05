@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Replace the title and description for each article. Remove noindex when ready to publish. -->
+  <title>Article title goes here | Johannes K. Schmidt</title>
+  <meta name="description" content="Replace with a short description of the article." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta property="og:site_name" content="Johannes K. Schmidt" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Article title goes here | Johannes K. Schmidt" />
+  <meta property="og:description" content="Replace with a short description of the article." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- Before publishing, add a canonical link, og:url, and an absolute og:image URL. -->
+  <link rel="preload" href="../fonts/noto-serif-v33-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../jks.css" />
+  <script src="../site.js" defer></script>
+</head>
+<body>
+
+<!--
+  Copy this file to assets/writing/article-slug.html. Relative paths assume that folder.
+  Replace the sample text, publication details, original link, images, and footnotes.
+  Optional blocks can be deleted in full without changing the remaining layout.
+  The page title is the only h1. Use h2, h3, and h4 for body subsections, in order.
+  Keep English copy left-aligned. For Spanish, set lang="es" and justify body paragraphs.
+-->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="navbar-container">
+  <nav class="navbar" aria-label="Primary">
+    <a href="../../index.html" class="logo">Johannes K. Schmidt</a>
+
+    <ul class="nav-links">
+      <li><a href="../../index.html">Home</a></li>
+
+      <li class="dropdown">
+        <button type="button" class="dropbtn" aria-expanded="false" aria-controls="menu-hemisphere">Our Hemisphere <span aria-hidden="true">&#9662;</span></button>
+
+        <ul class="dropdown-menu" id="menu-hemisphere">
+          <li class="submenu">
+            <button
+              type="button"
+              class="submenu-btn"
+              aria-expanded="false"
+              aria-controls="submenu-monroe"
+            >
+              Monroe Doctrine
+              <span class="submenu-arrow" aria-hidden="true">›</span>
+            </button>
+
+            <ul class="submenu-menu" id="submenu-monroe">
+              <li><a href="../../monroe-why.html">Why the Monroe Doctrine?</a></li>
+              <li><a href="../../monroe-reimagined.html">Reimagining the Monroe Doctrine</a></li>
+            </ul>
+          </li>
+
+          <li class="submenu">
+            <button
+              type="button"
+              class="submenu-btn"
+              aria-expanded="false"
+              aria-controls="submenu-salamanca"
+            >
+              School of Salamanca
+              <span class="submenu-arrow" aria-hidden="true">›</span>
+            </button>
+
+            <ul class="submenu-menu" id="submenu-salamanca">
+              <li><a href="../../hispanic-legacy-paper.html">Working Paper</a></li>
+              <li><a href="../../hispanic-legacy-podcast.html">Podcast Interview</a></li>
+              <li><a href="../../hispanic-legacy-map.html">Interactive Map</a></li>
+            </ul>
+          </li>
+
+          <li><a href="../../civitas-sancti-tui.html">&ldquo;Civitas Sancti Tui&rdquo;</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <button type="button" class="dropbtn is-section" aria-expanded="false" aria-controls="menu-about">About Me <span aria-hidden="true">&#9662;</span></button>
+
+        <ul class="dropdown-menu" id="menu-about">
+          <li><a href="../../bio.html">Bio</a></li>
+          <li><a href="../../writing.html">Selected Writing</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main" tabindex="-1">
+  <section class="content-section" aria-labelledby="article-title">
+    <div class="container">
+      <article class="article article--publication" aria-labelledby="article-title">
+        <header class="article__header">
+          <!-- Optional publication name and original publication date. Update datetime too. -->
+          <p class="eyebrow">[Publication name] &middot; <time datetime="2026-01-01">January 1, 2026</time></p>
+          <h1 id="article-title">Article title goes here</h1>
+          <!-- Optional subtitle. -->
+          <p class="article__subtitle">A short subtitle introduces the subject and gives the reader a reason to continue.</p>
+          <p class="article__byline">By <a href="../../bio.html" rel="author">Johannes K. Schmidt</a></p>
+          <!-- For co-authored work, add the other authors to the byline above. -->
+          <!-- Optional original-publication pill. Replace this example URL with the article URL. -->
+          <a class="article__original" href="https://example.com/article">Read the original at [Publication name] <span aria-hidden="true">&#8599;</span></a>
+        </header>
+
+        <!-- Optional banner. This existing site photo is a sample; replace src, dimensions, alt, caption, and credit together. -->
+        <figure class="article__banner">
+          <img src="../web/monroe/marines_ptoaldea.webp" width="2048" height="1322" alt="U.S. and Chilean Marines conduct physical training at Puerto Aldea, Chile" fetchpriority="high" />
+          <figcaption>U.S. and Chilean Marines conduct physical training during Exercise UNITAS at Puerto Aldea, Chile.
+            <span class="article__image-credit">[Photographer / image source]</span>
+          </figcaption>
+        </figure>
+
+        <!-- Optional lead paragraph. Remove the class for a regular body paragraph. -->
+        <p class="article__lead">The opening paragraph introduces the central question and states the article's argument. Replace this text with the published introduction.</p>
+        <p>Use regular paragraphs for the main text. Add links to supporting material where useful, and use numbered footnotes for source details or qualifications that would interrupt the argument.<sup class="fnref"><a id="fnref-1" href="#fn-1" role="doc-noteref" aria-label="Footnote 1">1</a></sup></p>
+
+        <!-- Heading 2: a main section within the article. -->
+        <h2 id="first-section">First section heading</h2>
+        <p>Develop the first part of the argument here. Each section should introduce its subject before moving into the evidence or examples that support it.</p>
+        <p>Continue with as many paragraphs as the material requires. Use <em>italics</em> for emphasis or publication titles, <strong>bold text</strong> when appropriate, and <a href="https://example.com/source">descriptive links</a> for sources.</p>
+
+        <!-- Heading 3: a subsection of the preceding h2. -->
+        <h3 id="supporting-argument">Supporting argument</h3>
+        <p>Use a subsection when a part of the analysis needs its own heading. Keep the heading hierarchy in order so readers can follow the structure.</p>
+
+        <!-- Optional inline figure. It stays within the reading column and preserves the image's proportions. -->
+        <figure>
+          <img src="../web/monroe/cmaldonado_csalazar.webp" width="999" height="717" alt="Chilean Vice Adm. Claudio Maldonado meets U.S. Navy Cmdr. Carla Salazar aboard USS Germantown" loading="lazy" decoding="async" />
+          <figcaption>Chilean Vice Adm. Claudio Maldonado meets U.S. Navy Cmdr. Carla Salazar aboard USS Germantown during UNITAS.
+            <span class="article__image-credit">[Photographer / image source]</span>
+          </figcaption>
+        </figure>
+
+        <!-- Heading 4: a more specific point within the preceding h3. -->
+        <h4 id="specific-detail">A specific detail</h4>
+        <p>Use this level for a narrower point within the subsection. Add another footnote reference where a claim needs a citation.<sup class="fnref"><a id="fnref-2" href="#fn-2" role="doc-noteref" aria-label="Footnote 2">2</a></sup></p>
+
+        <!-- Optional quotation. Delete the block if the article does not contain a quotation. -->
+        <blockquote>
+          <p>Insert the quoted passage here, preserving the source's wording and punctuation.</p>
+          <cite>[Author], [source title]</cite>
+        </blockquote>
+
+        <h2 id="final-section">Final section heading</h2>
+        <p>Complete the article's argument here. Replace the sample headings and paragraphs with the article's own structure and text.</p>
+
+        <!--
+          Optional footnotes. Delete the heading and list when no notes are needed.
+          For each new note, add a matching fnref-N link in the text and fn-N list item.
+          Every href must match a unique id. The return link goes to that note's reference.
+          For repeated citations, give each reference a unique id and add a return link for each.
+        -->
+        <h2 id="footnotes-title">Footnotes</h2>
+        <ol class="footnotes-list" aria-labelledby="footnotes-title">
+          <li id="fn-1" tabindex="-1">[Author], <cite>[Source title]</cite>, [publication], [date]. <a href="https://example.com/source">View source</a>.<a class="footnote-back" href="#fnref-1" role="doc-backlink" aria-label="Return to footnote reference 1">&#8617;</a></li>
+          <li id="fn-2" tabindex="-1">[Second source or explanatory note]. Include the source details needed to locate the material.<a class="footnote-back" href="#fnref-2" role="doc-backlink" aria-label="Return to footnote reference 2">&#8617;</a></li>
+        </ol>
+
+        <footer class="article__footer">
+          <p class="section-link"><a href="../../writing.html">All selected writing</a></p>
+        </footer>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p class="footer__mark" role="img" aria-label="Amagi, the Sumerian word for liberty">𒂼𒄄</p>
+    <p class="footer__end">&copy; 2026 JKS. E-mail me at <a href="mailto:schmidtj16@gmail.com">schmidtj16@gmail.com</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>

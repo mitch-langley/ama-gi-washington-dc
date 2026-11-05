@@ -2070,6 +2070,113 @@ a.eyebrow:hover::after {
     margin-block-start: 0;
   }
 
+  /* Published articles: optional metadata and a wider banner around the reading column. */
+
+  .article--publication {
+    max-inline-size: var(--archive-width, 58rem);
+  }
+
+  .article--publication > * {
+    max-inline-size: var(--measure-read, 40rem);
+    margin-inline: auto;
+  }
+
+  .article--publication > .article__header {
+    max-inline-size: 48rem;
+    padding-block-end: var(--space-l, 2.5rem);
+  }
+
+  .article--publication .article__header h1 {
+    font-size: clamp(2rem, 1.2rem + 3cqi, 3.25rem);
+    line-height: 1.16;
+  }
+
+  .article__subtitle {
+    margin-block-start: var(--space-m, 1.5rem);
+    font-size: var(--t-l, 1.25rem);
+    line-height: 1.6;
+    color: var(--paper-dim, #bdb8ad);
+  }
+
+  .article__byline {
+    margin-block-start: var(--space-m, 1.5rem);
+    font-size: var(--t-s, 0.9375rem);
+    color: var(--paper-dim, #bdb8ad);
+  }
+
+  .article__byline a {
+    color: var(--paper, #f2efe9);
+  }
+
+  .article__original {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-xs, 0.6rem);
+    max-inline-size: 100%;
+    min-block-size: var(--target-size, 2.75rem);
+    margin-block-start: var(--space-m, 1.5rem);
+    padding: 0.65rem 1.1rem;
+    border: 1px solid var(--hairline-gold, #756039);
+    border-radius: 999rem;
+    font-size: var(--t-s, 0.9375rem);
+    line-height: 1.5;
+    text-decoration: none;
+    background: var(--gold-wash, #221e15);
+    transition:
+      color var(--speed, 180ms) var(--ease, ease),
+      background-color var(--speed, 180ms) var(--ease, ease),
+      border-color var(--speed, 180ms) var(--ease, ease);
+  }
+
+  .article__original:is(:hover, :focus-visible) {
+    color: var(--gold-bright, #e0bf7d);
+    border-color: var(--gold, #c39b4e);
+    background: var(--ink-raised, #202024);
+  }
+
+  .article--publication > .article__banner {
+    max-inline-size: none;
+    margin-block: var(--space-l, 2.5rem);
+  }
+
+  .article--publication .article__banner img {
+    max-inline-size: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  .article--publication figcaption {
+    text-align: start;
+  }
+
+  .article__image-credit {
+    display: block;
+    margin-block-start: var(--space-2xs, 0.35rem);
+    font-style: normal;
+    color: var(--paper-dim, #bdb8ad);
+  }
+
+  .article__lead {
+    font-size: var(--t-l, 1.25rem);
+    color: var(--paper, #f2efe9);
+  }
+
+  .article--publication > h4 {
+    font-size: var(--t-m, 1rem);
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--paper, #f2efe9);
+  }
+
+  .article--publication :is([id], .fnref a) {
+    scroll-margin-block-start: calc(var(--nav-height, 7.25rem) + 2rem);
+  }
+
+  .article--publication .footnotes-list li::marker {
+    color: var(--gold, #c39b4e);
+  }
+
   /*
     Contents list for long papers: above the text on narrow screens,
     a sticky left margin beside the column on wide ones.
