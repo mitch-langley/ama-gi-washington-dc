@@ -337,7 +337,7 @@
 
   .content-section > .container > p,
   .split-panel__text p {
-    font-size: var(--t-m, 1rem);
+    font-size: var(--t-l, 1.25rem);
     line-height: 1.8;
     text-align: start;
     color: var(--paper-dim, #bdb8ad);
@@ -2560,6 +2560,21 @@ a.eyebrow:hover::after {
 /* Responsive and accessibility adjustments */
 
 @layer exceptions {
+  /* Homepage content overlaps its hero image. */
+  .home-page {
+    --home-hero-height: 25rem;
+  }
+
+  .home-page > .hero-carousel {
+    min-block-size: var(--home-hero-height, 25rem);
+  }
+
+  .home-page > .hero-carousel + .content-section {
+    position: relative;
+    margin-block-start: calc(var(--home-hero-height, 25rem) / -2 - 100px);
+    background: transparent;
+  }
+
   @media (max-width: 36rem) {
     :root {
       --nav-height: 0rem;
