@@ -2077,12 +2077,11 @@ a.eyebrow:hover::after {
   }
 
   .article--publication > * {
-    max-inline-size: var(--measure-read, 40rem);
+    max-inline-size: 48rem;
     margin-inline: auto;
   }
 
   .article--publication > .article__header {
-    max-inline-size: 48rem;
     padding-block-end: var(--space-l, 2.5rem);
   }
 
